@@ -16,5 +16,38 @@ namespace NinjaCheetah_Installer
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.Visible = true;
+            Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 f = new Form3();
+            f.Visible = true;
+            Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form4 f = new Form4();
+            f.Visible = true;
+            Visible = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form8 f = new Form8();
+            f.Visible = true;
+            Visible = false;
+        }
     }
 }
