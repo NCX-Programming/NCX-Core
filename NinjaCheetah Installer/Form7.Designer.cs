@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -70,9 +71,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(431, 37);
+            this.label1.Size = new System.Drawing.Size(369, 37);
             this.label1.TabIndex = 9;
-            this.label1.Text = "VisualBasic Collection Vol1";
+            this.label1.Text = "CSharp Collection Vol1";
             // 
             // label2
             // 
@@ -81,9 +82,9 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(623, 90);
             this.label2.TabIndex = 10;
-            this.label2.Text = "This is AutoMod, a program for Minecraft: Java Edition that automatically install" +
-    "s sets of mods that work well together (NOT MODPACKS), with no user input requir" +
-    "ed. ";
+            this.label2.Text = "This is the follow up project for The Visual Basic Collection Vol1, this time rew" +
+    "ritten in C#. It\'s a collection of smaller programs and games combined into a la" +
+    "rger program. ";
             // 
             // label3
             // 
@@ -116,8 +117,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.progressBar1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form7";
-            this.ShowIcon = false;
             this.Text = "CSharp Collection Vol1";
             this.ResumeLayout(false);
             this.PerformLayout();

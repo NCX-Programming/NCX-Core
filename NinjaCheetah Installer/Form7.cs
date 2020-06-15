@@ -62,7 +62,7 @@ namespace NinjaCheetah_Installer
                 );
             }
 
-            Thread.Sleep(5000);
+            Thread.Sleep(7500);
             Process.Start(Path.Combine(SavePath,"CSharpCollectionVol1Setup.msi"));
         }
     }
