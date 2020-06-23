@@ -53,17 +53,19 @@ namespace NinjaCheetah_Installer
         {
             using (WebClient wc = new WebClient())
             {
+                wc.DownloadFileCompleted += DownloadCompleted;
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
-                    new System.Uri("https://github.com/NinjaCheetah/CSharp-Collection-Vol1/releases/latest/download/CSharpCollectionVol1Setup.msi"),
+                    new System.Uri("https://github.com/NinjaCheetah/CSharp-Collection-Vol1/releases/latest/download/CSharpCollectionSetup.msi"),
                     // Param2 = Path to save
-                    Path.Combine(SavePath, "CSharpCollectionVol1Setup.msi")
+                    Path.Combine(SavePath, "CSharpCollectionSetup.msi")
                 );
             }
-
-            Thread.Sleep(7500);
-            Process.Start(Path.Combine(SavePath,"CSharpCollectionVol1Setup.msi"));
+        }
+        public void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            Process.Start(Path.Combine(SavePath, "CSharpCollectionSetup.msi"));
         }
     }
 }

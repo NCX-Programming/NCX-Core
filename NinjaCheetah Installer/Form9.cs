@@ -7,25 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
 using System.IO;
-using System.Threading;
+using System.Net;
 using System.Diagnostics;
 
 namespace NinjaCheetah_Installer
 {
-    public partial class Form8 : Form
+    public partial class Form9 : Form
     {
-        public Form8()
+        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+        public Form9()
         {
             InitializeComponent();
         }
 
-        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            Form4 f = new Form4();
             f.Visible = true;
             Visible = false;
         }
@@ -35,7 +34,7 @@ namespace NinjaCheetah_Installer
             progressBar1.Value = e.ProgressPercentage;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             using (WebClient wc = new WebClient())
             {
@@ -43,15 +42,15 @@ namespace NinjaCheetah_Installer
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
-                    new System.Uri("https://github.com/NinjaCheetah/NinjaCheetah-Installer/releases/latest/download/NinjaCheetahInstallerSetup.msi"),
+                    new System.Uri("https://github.com/NinjaCheetah/automod-rewrite/releases/latest/download/AutoModSetup.msi"),
                     // Param2 = Path to save
-                    Path.Combine(SavePath, "NinjaCheetahInstallerSetup.msi")
+                    Path.Combine(SavePath, "AutoModSetup.msi")
                 );
             }
         }
         public void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            Process.Start(Path.Combine(SavePath, "NinjaCheetahInstallerSetup.msi"));
+            Process.Start(Path.Combine(SavePath, "AutoModSetup.msi"));
         }
-    }
+    }   
 }

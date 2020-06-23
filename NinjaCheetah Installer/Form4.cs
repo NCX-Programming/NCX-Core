@@ -30,5 +30,12 @@ namespace NinjaCheetah_Installer
             f.Visible = true;
             Visible = false;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form9 f = new Form9();
+            f.Visible = true;
+            Visible = false;
+        }
     }
 }

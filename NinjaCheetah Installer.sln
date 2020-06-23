@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaCheetah Installer", "NinjaCheetah Installer\NinjaCheetah Installer.csproj", "{D93F5BA1-2A17-48E8-ABE9-F07FFD2A7426}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NinjaCheetah Installer Setup", "NinjaCheetah Installer Setup\NinjaCheetah Installer Setup.vdproj", "{282EE2E4-00BA-4711-AE04-00BB6E58226F}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NinjaCheetah Installer Setup", "NinjaCheetah Installer Setup\NinjaCheetah Installer Setup.vdproj", "{BB2520D6-7FCD-4421-A664-9781F716DB90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{D93F5BA1-2A17-48E8-ABE9-F07FFD2A7426}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D93F5BA1-2A17-48E8-ABE9-F07FFD2A7426}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D93F5BA1-2A17-48E8-ABE9-F07FFD2A7426}.Release|Any CPU.Build.0 = Release|Any CPU
-		{282EE2E4-00BA-4711-AE04-00BB6E58226F}.Debug|Any CPU.ActiveCfg = Debug
-		{282EE2E4-00BA-4711-AE04-00BB6E58226F}.Release|Any CPU.ActiveCfg = Release
+		{BB2520D6-7FCD-4421-A664-9781F716DB90}.Debug|Any CPU.ActiveCfg = Debug
+		{BB2520D6-7FCD-4421-A664-9781F716DB90}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
