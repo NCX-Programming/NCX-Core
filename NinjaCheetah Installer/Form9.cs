@@ -52,5 +52,9 @@ namespace NinjaCheetah_Installer
         {
             Process.Start(Path.Combine(SavePath, "AutoModSetup.msi"));
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }   
 }

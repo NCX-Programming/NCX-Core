@@ -53,5 +53,9 @@ namespace NinjaCheetah_Installer
         {
             Process.Start(Path.Combine(SavePath, "NinjaCheetahInstallerSetup.msi"));
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

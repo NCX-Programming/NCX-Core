@@ -46,5 +46,9 @@ namespace NinjaCheetah_Installer
             f.Visible = true;
             Visible = false;
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

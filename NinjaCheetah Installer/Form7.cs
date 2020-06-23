@@ -67,5 +67,9 @@ namespace NinjaCheetah_Installer
         {
             Process.Start(Path.Combine(SavePath, "CSharpCollectionSetup.msi"));
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

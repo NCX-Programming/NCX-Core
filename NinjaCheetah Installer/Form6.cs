@@ -47,5 +47,9 @@ namespace NinjaCheetah_Installer
                 );
             }
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
