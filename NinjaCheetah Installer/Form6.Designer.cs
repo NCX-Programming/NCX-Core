@@ -90,9 +90,8 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(623, 86);
             this.label2.TabIndex = 9;
-            this.label2.Text = "This is AutoMod, a program for Minecraft: Java Edition that automatically install" +
-    "s sets of mods that work well together (NOT MODPACKS), with no user input requir" +
-    "ed. ";
+            this.label2.Text = "The first collection of small applications written in Visual Basic, contained in " +
+    "Windows Forms. More applications will be added as development continues. ";
             // 
             // Form6
             // 
