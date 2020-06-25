@@ -51,8 +51,8 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(313, 71);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Created and Written by NinjaCheetah\r\nWritten in C Sharp using Visual Studio 2019\r" +
-    "\nPowered by the .NET Framework 4.7.2";
+            this.label2.Text = "v1.5\r\nCreated and Written by NinjaCheetah\r\nWritten in C Sharp using Visual Studio" +
+    " 2019\r\nPowered by the .NET Framework 4.7.2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1

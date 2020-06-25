@@ -21,13 +21,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
+        "MsmKey" = "8:_39ED4E54022946E6A3C3DB66DF1DEDCF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_AB1A40328D1A46A8956C38734A45D31F"
+        "MsmKey" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -169,10 +169,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AB1A40328D1A46A8956C38734A45D31F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_39ED4E54022946E6A3C3DB66DF1DEDCF"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\windowsiconncxinstaller_L9R_icon.ico"
-            "TargetName" = "8:windowsiconncxinstaller_L9R_icon.ico"
+            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\windowsiconncxinstaller_Yap_icon.ico"
+            "TargetName" = "8:windowsiconncxinstaller_Yap_icon.ico"
             "Tag" = "8:"
             "Folder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"
             "Condition" = "8:"
@@ -263,7 +263,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_AB1A40328D1A46A8956C38734A45D31F"
+        "ARPPRODUCTICON" = "8:_39ED4E54022946E6A3C3DB66DF1DEDCF"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -377,7 +377,7 @@
             "Target" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
             "Folder" = "8:_15A63B192629401C94F0CB82ACC62D76"
             "WorkingFolder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"
-            "Icon" = "8:_AB1A40328D1A46A8956C38734A45D31F"
+            "Icon" = "8:_39ED4E54022946E6A3C3DB66DF1DEDCF"
             "Feature" = "8:"
             }
         }
