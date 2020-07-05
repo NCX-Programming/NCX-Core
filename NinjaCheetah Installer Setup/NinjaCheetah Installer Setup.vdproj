@@ -21,8 +21,26 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_0AF59C8DB8AA01F8B530D5F538BF3A6C"
+        "OwnerKey" = "8:_472341C0A4AF3963D99A9D32D5EA7DA9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0AF59C8DB8AA01F8B530D5F538BF3A6C"
+        "OwnerKey" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_39ED4E54022946E6A3C3DB66DF1DEDCF"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_472341C0A4AF3963D99A9D32D5EA7DA9"
+        "OwnerKey" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -33,8 +51,50 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_89B21AE7427269E9EFC691315E9D4792"
+        "OwnerKey" = "8:_0AF59C8DB8AA01F8B530D5F538BF3A6C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B5537F5847AF0CCD2B28F2335FF93C78"
+        "OwnerKey" = "8:_F8B62ABFD52A50AAE38F581F92566F8E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F8B62ABFD52A50AAE38F581F92566F8E"
+        "OwnerKey" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_472341C0A4AF3963D99A9D32D5EA7DA9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0AF59C8DB8AA01F8B530D5F538BF3A6C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_F8B62ABFD52A50AAE38F581F92566F8E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B5537F5847AF0CCD2B28F2335FF93C78"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -169,6 +229,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0AF59C8DB8AA01F8B530D5F538BF3A6C"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_0AF59C8DB8AA01F8B530D5F538BF3A6C"
+                    {
+                    "Name" = "8:Interop.WMPLib.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Interop.WMPLib.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_39ED4E54022946E6A3C3DB66DF1DEDCF"
             {
             "SourcePath" = "8:..\\..\\..\\..\\Downloads\\windowsiconncxinstaller_Yap_icon.ico"
@@ -189,6 +280,119 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_472341C0A4AF3963D99A9D32D5EA7DA9"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_472341C0A4AF3963D99A9D32D5EA7DA9"
+                    {
+                    "Name" = "8:AxInterop.WMPLib.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:AxInterop.WMPLib.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_89B21AE7427269E9EFC691315E9D4792"
+            {
+            "SourcePath" = "8:wmp.dll"
+            "TargetName" = "8:wmp.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B5537F5847AF0CCD2B28F2335FF93C78"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:TRUE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_B5537F5847AF0CCD2B28F2335FF93C78"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F8B62ABFD52A50AAE38F581F92566F8E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Octokit, Version=0.48.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_F8B62ABFD52A50AAE38F581F92566F8E"
+                    {
+                    "Name" = "8:Octokit.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Octokit.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -204,6 +408,17 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_702C28FD2E3F484392E9053B1BF4870F"
+                    {
+                    "Name" = "8:NinjaCheetah"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_8608D95D032F430D9A6B726925F1ECEE"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_6024D94B5CF7434DA4297517157F9DD1"
@@ -245,16 +460,16 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NCX Installer"
-        "ProductCode" = "8:{D86BEF0F-8906-45A5-9E58-14C391BB257A}"
-        "PackageCode" = "8:{0EEA4236-1509-42C8-AAA0-A50210E1E7A3}"
+        "ProductCode" = "8:{FE530022-B371-46E5-9838-4ECDE3AC36FC}"
+        "PackageCode" = "8:{2C3E9509-C6BB-4048-83DE-1E48DE4B8D4E}"
         "UpgradeCode" = "8:{E62FE997-5A50-49A8-9A6F-4B57C3D0D420}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.4.0"
-        "Manufacturer" = "8:NinjaCheetah"
+        "ProductVersion" = "8:2.0.0"
+        "Manufacturer" = "8:NCX"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:NinjaCheetah Installer Setup"
@@ -375,7 +590,7 @@
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
             "Target" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
-            "Folder" = "8:_15A63B192629401C94F0CB82ACC62D76"
+            "Folder" = "8:_702C28FD2E3F484392E9053B1BF4870F"
             "WorkingFolder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"
             "Icon" = "8:_39ED4E54022946E6A3C3DB66DF1DEDCF"
             "Feature" = "8:"
