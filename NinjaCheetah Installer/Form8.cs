@@ -43,7 +43,7 @@ namespace NinjaCheetah_Installer
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
-                    new System.Uri("https://github.com/NinjaCheetah/NinjaCheetah-Installer/releases/latest/download/NinjaCheetahInstallerSetup.msi"),
+                    new System.Uri("https://github.com/NinjaCheetah/NCX-Installer/releases/latest/download/NinjaCheetahInstallerSetup.msi"),
                     // Param2 = Path to save
                     Path.Combine(SavePath, "NinjaCheetahInstallerSetup.msi")
                 );

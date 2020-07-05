@@ -15,6 +15,9 @@ namespace NinjaCheetah_Installer
         public Form1()
         {
             InitializeComponent();
+            Form11 f = new Form11();
+            f.Visible = true;
+            f.TopMost = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
