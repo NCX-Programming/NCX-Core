@@ -20,6 +20,11 @@ namespace NinjaCheetah_Installer
         public Form9()
         {
             InitializeComponent();
+            if (File.Exists("C:/Program Files/NCX/AutoMod/AutoMod.exe"))
+            {
+                label4.Visible = true;
+                button4.Visible = true;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -55,6 +60,11 @@ namespace NinjaCheetah_Installer
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Process.Start("C:/Program Files/NCX/AutoMod/AutoMod.exe");
         }
     }   
 }

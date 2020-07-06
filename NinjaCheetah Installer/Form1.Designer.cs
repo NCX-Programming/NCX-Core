@@ -39,6 +39,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -71,7 +73,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "v2.1";
+            this.label3.Text = "v2.2";
             // 
             // button1
             // 
@@ -80,7 +82,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 36);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Current Programs";
+            this.button1.Text = "X-Store";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -141,13 +143,33 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(15, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(192, 20);
+            this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 15;
-            this.label5.Text = "New/Recently Updated";
+            this.label5.Text = "Installed";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(99, 94);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Click to Launch";
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button9.Location = new System.Drawing.Point(554, 112);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(180, 180);
+            this.button9.TabIndex = 20;
+            this.button9.Text = "Show All";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
-            this.button8.BackgroundImage = global::NinjaCheetah_Installer.Properties.Resources.settings;
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button8.Location = new System.Drawing.Point(702, 311);
             this.button8.Name = "button8";
@@ -165,6 +187,7 @@
             this.button7.Size = new System.Drawing.Size(180, 180);
             this.button7.TabIndex = 17;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Visible = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button3
@@ -176,6 +199,7 @@
             this.button3.Size = new System.Drawing.Size(180, 180);
             this.button3.TabIndex = 16;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // Form1
@@ -183,6 +207,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 384);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button3);
@@ -219,6 +245,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button9;
     }
 }
 

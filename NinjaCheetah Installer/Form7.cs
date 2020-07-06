@@ -19,6 +19,11 @@ namespace NinjaCheetah_Installer
         public Form7()
         {
             InitializeComponent();
+            if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
+            {
+                label4.Visible = true;
+                button4.Visible = true;
+            }
         }
 
         static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -70,6 +75,11 @@ namespace NinjaCheetah_Installer
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Process.Start("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe");
         }
     }
 }

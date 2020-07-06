@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -30,6 +31,9 @@ namespace NinjaCheetah_Installer
             button8.TabStop = false;
             button8.FlatStyle = FlatStyle.Flat;
             button8.FlatAppearance.BorderSize = 0;
+            button9.TabStop = false;
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.FlatAppearance.BorderSize = 1;
             if (Properties.Settings.Default.firstTime == true)
             {
                 Form11 f = new Form11();
@@ -59,7 +63,14 @@ namespace NinjaCheetah_Installer
                     Path.Combine(SavePath, "newsLatest.txt")
                 );
             }
-            
+            if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
+            {
+                button3.Visible = true;
+            }
+            if (File.Exists("C:/Program Files/NCX/AutoMod/AutoMod.exe"))
+            {
+                button7.Visible = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -107,16 +118,12 @@ namespace NinjaCheetah_Installer
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Form7 f = new Form7();
-            f.Visible = true;
-            Visible = false;
+            Process.Start("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe");
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form9 f = new Form9();
-            f.Visible = true;
-            Visible = false;
+            Process.Start("C:/Program Files/NCX/AutoMod/AutoMod.exe");
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -132,6 +139,13 @@ namespace NinjaCheetah_Installer
             newstext = Convert.ToString(newsString);
             tr.Close();
             label4.Text = newsString;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form14 f = new Form14();
+            f.Visible = true;
+            Visible = false;
         }
     }
 }

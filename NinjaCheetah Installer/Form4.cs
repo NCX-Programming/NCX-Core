@@ -15,6 +15,12 @@ namespace NinjaCheetah_Installer
         public Form4()
         {
             InitializeComponent();
+            button1.TabStop = false;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button3.TabStop = false;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.FlatAppearance.BorderSize = 0;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -24,22 +30,23 @@ namespace NinjaCheetah_Installer
             Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             Form7 f = new Form7();
             f.Visible = true;
             Visible = false;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             Form9 f = new Form9();
             f.Visible = true;
             Visible = false;
-        }
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
