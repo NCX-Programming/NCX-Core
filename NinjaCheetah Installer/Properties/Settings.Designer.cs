@@ -82,5 +82,14 @@ namespace NinjaCheetah_Installer.Properties {
                 this["arch"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2.1")]
+        public decimal version {
+            get {
+                return ((decimal)(this["version"]));
+            }
+        }
     }
 }

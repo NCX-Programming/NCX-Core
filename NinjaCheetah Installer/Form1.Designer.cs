@@ -57,7 +57,8 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(14, 56);
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(15, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 19);
             this.label2.TabIndex = 1;
@@ -70,7 +71,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "v2.0";
+            this.label3.Text = "v2.1";
             // 
             // button1
             // 
@@ -128,9 +129,9 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(68, 56);
+            this.label4.Location = new System.Drawing.Point(68, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(557, 19);
+            this.label4.Size = new System.Drawing.Size(666, 42);
             this.label4.TabIndex = 10;
             this.label4.Text = "I\'ll be fetched from online soon so you\'ll know when new release are out! :)";
             // 

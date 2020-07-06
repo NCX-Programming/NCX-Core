@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +14,10 @@ namespace NinjaCheetah_Installer
 {
     public partial class Form1 : Form
     {
+
+        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        public string newstext;
+
         public Form1()
         {
             InitializeComponent();
@@ -42,6 +48,18 @@ namespace NinjaCheetah_Installer
             {
                 button2.Visible = true;
             }
+            label4.Text = "Fetching news... Please wait.";
+            using (WebClient wc = new WebClient())
+            {
+                wc.DownloadFileCompleted += DownloadCompleted;
+                wc.DownloadFileAsync(
+                    // Param1 = Link of file
+                    new System.Uri("https://github.com/NinjaCheetah/NCX-Installer-News/releases/latest/download/newsLatest.txt"),
+                    // Param2 = Path to save
+                    Path.Combine(SavePath, "newsLatest.txt")
+                );
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -105,6 +123,15 @@ namespace NinjaCheetah_Installer
         {
             Form12 f = new Form12();
             f.Visible = true;
+        }
+
+        public void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            TextReader tr = new StreamReader(Path.Combine(SavePath, "newsLatest.txt"));
+            string newsString = tr.ReadLine();
+            newstext = Convert.ToString(newsString);
+            tr.Close();
+            label4.Text = newsString;
         }
     }
 }
