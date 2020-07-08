@@ -237,6 +237,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="settings.png" />
+    <Content Include="BugReport.txt" />
     <Content Include="WindowsIconAutoMod.png" />
     <Content Include="WindowsIconCSharpCollection.png.png" />
     <Content Include="windowsiconncxinstaller_Yap_icon.ico" />

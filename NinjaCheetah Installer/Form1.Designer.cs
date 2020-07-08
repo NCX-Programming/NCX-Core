@@ -73,7 +73,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "v2.2";
+            this.label3.Text = "v2.3";
             // 
             // button1
             // 
@@ -170,6 +170,7 @@
             // 
             // button8
             // 
+            this.button8.BackgroundImage = global::NinjaCheetah_Installer.Properties.Resources.settings;
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button8.Location = new System.Drawing.Point(702, 311);
             this.button8.Name = "button8";

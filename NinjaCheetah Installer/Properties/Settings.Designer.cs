@@ -85,7 +85,7 @@ namespace NinjaCheetah_Installer.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2.3")]
         public decimal version {
             get {
                 return ((decimal)(this["version"]));

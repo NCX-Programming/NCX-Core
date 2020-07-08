@@ -1,0 +1,5 @@
+﻿v2.2:
+x- The X on a form is not terminating the program (not sure which)
+x- Settings icon missing
+x- All installed programs show programs that aren't installed, clicking them causes a fatal error
+x- Says update available when there isn't due to the ver setting not being updated

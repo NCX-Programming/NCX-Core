@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,16 @@ namespace NinjaCheetah_Installer
             button3.TabStop = false;
             button3.FlatStyle = FlatStyle.Flat;
             button3.FlatAppearance.BorderSize = 1;
+            if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
+            {
+                button1.Visible = true;
+                button5.Visible = true;
+            }
+            if (File.Exists("C:/Program Files/NCX/AutoMod/AutoMod.exe"))
+            {
+                button2.Visible = true;
+                button6.Visible = true;
+            }
         }
 
         private void Form14_Load(object sender, EventArgs e)

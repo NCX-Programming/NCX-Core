@@ -57,6 +57,7 @@
             this.button2.Size = new System.Drawing.Size(128, 128);
             this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
@@ -87,6 +88,7 @@
             this.button1.Size = new System.Drawing.Size(128, 128);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
@@ -97,6 +99,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "View in Store";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
@@ -107,6 +110,7 @@
             this.button6.TabIndex = 6;
             this.button6.Text = "View in Store";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form14
@@ -123,7 +127,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form14";
-            this.Text = "Form14";
+            this.Text = "Installed Programs";
             this.Load += new System.EventHandler(this.Form14_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
