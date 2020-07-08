@@ -21,18 +21,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0AF59C8DB8AA01F8B530D5F538BF3A6C"
-        "OwnerKey" = "8:_472341C0A4AF3963D99A9D32D5EA7DA9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_0AF59C8DB8AA01F8B530D5F538BF3A6C"
-        "OwnerKey" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_237C7CCBCC32288CF7FC50890BD279D1"
         "OwnerKey" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
         "MsmSig" = "8:_UNDEFINED"
@@ -45,7 +33,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_472341C0A4AF3963D99A9D32D5EA7DA9"
+        "MsmKey" = "8:_3D03AF7C014FB0D9C5ED3AFEADF8F9D7"
         "OwnerKey" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -58,13 +46,25 @@
         "Entry"
         {
         "MsmKey" = "8:_89B21AE7427269E9EFC691315E9D4792"
-        "OwnerKey" = "8:_0AF59C8DB8AA01F8B530D5F538BF3A6C"
+        "OwnerKey" = "8:_DB1073C3AF4F6FBFE5D13D1AA3331748"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_B5537F5847AF0CCD2B28F2335FF93C78"
         "OwnerKey" = "8:_F8B62ABFD52A50AAE38F581F92566F8E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DB1073C3AF4F6FBFE5D13D1AA3331748"
+        "OwnerKey" = "8:_3D03AF7C014FB0D9C5ED3AFEADF8F9D7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DB1073C3AF4F6FBFE5D13D1AA3331748"
+        "OwnerKey" = "8:_889F7D1B42134E6EB6DBA763AEAF3613"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,13 +82,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_472341C0A4AF3963D99A9D32D5EA7DA9"
+        "OwnerKey" = "8:_3D03AF7C014FB0D9C5ED3AFEADF8F9D7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0AF59C8DB8AA01F8B530D5F538BF3A6C"
+        "OwnerKey" = "8:_DB1073C3AF4F6FBFE5D13D1AA3331748"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -241,37 +241,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0AF59C8DB8AA01F8B530D5F538BF3A6C"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_0AF59C8DB8AA01F8B530D5F538BF3A6C"
-                    {
-                    "Name" = "8:Interop.WMPLib.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Interop.WMPLib.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_237C7CCBCC32288CF7FC50890BD279D1"
             {
             "AssemblyRegister" = "3:1"
@@ -323,14 +292,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_472341C0A4AF3963D99A9D32D5EA7DA9"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3D03AF7C014FB0D9C5ED3AFEADF8F9D7"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_472341C0A4AF3963D99A9D32D5EA7DA9"
+                    "_3D03AF7C014FB0D9C5ED3AFEADF8F9D7"
                     {
                     "Name" = "8:AxInterop.WMPLib.dll"
                     "Attributes" = "3:512"
@@ -388,6 +357,37 @@
                     }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DB1073C3AF4F6FBFE5D13D1AA3331748"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_DB1073C3AF4F6FBFE5D13D1AA3331748"
+                    {
+                    "Name" = "8:Interop.WMPLib.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Interop.WMPLib.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"
@@ -503,8 +503,8 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NCX Installer"
-        "ProductCode" = "8:{D1E1526F-0356-40BD-A302-F57AAD72795C}"
-        "PackageCode" = "8:{7F2E0185-6C6D-4212-BF4B-DD2B5998B378}"
+        "ProductCode" = "8:{DA6BCA47-9BDD-44FC-ACEE-F30CE925A5D8}"
+        "PackageCode" = "8:{65365089-8D98-41CA-A91D-C0ABAA3A5583}"
         "UpgradeCode" = "8:{E62FE997-5A50-49A8-9A6F-4B57C3D0D420}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -1039,7 +1039,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_889F7D1B42134E6EB6DBA763AEAF3613"
             {
-            "SourcePath" = "8:..\\NinjaCheetah Installer\\obj\\Release\\NinjaCheetah Installer.exe"
+            "SourcePath" = "8:..\\NinjaCheetah Installer\\obj\\Debug\\NinjaCheetah Installer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_CAC4008EEA2F40DA87BC51B0E2646DF5"

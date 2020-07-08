@@ -94,5 +94,63 @@ namespace NinjaCheetah_Installer
                 button3.Visible = false;
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            string message = "Are you sure you would like to uninstall NCX-Installer?";
+            string title = "Confirm Uninstallation";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                Start_Unistall();
+            }
+            else if (result == DialogResult.No)
+            {
+                
+            }
+        }
+
+        public void Start_Unistall()
+        {
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            label4.Visible = true;
+            if (File.Exists(Path.Combine(SavePath, "updateNotice.txt")))
+            {
+                File.Delete(Path.Combine(SavePath, "updateNotice.txt"));
+            }
+            if (File.Exists(Path.Combine(SavePath, "newsLatest.txt")))
+            {
+                File.Delete(Path.Combine(SavePath, "newsLatest.txt"));
+            }
+            using (WebClient wc = new WebClient())
+            {
+                wc.DownloadFileCompleted += DownloadCompleted3;
+                wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                wc.DownloadFileAsync(
+                    // Param1 = Link of file
+                    new System.Uri("https://github.com/NinjaCheetah/NCX-Installer/releases/latest/download/NinjaCheetahInstallerSetup.msi"),
+                    // Param2 = Path to save
+                    Path.Combine(SavePath, "NinjaCheetahInstallerSetup.msi")
+                );
+            }
+        }
+
+        public void DownloadCompleted3(object sender, AsyncCompletedEventArgs e)
+        {
+            Process.Start(Path.Combine(SavePath, "NinjaCheetahInstallerSetup.msi"));
+            label4.Text = "Uninstallation Started.";
+            string message = "Thank you for using NCX-Installer. We will miss you!";
+            string title = "Goodbye!";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }
