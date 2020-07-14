@@ -1,0 +1,26 @@
+﻿<Window x:Class="NCX_Installer.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NCX_Installer"
+        mc:Ignorable="d"
+        Title="Installed Programs" Height="391" Width="722">
+    <Grid>
+        <Label x:Name="label1" Content="All Installed Programs" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Height="128" Width="128" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="image/csharpcol.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="143,42,0,0" VerticalAlignment="Top" Height="128" Width="128" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="image/automod.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn2" Content="View in Store" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Height="23" Width="128" Visibility="Hidden"/>
+        <Button x:Name="btn4" Content="View in Store" HorizontalAlignment="Left" Margin="143,175,0,0" VerticalAlignment="Top" Height="23" Width="128" Visibility="Hidden"/>
+        <Button x:Name="btn5" Content="Download More Apps" HorizontalAlignment="Left" Margin="276,42,0,0" VerticalAlignment="Top" Height="128" Width="128" Background="{x:Null}"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="614,10,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Button_Click"/>
+    </Grid>
+</Window>
