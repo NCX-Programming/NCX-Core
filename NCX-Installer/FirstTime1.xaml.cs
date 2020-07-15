@@ -30,7 +30,9 @@ namespace NCX_Installer
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-            
+            FirstTime2 win = new FirstTime2();
+            win.Show();
+            Hide();
         }
     }
 }

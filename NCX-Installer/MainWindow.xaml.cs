@@ -29,6 +29,18 @@ namespace NCX_Installer
         public MainWindow()
         {
             InitializeComponent();
+            if (Settings1.Default.name != "")
+            {
+                label1.Content = "Welcome back, " + Settings1.Default.name + "!";
+            }
+            else if (Settings1.Default.name == "")
+            {
+                label1.Content = "Welcome back!";
+            }
+            if (Settings1.Default.arch == true)
+            {
+                btn9.Visibility = Visibility.Visible;
+            }
             using (WebClient wc = new WebClient())
             {
                 wc.DownloadFileCompleted += DownloadCompleted;
@@ -109,6 +121,19 @@ namespace NCX_Installer
         {
             About win = new About();
             win.Show();
+        }
+
+        private void btn7_Click(object sender, RoutedEventArgs e)
+        {
+            FirstTime2 win = new FirstTime2();
+            win.Show();
+        }
+
+        private void btn9_Click(object sender, RoutedEventArgs e)
+        {
+            ArchivedProjects win = new ArchivedProjects();
+            win.Show();
+            Hide();
         }
     }
 }

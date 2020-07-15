@@ -26,14 +26,8 @@ namespace NCX_Installer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string message = "Haven't figured out how to open web pages in .NET Core yet so, uh, yeah.";
-            string caption = "Currently Unavailable";
-            MessageBoxButton buttons = MessageBoxButton.OK;
-            MessageBoxImage icon = MessageBoxImage.Error;
-            if (MessageBox.Show(message, caption, buttons, icon) == MessageBoxResult.OK)
-            {
-                
-            }
+            string url = "https://github.com/NinjaCheetah/NCX-Installer";
+            Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
     }
 }

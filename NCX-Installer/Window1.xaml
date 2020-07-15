@@ -8,19 +8,19 @@
         Title="Installed Programs" Height="391" Width="722">
     <Grid>
         <Label x:Name="label1" Content="All Installed Programs" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
-        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Height="128" Width="128" Visibility="Hidden">
+        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Height="128" Width="128" Visibility="Hidden" Click="btn1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/csharpcol.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="143,42,0,0" VerticalAlignment="Top" Height="128" Width="128" Visibility="Hidden">
+        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="143,42,0,0" VerticalAlignment="Top" Height="128" Width="128" Visibility="Hidden" Click="btn3_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/automod.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn2" Content="View in Store" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Height="23" Width="128" Visibility="Hidden"/>
-        <Button x:Name="btn4" Content="View in Store" HorizontalAlignment="Left" Margin="143,175,0,0" VerticalAlignment="Top" Height="23" Width="128" Visibility="Hidden"/>
-        <Button x:Name="btn5" Content="Download More Apps" HorizontalAlignment="Left" Margin="276,42,0,0" VerticalAlignment="Top" Height="128" Width="128" Background="{x:Null}"/>
+        <Button x:Name="btn2" Content="View in Store" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Height="23" Width="128" Visibility="Hidden" Click="btn2_Click"/>
+        <Button x:Name="btn4" Content="View in Store" HorizontalAlignment="Left" Margin="143,175,0,0" VerticalAlignment="Top" Height="23" Width="128" Visibility="Hidden" Click="btn4_Click"/>
+        <Button x:Name="btn5" Content="Download More Apps" HorizontalAlignment="Left" Margin="276,42,0,0" VerticalAlignment="Top" Height="128" Width="128" Background="{x:Null}" Click="btn5_Click"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="614,10,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Button_Click"/>
     </Grid>
 </Window>

@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace NCX_Installer
 {
@@ -44,6 +45,37 @@ namespace NCX_Installer
         {
             base.OnClosing(e);
             Environment.Exit(0);
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
+            {
+                Process.Start("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe");
+            }
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists("C:/Program Files/NCX/AutoMod/AutoMod.exe"))
+            {
+                Process.Start("C:/Program Files/NCX/AutoMod/AutoMod.exe");
+            }
+        }
+
+        private void btn4_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
