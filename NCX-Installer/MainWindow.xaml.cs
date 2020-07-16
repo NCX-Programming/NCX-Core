@@ -94,7 +94,7 @@ namespace NCX_Installer
             string newsString = tr.ReadLine();
             newstext = Convert.ToString(newsString);
             tr.Close();
-            label3.Content = newsString;
+            label3.Text = newsString;
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -134,6 +134,12 @@ namespace NCX_Installer
             ArchivedProjects win = new ArchivedProjects();
             win.Show();
             Hide();
+        }
+
+        private void btn8_Click(object sender, RoutedEventArgs e)
+        {
+            XStore win = new XStore();
+            win.Show();
         }
     }
 }

@@ -10,7 +10,6 @@
         <Label x:Name="label1" Content="placeholder text" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <Label Content="v2.4" HorizontalAlignment="Left" Margin="707,0,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="News:" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="Blue"/>
-        <Label x:Name="label3" Content="Fetching News... Please wait." HorizontalAlignment="Left" Margin="60,42,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Installed" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
         <Label Content="Click to Launch" HorizontalAlignment="Left" Margin="88,94,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="12,122,0,0" VerticalAlignment="Top" Height="175" Width="175" Click="Button_Click_1" Visibility="Hidden">
@@ -32,8 +31,9 @@
                 <ImageBrush ImageSource="image/settings.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn8" Content="X-Store" HorizontalAlignment="Left" Margin="12,338,0,0" VerticalAlignment="Top" Height="36" Width="104" FontSize="16"/>
+        <Button x:Name="btn8" Content="X-Store" HorizontalAlignment="Left" Margin="12,338,0,0" VerticalAlignment="Top" Height="36" Width="104" FontSize="16" Click="btn8_Click"/>
         <Button x:Name="btn9" Content="Archived Projects" HorizontalAlignment="Left" Margin="121,338,0,0" VerticalAlignment="Top" Height="36" Width="104" Visibility="Hidden" Click="btn9_Click"/>
+        <TextBlock x:Name="label3" HorizontalAlignment="Left" Margin="65,49,0,0" Text="Fetching News... Please wait." TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="635" FontSize="14"/>
 
     </Grid>
 </Window>

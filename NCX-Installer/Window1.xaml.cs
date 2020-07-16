@@ -49,7 +49,8 @@ namespace NCX_Installer
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-
+            XStore win = new XStore();
+            win.Show();
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
@@ -62,7 +63,9 @@ namespace NCX_Installer
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-
+            NavSettings.Default.comingFrom = "cscol";
+            XStore win = new XStore();
+            win.Show();
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
@@ -75,7 +78,9 @@ namespace NCX_Installer
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-
+            NavSettings.Default.comingFrom = "am";
+            XStore win = new XStore();
+            win.Show();
         }
     }
 }
