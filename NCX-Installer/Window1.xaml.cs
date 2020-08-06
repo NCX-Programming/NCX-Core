@@ -27,11 +27,6 @@ namespace NCX_Installer
                 btn1.Visibility = Visibility.Visible;
                 btn2.Visibility = Visibility.Visible;
             }
-            if (File.Exists("C:/Program Files/NCX/AutoMod/AutoMod.exe"))
-            {
-                btn3.Visibility = Visibility.Visible;
-                btn4.Visibility = Visibility.Visible;
-            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -66,14 +61,6 @@ namespace NCX_Installer
             NavSettings.Default.comingFrom = "cscol";
             XStore win = new XStore();
             win.Show();
-        }
-
-        private void btn3_Click(object sender, RoutedEventArgs e)
-        {
-            if (File.Exists("C:/Program Files/NCX/AutoMod/AutoMod.exe"))
-            {
-                Process.Start("C:/Program Files/NCX/AutoMod/AutoMod.exe");
-            }
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)

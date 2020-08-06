@@ -10,38 +10,33 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Net;
 using System.Diagnostics;
 using System.IO;
-using System.Net;
-using System.Security.Policy;
 
 namespace NCX_Installer
 {
     /// <summary>
-    /// Interaction logic for XSCSharpCol.xaml
+    /// Interaction logic for XSC64TL.xaml
     /// </summary>
-    public partial class XSCSharpCol : Page
+    public partial class XSC64TL : Page
     {
-        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-        public XSCSharpCol()
+        public XSC64TL()
         {
             InitializeComponent();
-            if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
-            {
-                btn6.Visibility = Visibility.Visible;
-            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string url = "https://github.com/NinjaCheetah/CSharp-Collection-Vol1";
+            string url = "https://github.com/IanSkinner1982/C64-title-loader";
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            string url = "https://github.com/NinjaCheetah";
+            string url = "https://github.com/IanSkinner1982";
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
 
@@ -53,8 +48,7 @@ namespace NCX_Installer
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            XSCSCP page = new XSCSCP();
-            NavigationService.Navigate(page);
+
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -67,9 +61,9 @@ namespace NCX_Installer
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
-                    new System.Uri("https://github.com/NinjaCheetah/CSharp-Collection-Vol1/releases/latest/download/CSharpCollectionSetup.msi"),
+                    new System.Uri("https://github.com/IanSkinner1982/C64-title-loader/releases/latest/download/loader.d64"),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, "CSharpCollectionSetup.msi")
+                    System.IO.Path.Combine(SavePath, "loader.d64")
                 );
             }
         }
@@ -78,23 +72,11 @@ namespace NCX_Installer
         {
             label1.Content = "Download Complete";
             Directory.SetCurrentDirectory(SavePath);
-            Process p = new Process();
-            p.StartInfo.FileName = "msiexec";
-            p.StartInfo.Arguments = "/i CSharpCollectionSetup.msi";
-            p.Start();
         }
 
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             progressBar1.Value = e.ProgressPercentage;
-        }
-
-        private void btn6_Click(object sender, RoutedEventArgs e)
-        {
-            if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
-            {
-                Process.Start("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe");
-            }
         }
     }
 }

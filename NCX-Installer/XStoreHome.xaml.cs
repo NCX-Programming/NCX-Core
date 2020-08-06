@@ -32,7 +32,13 @@ namespace NCX_Installer
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-            XSAutoMod page = new XSAutoMod();
+            XSDSiD page = new XSDSiD();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            XSC64TL page = new XSC64TL();
             NavigationService.Navigate(page);
         }
     }

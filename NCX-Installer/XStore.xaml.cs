@@ -30,11 +30,6 @@ namespace NCX_Installer
                 NavSettings.Default.comingFrom = "";
                 _NavigationFrame.Navigate(new XSCSharpCol());
             }
-            else if (NavSettings.Default.comingFrom == "am")
-            {
-                NavSettings.Default.comingFrom = "";
-                _NavigationFrame.Navigate(new XSAutoMod());
-            }
         }
     }
 }

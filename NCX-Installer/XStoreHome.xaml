@@ -16,12 +16,17 @@
                 <ImageBrush ImageSource="image/csharpcol.png"/>
             </Button.Background>
         </Button>
+        <Label Content="Please note: X-Store does not include archived projects, they are only available from GitHub" HorizontalAlignment="Left" Margin="0,283,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="115,72,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="btn2_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="image/dsidownloader.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="220,72,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="btn3_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/automod.png"/>
             </Button.Background>
         </Button>
-        <Label Content="Please note: X-Store does not include archived projects, they are only available from GitHub" HorizontalAlignment="Left" Margin="0,283,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

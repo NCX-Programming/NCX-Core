@@ -7,12 +7,19 @@
     <UseWPF>true</UseWPF>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
     <Platforms>AnyCPU;x64</Platforms>
+    <Win32Resource></Win32Resource>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description />
+    <SignAssembly>false</SignAssembly>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="AutoMod.png" />
     <None Remove="CSharp.png" />
     <None Remove="Icon.ico" />
+    <None Remove="image\dsidownloader.png" />
     <None Remove="image\firsttime.png" />
     <None Remove="image\screen\am1.png" />
     <None Remove="image\screen\am2.png" />
@@ -23,9 +30,9 @@
 
   <ItemGroup>
     <Content Include="Icon.ico" />
-    <PackageReference Include="WpfAnimatedGif" Version="2.0.0" />
     <Resource Include="image\automod.png" />
     <Resource Include="image\csharpcol.png" />
+    <Resource Include="image\dsidownloader.png" />
     <Resource Include="image\firsttime.png" />
     <Resource Include="image\screen\am1.png" />
     <Resource Include="image\screen\am2.png" />
@@ -40,11 +47,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>NavSettings.settings</DependentUpon>
     </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Update="Settings1.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings1.settings</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

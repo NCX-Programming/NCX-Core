@@ -55,10 +55,6 @@ namespace NCX_Installer
             {
                 btn1.Visibility = Visibility.Visible;
             }
-            if (File.Exists("C:/Program Files/NCX/AutoMod/AutoMod.exe"))
-            {
-                btn2.Visibility = Visibility.Visible;
-            }
             if (Settings1.Default.firstTime == true)
             {
                 FirstTime1 win = new FirstTime1();
@@ -77,14 +73,6 @@ namespace NCX_Installer
             if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
             {
                 Process.Start("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe");
-            }
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            if (File.Exists("C:/Program Files/NCX/AutoMod/AutoMod.exe"))
-            {
-                Process.Start("C:/Program Files/NCX/AutoMod/AutoMod.exe");
             }
         }
 
