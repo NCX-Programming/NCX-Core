@@ -9,7 +9,7 @@
       Title="XSC64TL" Background="White">
 
     <Grid>
-        <Image HorizontalAlignment="Left" Height="175" Margin="10,10,0,0" VerticalAlignment="Top" Width="175" Source="image/dsidownloader.png"/>
+        <Image HorizontalAlignment="Left" Height="175" Margin="10,10,0,0" VerticalAlignment="Top" Width="175" Source="image/c64titleloader.png"/>
         <Label Content="C64 Title Loader" HorizontalAlignment="Left" Margin="185,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="26"/>
         <Label Content="By IanSkinner1982" HorizontalAlignment="Left" Margin="185,42,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Button x:Name="btn1" Content="User Page" HorizontalAlignment="Left" Margin="190,79,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Button_Click_1" Background="{x:Null}"/>

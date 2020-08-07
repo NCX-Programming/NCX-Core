@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCX-Installer", "NCX-Installer\NCX-Installer.csproj", "{793DF1EB-BC4B-4C04-98A6-2EA9DD89BC34}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NCX-Installer Setup", "NCX-Installer Setup\NCX-Installer Setup.vdproj", "{3BBA9C18-669C-4329-BFF4-9C91B27B553E}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NCX-Installer Setup", "NCX-Installer Setup\NCX-Installer Setup.vdproj", "{9B33ECCC-F8C3-4DCC-82BA-AAFB953EA5ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{793DF1EB-BC4B-4C04-98A6-2EA9DD89BC34}.Release|Any CPU.Build.0 = Release|Any CPU
 		{793DF1EB-BC4B-4C04-98A6-2EA9DD89BC34}.Release|x64.ActiveCfg = Release|x64
 		{793DF1EB-BC4B-4C04-98A6-2EA9DD89BC34}.Release|x64.Build.0 = Release|x64
-		{3BBA9C18-669C-4329-BFF4-9C91B27B553E}.Debug|Any CPU.ActiveCfg = Debug
-		{3BBA9C18-669C-4329-BFF4-9C91B27B553E}.Debug|x64.ActiveCfg = Debug
-		{3BBA9C18-669C-4329-BFF4-9C91B27B553E}.Release|Any CPU.ActiveCfg = Release
-		{3BBA9C18-669C-4329-BFF4-9C91B27B553E}.Release|x64.ActiveCfg = Release
+		{9B33ECCC-F8C3-4DCC-82BA-AAFB953EA5ED}.Debug|Any CPU.ActiveCfg = Debug
+		{9B33ECCC-F8C3-4DCC-82BA-AAFB953EA5ED}.Debug|x64.ActiveCfg = Debug
+		{9B33ECCC-F8C3-4DCC-82BA-AAFB953EA5ED}.Release|Any CPU.ActiveCfg = Release
+		{9B33ECCC-F8C3-4DCC-82BA-AAFB953EA5ED}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

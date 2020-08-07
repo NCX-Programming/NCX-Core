@@ -24,7 +24,7 @@
         </Button>
         <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="220,72,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="btn3_Click">
             <Button.Background>
-                <ImageBrush ImageSource="image/automod.png"/>
+                <ImageBrush ImageSource="image/c64titleloader.png"/>
             </Button.Background>
         </Button>
 

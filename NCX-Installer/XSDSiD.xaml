@@ -21,6 +21,7 @@
         <Button x:Name="btn3" Content="Back" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Button_Click_2" Background="{x:Null}"/>
         <Button Content="Photos" HorizontalAlignment="Left" Margin="348,79,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Button_Click_3" Background="{x:Null}"/>
         <Label Content="Requires External Software: 7-Zip" HorizontalAlignment="Left" Margin="190,149,0,0" VerticalAlignment="Top"/>
+        <Label Content="Downloads to your desktop as &quot;lazy-dsi-file-downloader-v.X.X.X.exe&quot;" HorizontalAlignment="Left" Margin="190,167,0,0" VerticalAlignment="Top" Height="33" Width="376"/>
 
     </Grid>
 </Page>
