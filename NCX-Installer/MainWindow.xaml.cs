@@ -96,7 +96,6 @@ namespace NCX_Installer
         {
             Updates win = new Updates();
             win.Show();
-            Hide();
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
@@ -128,6 +127,18 @@ namespace NCX_Installer
         {
             XStore win = new XStore();
             win.Show();
+        }
+
+        private void Button_Click_1_Copy(object sender, RoutedEventArgs e)
+        {
+            string message = "XWare/XWare Launcher is still in development. It will be available in v2.8. Stay tuned!";
+            string caption = "Coming Soon";
+            MessageBoxButton buttons = MessageBoxButton.OK;
+            MessageBoxImage icon = MessageBoxImage.Exclamation;
+            if (MessageBox.Show(message, caption, buttons, icon) == MessageBoxResult.OK)
+            {
+                //no code here it just closes the box
+            }
         }
     }
 }

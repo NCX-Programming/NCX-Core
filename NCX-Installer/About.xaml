@@ -8,7 +8,7 @@
         Title="About" Height="206" Width="353">
     <Grid>
         <Label Content="NCX-Installer" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Height="38" Width="314" FontWeight="Bold" FontSize="24"/>
-        <Label Content="v2.6" HorizontalAlignment="Center" Margin="0,32,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="v2.7" HorizontalAlignment="Center" Margin="0,32,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="© NinjaCheetah 2020" HorizontalAlignment="Center" Margin="0,51,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Written in C Sharp using Visual Studio 2019" HorizontalAlignment="Center" Margin="0,73,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Powered by the .NET Core 3.1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,95,0,0"/>

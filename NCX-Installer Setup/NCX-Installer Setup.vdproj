@@ -62,6 +62,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -86,6 +94,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -225,15 +241,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NCX-Installer"
-        "ProductCode" = "8:{5C2DFC22-C177-4092-948C-820E32B949EB}"
-        "PackageCode" = "8:{F5167325-4118-4226-80CC-D738758E867B}"
+        "ProductCode" = "8:{2F4FB86F-E3E8-4350-9665-A7EBEA28920D}"
+        "PackageCode" = "8:{709CE380-A987-48A5-9ACB-FE867F11578C}"
         "UpgradeCode" = "8:{BCE275FE-8549-4BC2-A0ED-1C1B447D64EC}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.6.0"
+        "ProductVersion" = "8:2.7.0"
         "Manufacturer" = "8:NCX"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

@@ -30,17 +30,7 @@ namespace NCX_Installer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow win = new MainWindow();
-            win.Show();
             Hide();
-        }
-
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            //do my stuff before closing
-
-            base.OnClosing(e);
-            Environment.Exit(0);
         }
 
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -124,7 +114,7 @@ namespace NCX_Installer
             {
                 Start_Unistall();
             }
-            else if (MessageBox.Show(message, caption, buttons, icon) == MessageBoxResult.No)
+            else
             {
                 // No code here  
             }

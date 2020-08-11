@@ -41,5 +41,17 @@ namespace NCX_Installer
             XSC64TL page = new XSC64TL();
             NavigationService.Navigate(page);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string message = "XWare is still in development. It will be available in v2.8. Stay tuned!";
+            string caption = "Coming Soon";
+            MessageBoxButton buttons = MessageBoxButton.OK;
+            MessageBoxImage icon = MessageBoxImage.Exclamation;
+            if (MessageBox.Show(message, caption, buttons, icon) == MessageBoxResult.OK)
+            {
+                //no code here it just closes the box
+            }
+        }
     }
 }

@@ -5,17 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NCX_Installer"
         mc:Ignorable="d"
-        Title="Settings" Height="222" Width="473">
+        Title="Settings" Height="310" Width="436" Background="Black">
     <Grid>
-        <Label Content="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold"/>
-        <Label Content="Your Name (Optional)" HorizontalAlignment="Left" Margin="0,45,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="5,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Height="19"/>
-        <CheckBox x:Name="checkBox1" Content="Enable Older Versions (WIP)" HorizontalAlignment="Left" Margin="0,103,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkBox3" Content="Enable Archived Projects" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkBox2" Content="Enable Beta Versions (WIP)" HorizontalAlignment="Left" Margin="0,123,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btn1" Content="Done" HorizontalAlignment="Left" Margin="366,146,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn1_Click"/>
-        <Button x:Name="btn2" Content="Cancel" HorizontalAlignment="Left" Margin="287,146,0,0" VerticalAlignment="Top" Width="74" Height="23" Visibility="Hidden"/>
-        <Button x:Name="btn3" Content="RESET" HorizontalAlignment="Left" Margin="366,118,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn3_Click"/>
+        <Label Content="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Your Name (Optional)" HorizontalAlignment="Left" Margin="0,64,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="5,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Height="19" Background="#FF323232" Foreground="White"/>
+        <CheckBox x:Name="checkBox1" Content="Enable Older Versions (WIP)" HorizontalAlignment="Left" Margin="5,138,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
+        <CheckBox x:Name="checkBox3" Content="Enable Archived Projects" HorizontalAlignment="Left" Margin="5,178,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
+        <CheckBox x:Name="checkBox2" Content="Enable Beta Versions (WIP)" HorizontalAlignment="Left" Margin="5,158,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
+        <Button x:Name="btn1" Content="Done" HorizontalAlignment="Left" Margin="328,232,0,0" VerticalAlignment="Top" Width="76" Height="23" Click="btn1_Click" Background="Black" Foreground="White"/>
+        <Button x:Name="btn2" Content="Cancel" HorizontalAlignment="Left" Margin="249,232,0,0" VerticalAlignment="Top" Width="74" Height="23" Visibility="Visible" Background="Black" Foreground="White" Click="btn2_Click"/>
+        <Button x:Name="btn3" Content="RESET" HorizontalAlignment="Left" Margin="329,204,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn3_Click" Background="Black" Foreground="White"/>
+        <Button x:Name="btn4" Content="About" HorizontalAlignment="Left" Margin="11,232,0,0" VerticalAlignment="Top" Width="74" Height="23" Visibility="Visible" Background="Black" Foreground="White" Click="btn4_Click"/>
+        <Label Content="Theme" HorizontalAlignment="Left" Margin="249,64,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <RadioButton Content="Dark" HorizontalAlignment="Left" Margin="249,95,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
 
     </Grid>
 </Window>

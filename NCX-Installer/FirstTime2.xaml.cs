@@ -86,5 +86,16 @@ namespace NCX_Installer
                 this.Close();
             }
         }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
+
+        private void btn4_Click(object sender, RoutedEventArgs e)
+        {
+            About win = new About();
+            win.Show();
+        }
     }
 }

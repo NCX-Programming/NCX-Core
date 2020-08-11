@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NCX_Installer"
         mc:Ignorable="d"
-        Title="Updates" Height="257" Width="443">
+        Title="Updates" Height="257" Width="443" Background="Black">
     <Grid>
-        <Label Content="NCX-Installer Updates" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold"/>
+        <Label Content="NCX-Installer Updates" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White"/>
         <Label HorizontalAlignment="Right" Margin="0,36,28,0" VerticalAlignment="Top" FontSize="18" Height="85" Width="396">
-            <TextBlock TextWrapping="WrapWithOverflow" Width="395">
-    Update Checking Available... but not actually because this is a beta
+            <TextBlock TextWrapping="WrapWithOverflow" Width="395" Foreground="White">
+    Update Checking Available! (look I finally fixed the text on this window)
             </TextBlock>
         </Label>
-        <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="10,192,0,0" VerticalAlignment="Top" Width="405"/>
-        <Button x:Name="btn2" Content="Check for Updates" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Height="22" Width="110" Click="btn2_Click"/>
-        <Button x:Name="btn1" Content="Back" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Height="21" Width="55" Click="Button_Click"/>
-        <Button x:Name="btn3" Content="Uninstall" HorizontalAlignment="Left" Margin="336,164,0,0" VerticalAlignment="Top" Width="79" Height="23" Click="btn3_Click"/>
-        <Label x:Name="label1" Content="" HorizontalAlignment="Left" Margin="125,164,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btn4" Content="Update" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Height="22" Width="110" Visibility="Hidden" Click="btn4_Click"/>
-        <Label x:Name="label2" Content="Preparing uninstallation..." HorizontalAlignment="Left" Margin="0,164,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Visibility="Hidden"/>
+        <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="10,192,0,0" VerticalAlignment="Top" Width="405" Background="#FF323232"/>
+        <Button x:Name="btn2" Content="Check for Updates" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Height="22" Width="110" Click="btn2_Click" Background="Black" Foreground="White"/>
+        <Button x:Name="btn1" Content="Back" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Height="21" Width="55" Click="Button_Click" Background="Black" Foreground="White"/>
+        <Button x:Name="btn3" Content="Uninstall" HorizontalAlignment="Left" Margin="336,164,0,0" VerticalAlignment="Top" Width="79" Height="23" Click="btn3_Click" Foreground="White" Background="Black"/>
+        <Label x:Name="label1" Content="" HorizontalAlignment="Left" Margin="125,164,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="btn4" Content="Update" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Height="22" Width="110" Visibility="Hidden" Click="btn4_Click" Foreground="White" Background="Black"/>
+        <Label x:Name="label2" Content="Preparing uninstallation..." HorizontalAlignment="Left" Margin="0,164,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Visibility="Hidden" Foreground="White"/>
     </Grid>
 </Window>
