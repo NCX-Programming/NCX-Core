@@ -1,4 +1,5 @@
 ![.NET Core](https://github.com/NinjaCheetah/NCX-Installer/workflows/.NET%20Core/badge.svg?branch=master)
+![Discord](https://img.shields.io/discord/714479281312366592)
 # NCX-Installer
 The easy to use hub for all my Visual Studio projects. Here to stop you from having to chase new commits and releases.
 ## Features
