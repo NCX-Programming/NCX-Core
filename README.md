@@ -1,3 +1,4 @@
+https://ninjacheetah-gaming.site/WindowsIconNCXInstaller.png
 ![.NET Core](https://github.com/NinjaCheetah/NCX-Installer/workflows/.NET%20Core/badge.svg?branch=master)
 ![GitHub All Releases](https://img.shields.io/github/downloads/NinjaCheetah/NCX-Installer/total?color=Aqua&label=Downloads)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/NinjaCheetah/NCX-Installer?label=Latest%20Release)
