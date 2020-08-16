@@ -11,7 +11,7 @@
         <Label Content="v2.7" HorizontalAlignment="Left" Margin="707,0,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label x:Name="label2" Content="News:" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White"/>
         <Label Content="Quick Launch" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="White"/>
-        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="12,209,0,0" VerticalAlignment="Top" Height="82" Width="82" Click="Button_Click_1" Visibility="Visible">
+        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="99,122,0,0" VerticalAlignment="Top" Height="82" Width="82" Click="Button_Click_1" Visibility="Visible">
             <Button.Background>
                 <ImageBrush ImageSource="image/csharpcol.png"/>
             </Button.Background>
@@ -24,9 +24,9 @@
         <Button x:Name="btn8" Content="X-Store" HorizontalAlignment="Left" Margin="12,391,0,0" VerticalAlignment="Top" Height="36" Width="104" FontSize="16" Click="btn8_Click" Foreground="White" Background="Black" BorderBrush="#FFA6A6A6"/>
         <Button x:Name="btn9" Content="Archived Projects" HorizontalAlignment="Left" Margin="121,391,0,0" VerticalAlignment="Top" Height="36" Width="104" Visibility="Visible" Click="btn9_Click" Background="Black" Foreground="White"/>
         <TextBlock x:Name="label3" HorizontalAlignment="Left" Margin="65,49,0,0" Text="Fetching News... Please wait." TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="635" FontSize="14" Foreground="White"/>
-        <Button x:Name="btn1_Copy" Content="" HorizontalAlignment="Left" Margin="99,122,0,0" VerticalAlignment="Top" Height="82" Width="82" Click="Button_Click_1_Copy" Visibility="Visible">
+        <Button x:Name="btn10" Content="" HorizontalAlignment="Left" Margin="186,122,0,0" VerticalAlignment="Top" Height="82" Width="82" Click="Button_Click_1_Copy" Visibility="Hidden">
             <Button.Background>
-                <ImageBrush ImageSource="image/xwarelaunch.png"/>
+                <ImageBrush ImageSource="image/ncxnewsplus.png"/>
             </Button.Background>
         </Button>
 

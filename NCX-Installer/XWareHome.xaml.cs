@@ -1,8 +1,5 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Net;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,41 +10,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO.Compression;
 
 namespace NCX_Installer
 {
     /// <summary>
-    /// Interaction logic for XStoreHome.xaml
+    /// Interaction logic for XWareHome.xaml
     /// </summary>
-    public partial class XStoreHome : Page
+    public partial class XWareHome : Page
     {
-        public XStoreHome()
+        public XWareHome()
         {
             InitializeComponent();
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            XSCSharpCol page = new XSCSharpCol();
-            NavigationService.Navigate(page);
-        }
-
-        private void btn2_Click(object sender, RoutedEventArgs e)
-        {
-            XSDSiD page = new XSDSiD();
-            NavigationService.Navigate(page);
-        }
-
-        private void btn3_Click(object sender, RoutedEventArgs e)
-        {
-            XSC64TL page = new XSC64TL();
+            XWareHome page = new XWareHome();
             NavigationService.Navigate(page);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            XWareHome page = new XWareHome();
+            XWareNews page = new XWareNews();
             NavigationService.Navigate(page);
         }
     }

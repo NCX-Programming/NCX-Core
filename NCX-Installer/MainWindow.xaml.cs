@@ -61,6 +61,10 @@ namespace NCX_Installer
                 win.Show();
                 win.Topmost = true;
             }
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/XWare.exe")))
+            {
+                btn10.Visibility = Visibility.Visible;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
