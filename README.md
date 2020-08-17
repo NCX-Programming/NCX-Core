@@ -1,9 +1,10 @@
+![NCX-Core Logo](https://ninjacheetah-gaming.site/WindowsIconNCXInstaller.png)
+# NCX-Installer
 ![.NET Core](https://github.com/NinjaCheetah/NCX-Installer/workflows/.NET%20Core/badge.svg?branch=master)
 ![GitHub All Releases](https://img.shields.io/github/downloads/NinjaCheetah/NCX-Installer/total?color=Aqua&label=Downloads)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/NinjaCheetah/NCX-Installer?label=Latest%20Release)
 ![Discord](https://img.shields.io/discord/714479281312366592?label=Discord)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020?label=Maintained)
-# NCX-Installer
 The easy to use hub for all my Visual Studio projects. Here to stop you from having to chase new commits and releases.
 ## Features
 - Semi-Auto updating: Will download the latest installer file and run it
