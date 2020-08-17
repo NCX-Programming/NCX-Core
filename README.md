@@ -5,7 +5,7 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/NinjaCheetah/NCX-Installer?label=Latest%20Release)
 ![Discord](https://img.shields.io/discord/714479281312366592?label=Discord)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020?label=Maintained)
-The easy to use hub for all my Visual Studio projects. Here to stop you from having to chase new commits and releases.
+## The easy to use hub for all my Visual Studio projects. Here to stop you from having to chase new commits and releases.
 ## Features
 - Semi-Auto updating: Will download the latest installer file and run it
 - Can download and auto run installers for my programs that support being installed
