@@ -21,14 +21,19 @@ namespace NCX_Installer
         public XStore()
         {
             InitializeComponent();
-            if (NavSettings.Default.comingFrom == "")
+            switch (NavSettings.Default.comingFrom)
             {
-                _NavigationFrame.Navigate(new XStoreHome());
-            }
-            else if (NavSettings.Default.comingFrom == "cscol")
-            {
-                NavSettings.Default.comingFrom = "";
-                _NavigationFrame.Navigate(new XSCSharpCol());
+                case "cscol":
+                    NavSettings.Default.comingFrom = "";
+                    _NavigationFrame.Navigate(new XSCSharpCol());
+                    break;
+                case "nplus":
+                    NavSettings.Default.comingFrom = "";
+                    _NavigationFrame.Navigate(new XWareNews());
+                    break;
+                default:
+                    _NavigationFrame.Navigate(new XStoreHome());
+                    break;
             }
         }
     }

@@ -8,7 +8,7 @@
         Title="Main Menu" Height="476" Width="758" Background="Black">
     <Grid>
         <Label x:Name="label1" Content="placeholder text" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
-        <Label Content="v2.7" HorizontalAlignment="Left" Margin="707,0,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="v2.8" HorizontalAlignment="Left" Margin="707,0,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label x:Name="label2" Content="News:" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White"/>
         <Label Content="Quick Launch" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="White"/>
         <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="99,122,0,0" VerticalAlignment="Top" Height="82" Width="82" Click="Button_Click_1" Visibility="Hidden">
@@ -29,6 +29,8 @@
                 <ImageBrush ImageSource="image/ncxnewsplus.png"/>
             </Button.Background>
         </Button>
+        <Button Content="Reload" HorizontalAlignment="Left" Margin="227,400,0,0" VerticalAlignment="Top" Height="22" Width="75" Foreground="White" Background="Black" Click="Button_Click_2"/>
+        <TextBlock Text="If software doesn't appear after installing or the news won't update, click &quot;Reload&quot;" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="310,398,0,0" VerticalAlignment="Top" Foreground="White" Height="42" Width="286"/>
 
     </Grid>
 </Window>

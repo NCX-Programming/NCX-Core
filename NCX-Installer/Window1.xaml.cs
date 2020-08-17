@@ -19,6 +19,8 @@ namespace NCX_Installer
     /// </summary>
     public partial class Window1 : Window
     {
+        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
         public Window1()
         {
             InitializeComponent();
@@ -27,6 +29,11 @@ namespace NCX_Installer
                 btn1.Visibility = Visibility.Visible;
                 btn2.Visibility = Visibility.Visible;
             }
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            {
+                btn3.Visibility = Visibility.Visible;
+                btn4.Visibility = Visibility.Visible;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -34,12 +41,6 @@ namespace NCX_Installer
             MainWindow win = new MainWindow();
             win.Show();
             Hide();
-        }
-
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            Environment.Exit(0);
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
@@ -65,9 +66,17 @@ namespace NCX_Installer
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-            NavSettings.Default.comingFrom = "am";
+            NavSettings.Default.comingFrom = "nplus";
             XStore win = new XStore();
             win.Show();
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            {
+                Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
+            }
         }
     }
 }

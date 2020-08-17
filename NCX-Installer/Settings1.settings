@@ -18,7 +18,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="version" Type="System.Decimal" Scope="Application">
-      <Value Profile="(Default)">2.7</Value>
+      <Value Profile="(Default)">2.8</Value>
     </Setting>
   </Settings>
 </SettingsFile>

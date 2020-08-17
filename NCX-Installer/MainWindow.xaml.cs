@@ -76,7 +76,7 @@ namespace NCX_Installer
                 win.Show();
                 win.Topmost = true;
             }
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/XWare.exe")))
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
             {
                 btn10.Visibility = Visibility.Visible;
             }
@@ -108,7 +108,6 @@ namespace NCX_Installer
         {
             Window1 win = new Window1();
             win.Show();
-            Hide();
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
@@ -162,9 +161,16 @@ namespace NCX_Installer
 
         private void btn10_Click(object sender, RoutedEventArgs e)
         {
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/XWare.exe"))) {
-                Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/XWare.exe"));
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"))) {
+                Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
             }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MainWindow win = new MainWindow();
+            win.Show();
+            Hide();
         }
     }
 }

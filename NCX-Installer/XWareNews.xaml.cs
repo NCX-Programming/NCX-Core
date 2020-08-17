@@ -111,10 +111,6 @@ namespace NCX_Installer
             File.Delete(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip"));
             label1.Content = "Download Complete";
             NavSettings.Default.mainReload = true;
-            MainWindow win = new MainWindow();
-            win.Hide();
-            MainWindow win2 = new MainWindow();
-            win2.Show();
         }
 
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
