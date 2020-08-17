@@ -74,6 +74,7 @@ namespace NCX_Installer
                     {
                         btn5.Visibility = Visibility.Hidden;
                         label1.Visibility = Visibility.Visible;
+                        wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                         wc.DownloadFileCompleted += DownloadCompleted;
                         wc.DownloadFileAsync(
                             // Param1 = Link of file
@@ -88,9 +89,11 @@ namespace NCX_Installer
             {
                 Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core"));
                 Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"));
-                Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"));
                 using (WebClient wc = new WebClient())
                 {
+                    btn5.Visibility = Visibility.Hidden;
+                    label1.Visibility = Visibility.Visible;
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileCompleted += DownloadCompleted;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
@@ -107,6 +110,11 @@ namespace NCX_Installer
             ZipFile.ExtractToDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip"), System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"), true);
             File.Delete(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip"));
             label1.Content = "Download Complete";
+            NavSettings.Default.mainReload = true;
+            MainWindow win = new MainWindow();
+            win.Hide();
+            MainWindow win2 = new MainWindow();
+            win2.Show();
         }
 
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)

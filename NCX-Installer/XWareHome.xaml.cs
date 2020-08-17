@@ -25,7 +25,7 @@ namespace NCX_Installer
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            XWareHome page = new XWareHome();
+            XStoreHome page = new XStoreHome();
             NavigationService.Navigate(page);
         }
 

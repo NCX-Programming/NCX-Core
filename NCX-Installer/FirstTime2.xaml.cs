@@ -51,7 +51,7 @@ namespace NCX_Installer
                 Process.Start(Application.ResourceAssembly.Location);
                 Application.Current.Shutdown();
             }
-            else if (MessageBox.Show(message, caption, buttons, icon) == MessageBoxResult.No)
+            else
             {
                 string message2 = "Some changes may not take effect until you restart the program.";
                 string caption2 = "Restart Recommended";

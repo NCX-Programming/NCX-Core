@@ -41,16 +41,31 @@ namespace NCX_Installer
             {
                 btn9.Visibility = Visibility.Visible;
             }
-            using (WebClient wc = new WebClient())
+            
+            if (NavSettings.Default.mainReload == false)
             {
-                wc.DownloadFileCompleted += DownloadCompleted;
-                wc.DownloadFileAsync(
-                    // Param1 = Link of file
-                    new System.Uri("https://github.com/NinjaCheetah/NCX-Installer-News/releases/latest/download/newsLatest.txt"),
-                    // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, "newsLatest.txt")
-                );
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadFileCompleted += DownloadCompleted;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://github.com/NinjaCheetah/NCX-Installer-News/releases/latest/download/newsLatest.txt"),
+                        // Param2 = Path to save
+                        System.IO.Path.Combine(SavePath, "newsLatest.txt")
+                    );
+                }
             }
+            else if (NavSettings.Default.mainReload == true)
+            {
+                NavSettings.Default.mainReload = false;
+                TextReader tr = new StreamReader(System.IO.Path.Combine(SavePath, "newsLatest.txt"));
+                string newsString = tr.ReadLine();
+                newstext = Convert.ToString(newsString);
+                tr.Close();
+                label3.Text = newsString;
+            }
+
+            
             if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
             {
                 btn1.Visibility = Visibility.Visible;
@@ -142,6 +157,13 @@ namespace NCX_Installer
             if (MessageBox.Show(message, caption, buttons, icon) == MessageBoxResult.OK)
             {
                 //no code here it just closes the box
+            }
+        }
+
+        private void btn10_Click(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/XWare.exe"))) {
+                Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/XWare.exe"));
             }
         }
     }
