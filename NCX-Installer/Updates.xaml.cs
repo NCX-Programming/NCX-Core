@@ -166,5 +166,10 @@ namespace NCX_Installer
                 Environment.Exit(0);
             }
         }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

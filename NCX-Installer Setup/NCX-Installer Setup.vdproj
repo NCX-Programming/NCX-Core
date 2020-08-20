@@ -241,15 +241,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NCX-Core"
-        "ProductCode" = "8:{06AC378E-ECE5-4D38-BBAE-B49CD169E070}"
-        "PackageCode" = "8:{9B3897F2-F612-45F3-9BED-A71FA903BC34}"
+        "ProductCode" = "8:{3E50B922-71D7-4E23-B63A-D98717AF41A0}"
+        "PackageCode" = "8:{FE2839D4-06AD-4AE1-AF97-1FB4F1F7EDD2}"
         "UpgradeCode" = "8:{BCE275FE-8549-4BC2-A0ED-1C1B447D64EC}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.8.0"
+        "ProductVersion" = "8:2.9.0"
         "Manufacturer" = "8:NCX"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -824,7 +824,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B818BE398EDD43208C365D3587DBA364"
             {
-            "SourcePath" = "8:..\\NCX-Installer\\obj\\x64\\Debug\\netcoreapp3.1\\NCX-Core.exe"
+            "SourcePath" = "8:..\\NCX-Installer\\obj\\x64\\Release\\netcoreapp3.1\\NCX-Core.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_EDD77D79A8FB49A597997A7318E62B0C"
@@ -852,7 +852,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_DE932C85E39D4015B3144618273DC42A"
             {
-            "SourcePath" = "8:..\\NCX-Installer\\obj\\x64\\Debug\\netcoreapp3.1\\NCX-Core.dll"
+            "SourcePath" = "8:..\\NCX-Installer\\obj\\x64\\Release\\netcoreapp3.1\\NCX-Core.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_EDD77D79A8FB49A597997A7318E62B0C"

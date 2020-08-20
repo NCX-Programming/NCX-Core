@@ -20,5 +20,6 @@
         <Label x:Name="label1" Content="" HorizontalAlignment="Left" Margin="125,164,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Button x:Name="btn4" Content="Update" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Height="22" Width="110" Visibility="Hidden" Click="btn4_Click" Foreground="White" Background="Black"/>
         <Label x:Name="label2" Content="Preparing uninstallation..." HorizontalAlignment="Left" Margin="0,164,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Visibility="Hidden" Foreground="White"/>
+        <Button x:Name="btn5" Content="Nightly" HorizontalAlignment="Left" Margin="336,136,0,0" VerticalAlignment="Top" Height="23" Width="79" Foreground="White" Background="Black" Click="btn5_Click"/>
     </Grid>
 </Window>
