@@ -1,6 +1,6 @@
 <p align="center">
 <img src="https://ninjacheetah-gaming.site/WindowsIconNCXInstaller.png"/>
-<h1>MCX-Core</h1>
+<h1>NCX-Core</h1>
 
  For more info visit:	
 <p align="center">
