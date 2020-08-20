@@ -23,6 +23,10 @@ namespace NCX_Installer
         public Updates()
         {
             InitializeComponent();
+            if (Settings1.Default.betaVer == true)
+            {
+                btn5.Visibility = Visibility.Visible;
+            }
         }
 
         static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -161,7 +165,7 @@ namespace NCX_Installer
                 Directory.SetCurrentDirectory(SavePath);
                 Process p = new Process();
                 p.StartInfo.FileName = "msiexec";
-                p.StartInfo.Arguments = "/i NCXCoreInstaller.msi";
+                p.StartInfo.Arguments = "/i NCXCoreSetup.msi";
                 p.Start();
                 Environment.Exit(0);
             }
@@ -169,7 +173,29 @@ namespace NCX_Installer
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
+            label1.Content = "Downloading the latest NCX-Core beta...";
+            using (WebClient wc = new WebClient())
+            {
+                wc.DownloadFileCompleted += DownloadCompleted4;
+                wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                wc.DownloadFileAsync(
+                    // Param1 = Link of file
+                    new System.Uri("https://github.com/NinjaCheetah/NCX-Core/raw/master/Beta/NCXCoreNightlySetup.msi"),
+                    // Param2 = Path to save
+                    System.IO.Path.Combine(SavePath, "NCXCoreNightlySetup.msi")
+                );
+            }
+        }
 
+        public void DownloadCompleted4(object sender, EventArgs e)
+        {
+            label1.Content = "Download completed.";
+            Directory.SetCurrentDirectory(SavePath);
+            Process p = new Process();
+            p.StartInfo.FileName = "msiexec";
+            p.StartInfo.Arguments = "/i NCXCoreNightlySetup.msi";
+            p.Start();
+            Environment.Exit(0);
         }
     }
 }
