@@ -26,7 +26,7 @@ namespace NCX_Installer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string url = "https://github.com/NinjaCheetah/NCX-Installer";
+            string url = "https://github.com/NinjaCheetah/NCX-Core";
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
     }

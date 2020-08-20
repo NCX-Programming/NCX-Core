@@ -22,6 +22,7 @@
         <Button Content="Photos" HorizontalAlignment="Left" Margin="348,79,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Button_Click_3" Background="{x:Null}" Foreground="White"/>
         <Label Content="Requires External Software: Vice Emulator" HorizontalAlignment="Left" Margin="190,173,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Downloads to your desktop as &quot;loader.d64&quot;" HorizontalAlignment="Left" Margin="190,190,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="btn4" Content="Nightly" HorizontalAlignment="Left" Margin="89,279,0,0" VerticalAlignment="Top" Foreground="White" Background="Black" Height="23" Width="75" Click="Button_Click_5" Visibility="Hidden"/>
 
     </Grid>
 </Page>

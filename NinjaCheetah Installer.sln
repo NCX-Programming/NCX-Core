@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCX-Installer", "NCX-Installer\NCX-Installer.csproj", "{793DF1EB-BC4B-4C04-98A6-2EA9DD89BC34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCX-Core", "NCX-Installer\NCX-Core.csproj", "{793DF1EB-BC4B-4C04-98A6-2EA9DD89BC34}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NCX-Installer Setup", "NCX-Installer Setup\NCX-Installer Setup.vdproj", "{9B33ECCC-F8C3-4DCC-82BA-AAFB953EA5ED}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NCX-Core Setup", "NCX-Installer Setup\NCX-Installer Setup.vdproj", "{9B33ECCC-F8C3-4DCC-82BA-AAFB953EA5ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

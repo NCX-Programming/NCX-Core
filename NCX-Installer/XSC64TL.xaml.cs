@@ -26,6 +26,10 @@ namespace NCX_Installer
         public XSC64TL()
         {
             InitializeComponent();
+            if (Settings1.Default.betaVer == true)
+            {
+                btn4.Visibility = Visibility.Visible;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -78,6 +82,23 @@ namespace NCX_Installer
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             progressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            using (WebClient wc = new WebClient())
+            {
+                btn5.Visibility = Visibility.Hidden;
+                label1.Visibility = Visibility.Visible;
+                wc.DownloadFileCompleted += DownloadCompleted;
+                wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                wc.DownloadFileAsync(
+                    // Param1 = Link of file
+                    new System.Uri("https://github.com/IanSkinner1982/C64-title-loader/raw/master/build/loader.prg"),
+                    // Param2 = Path to save
+                    System.IO.Path.Combine(SavePath, "loader-nightly.prg")
+                );
+            }
         }
     }
 }

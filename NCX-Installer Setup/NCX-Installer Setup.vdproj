@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:NCX-Installer Setup"
+"ProjectName" = "8:NCX-Core Setup"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -240,7 +240,7 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:NCX-Installer"
+        "ProductName" = "8:NCX-Core"
         "ProductCode" = "8:{06AC378E-ECE5-4D38-BBAE-B49CD169E070}"
         "PackageCode" = "8:{9B3897F2-F612-45F3-9BED-A71FA903BC34}"
         "UpgradeCode" = "8:{BCE275FE-8549-4BC2-A0ED-1C1B447D64EC}"
@@ -253,7 +253,7 @@
         "Manufacturer" = "8:NCX"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:NCX-Installer Setup"
+        "Title" = "8:NCX-Core Setup"
         "Subject" = "8:"
         "ARPCONTACT" = "8:NCX"
         "Keywords" = "8:"
@@ -736,7 +736,7 @@
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
                             "Setting" = "3:2"
-                            "Value" = "8:Thanks for choosing NCX-Installer! This installer will guide you through the steps required to install [ProductName] on your computer."
+                            "Value" = "8:Thanks for choosing NCX-Core! This installer will guide you through the steps required to install [ProductName] on your computer."
                             "DefaultValue" = "8:#1203"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -824,7 +824,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B818BE398EDD43208C365D3587DBA364"
             {
-            "SourcePath" = "8:..\\NCX-Installer\\obj\\x64\\Release\\netcoreapp3.1\\NCX-Installer.exe"
+            "SourcePath" = "8:..\\NCX-Installer\\obj\\x64\\Debug\\netcoreapp3.1\\NCX-Core.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_EDD77D79A8FB49A597997A7318E62B0C"
@@ -852,7 +852,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_DE932C85E39D4015B3144618273DC42A"
             {
-            "SourcePath" = "8:..\\NCX-Installer\\obj\\x64\\Release\\netcoreapp3.1\\NCX-Installer.dll"
+            "SourcePath" = "8:..\\NCX-Installer\\obj\\x64\\Debug\\netcoreapp3.1\\NCX-Core.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_EDD77D79A8FB49A597997A7318E62B0C"

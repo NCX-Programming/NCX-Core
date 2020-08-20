@@ -8,7 +8,7 @@
         Title="Main Menu" Height="476" Width="758" Background="Black">
     <Grid>
         <Label x:Name="label1" Content="placeholder text" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
-        <Label Content="v2.8" HorizontalAlignment="Left" Margin="707,0,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="v2.9" HorizontalAlignment="Left" Margin="707,0,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label x:Name="label2" Content="News:" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White"/>
         <Label Content="Quick Launch" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="White"/>
         <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="99,122,0,0" VerticalAlignment="Top" Height="82" Width="82" Click="Button_Click_1" Visibility="Hidden">

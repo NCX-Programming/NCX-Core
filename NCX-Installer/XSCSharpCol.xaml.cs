@@ -27,7 +27,7 @@ namespace NCX_Installer
         public XSCSharpCol()
         {
             InitializeComponent();
-            if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
+            if (File.Exists("C:/Program Files/NCX/CSharpCollection/CSharpCollection.exe"))
             {
                 btn6.Visibility = Visibility.Visible;
             }
@@ -35,7 +35,7 @@ namespace NCX_Installer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string url = "https://github.com/NinjaCheetah/CSharp-Collection-Vol1";
+            string url = "https://github.com/NinjaCheetah/CSharp-Collection";
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
 
@@ -67,7 +67,7 @@ namespace NCX_Installer
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
-                    new System.Uri("https://github.com/NinjaCheetah/CSharp-Collection-Vol1/releases/latest/download/CSharpCollectionSetup.msi"),
+                    new System.Uri("https://github.com/NinjaCheetah/CSharp-Collection/releases/latest/download/CSharpCollectionSetup.msi"),
                     // Param2 = Path to save
                     System.IO.Path.Combine(SavePath, "CSharpCollectionSetup.msi")
                 );
@@ -91,9 +91,9 @@ namespace NCX_Installer
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
-            if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
+            if (File.Exists("C:/Program Files/NCX/CSharpCollection/CSharpCollection.exe"))
             {
-                Process.Start("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe");
+                Process.Start("C:/Program Files/NCX/CSharpCollection/CSharpCollection.exe");
             }
         }
     }

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Updates" Height="257" Width="443" Background="Black">
     <Grid>
-        <Label Content="NCX-Installer Updates" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White"/>
+        <Label Content="NCX-Core Updates" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White"/>
         <Label HorizontalAlignment="Right" Margin="0,36,28,0" VerticalAlignment="Top" FontSize="18" Height="85" Width="396">
             <TextBlock TextWrapping="WrapWithOverflow" Width="395" Foreground="White">
     Update Checking Available! (look I finally fixed the text on this window)

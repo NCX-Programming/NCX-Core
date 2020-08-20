@@ -66,7 +66,7 @@ namespace NCX_Installer
             }
 
             
-            if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
+            if (File.Exists("C:/Program Files/NCX/CSharpCollection/CSharpCollection.exe"))
             {
                 btn1.Visibility = Visibility.Visible;
             }
@@ -89,9 +89,9 @@ namespace NCX_Installer
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
+            if (File.Exists("C:/Program Files/NCX/CSharpCollection/CSharpCollection.exe"))
             {
-                Process.Start("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe");
+                Process.Start("C:/Program Files/NCX/CSharpCollection/CSharpCollection.exe");
             }
         }
 

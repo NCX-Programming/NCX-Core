@@ -12,7 +12,7 @@
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="5,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Height="19" Background="#FF323232" Foreground="White"/>
         <CheckBox x:Name="checkBox1" Content="Enable Older Versions (WIP)" HorizontalAlignment="Left" Margin="5,138,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
         <CheckBox x:Name="checkBox3" Content="Enable Archived Projects" HorizontalAlignment="Left" Margin="5,178,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
-        <CheckBox x:Name="checkBox2" Content="Enable Beta Versions (WIP)" HorizontalAlignment="Left" Margin="5,158,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
+        <CheckBox x:Name="checkBox2" Content="Enable Beta Versions" HorizontalAlignment="Left" Margin="5,158,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
         <Button x:Name="btn1" Content="Done" HorizontalAlignment="Left" Margin="328,232,0,0" VerticalAlignment="Top" Width="76" Height="23" Click="btn1_Click" Background="Black" Foreground="White"/>
         <Button x:Name="btn2" Content="Cancel" HorizontalAlignment="Left" Margin="249,232,0,0" VerticalAlignment="Top" Width="74" Height="23" Visibility="Visible" Background="Black" Foreground="White" Click="btn2_Click"/>
         <Button x:Name="btn3" Content="RESET" HorizontalAlignment="Left" Margin="329,204,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn3_Click" Background="Black" Foreground="White"/>

@@ -82,7 +82,7 @@ namespace NCX_Installer
             Directory.SetCurrentDirectory(SavePath);
             Process p = new Process();
             p.StartInfo.FileName = "msiexec";
-            p.StartInfo.Arguments = "/i NinjaCheetahInstallerSetup.msi";
+            p.StartInfo.Arguments = "/i NCXCoreSetup.msi";
             p.Start();
             Environment.Exit(0);
         }
@@ -97,9 +97,9 @@ namespace NCX_Installer
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
-                    new System.Uri("https://github.com/NinjaCheetah/NCX-Installer/releases/latest/download/NinjaCheetahInstallerSetup.msi"),
+                    new System.Uri("https://github.com/NinjaCheetah/NCX-Core/releases/latest/download/NCXCoreSetup.msi"),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, "NinjaCheetahInstallerSetup.msi")
+                    System.IO.Path.Combine(SavePath, "NCXCoreSetup.msi")
                 );
             }
         }
@@ -141,9 +141,9 @@ namespace NCX_Installer
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
-                    new System.Uri("https://github.com/NinjaCheetah/NCX-Installer/releases/latest/download/NinjaCheetahInstallerSetup.msi"),
+                    new System.Uri("https://github.com/NinjaCheetah/NCX-Core/releases/latest/download/NCXCoreSetup.msi"),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, "NinjaCheetahInstallerSetup.msi")
+                    System.IO.Path.Combine(SavePath, "NCXCoreSetup.msi")
                 );
             }
         }
@@ -161,7 +161,7 @@ namespace NCX_Installer
                 Directory.SetCurrentDirectory(SavePath);
                 Process p = new Process();
                 p.StartInfo.FileName = "msiexec";
-                p.StartInfo.Arguments = "/i NinjaCheetahInstallerSetup.msi";
+                p.StartInfo.Arguments = "/i NCXCoreInstaller.msi";
                 p.Start();
                 Environment.Exit(0);
             }
