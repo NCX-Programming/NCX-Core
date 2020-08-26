@@ -8,13 +8,18 @@
       d:DesignHeight="350" d:DesignWidth="600"
       Title="X-Store" Background="Black">
 
-    <Grid>
+    <Grid x:Name="btn3">
         <Label Content="XWare" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White"/>
         <Label Content="Stuff to add functionality to NCX-Core!" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
         <Label Content="XWare is still a work in progress. Many changes may occur in the future." HorizontalAlignment="Left" Margin="0,283,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="Button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/ncxnewsplus.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="115,72,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="btn2_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="image/coreupdater.png"/>
             </Button.Background>
         </Button>
         <Button Content="Back" HorizontalAlignment="Left" Margin="10,263,0,0" VerticalAlignment="Top" Height="23" Width="75" Click="btn1_Click" Background="Black" Foreground="White"/>

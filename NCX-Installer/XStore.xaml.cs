@@ -31,6 +31,10 @@ namespace NCX_Installer
                     NavSettings.Default.comingFrom = "";
                     _NavigationFrame.Navigate(new XWareNews());
                     break;
+                case "coreup":
+                    NavSettings.Default.comingFrom = "";
+                    _NavigationFrame.Navigate(new XWareUpdater());
+                    break;
                 default:
                     _NavigationFrame.Navigate(new XStoreHome());
                     break;

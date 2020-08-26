@@ -112,8 +112,53 @@ namespace NCX_Installer
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-            Updates win = new Updates();
-            win.Show();
+            
+            if (Directory.Exists(System.IO.Path.Combine(SavePath, "NCX-Core")))
+            {
+                if (Directory.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater")))
+                {
+                    //Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
+                    ProcessStartInfo info = new ProcessStartInfo(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
+                    info.UseShellExecute = true;
+                    info.Verb = "runas";
+                    
+                    Process.Start(info);
+                }
+                else
+                {
+                    string message = "You do not have NCX-Core Updater installed. Would you like to go to X-Store and install it?";
+                    string caption = "Updater Not Installer";
+                    MessageBoxButton buttons = MessageBoxButton.YesNo;
+                    MessageBoxImage icon = MessageBoxImage.Exclamation;
+                    if (MessageBox.Show(message, caption, buttons, icon) == MessageBoxResult.Yes)
+                    {
+                        NavSettings.Default.comingFrom = "coreup";
+                        XStore win = new XStore();
+                        win.Show();
+                    }
+                    else
+                    {
+                        // No code here  
+                    }
+                }
+            }
+            else
+            {
+                string message = "You do not have NCX-Core Updater installed. Would you like to go to X-Store and install it?";
+                string caption = "Updater Not Installer";
+                MessageBoxButton buttons = MessageBoxButton.YesNo;
+                MessageBoxImage icon = MessageBoxImage.Exclamation;
+                if (MessageBox.Show(message, caption, buttons, icon) == MessageBoxResult.Yes)
+                {
+                    NavSettings.Default.comingFrom = "update";
+                    XStore win = new XStore();
+                    win.Show();
+                }
+                else
+                {
+                    // No code here  
+                }
+            }
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)

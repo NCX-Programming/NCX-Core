@@ -18,8 +18,9 @@
   <ItemGroup>
     <None Remove="AutoMod.png" />
     <None Remove="CSharp.png" />
-    <None Remove="Icon.ico" />
     <None Remove="image\c64titleloader.png" />
+    <None Remove="image\coreupdater.png" />
+    <None Remove="image\csharpcol.png" />
     <None Remove="image\dsidownloader.png" />
     <None Remove="image\firsttime.png" />
     <None Remove="image\ncxnewsplus.png" />
@@ -38,14 +39,14 @@
 
   <ItemGroup>
     <Resource Include="image\c64titleloader.png" />
+    <Resource Include="image\coreupdater.png" />
+    <Resource Include="image\csharpcol.png" />
     <Resource Include="image\ncxnewsplus.png" />
     <Resource Include="image\screen\c64tl2.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Icon.ico" />
     <Resource Include="image\automod.png" />
-    <Resource Include="image\csharpcol.png" />
     <Resource Include="image\dsidownloader.png" />
     <Resource Include="image\firsttime.png" />
     <Resource Include="image\screen\am1.png" />

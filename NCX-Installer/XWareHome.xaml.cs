@@ -34,5 +34,11 @@ namespace NCX_Installer
             XWareNews page = new XWareNews();
             NavigationService.Navigate(page);
         }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            XWareUpdater page = new XWareUpdater();
+            NavigationService.Navigate(page);
+        }
     }
 }
