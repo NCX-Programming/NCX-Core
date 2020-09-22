@@ -1,0 +1,31 @@
+﻿<Page x:Class="NCX_Installer.MainMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NCX_Installer"
+      mc:Ignorable="d" 
+      Title="MainMenu" Height="450" Width="800" Background="Black">
+
+    <Grid>
+        <Button Content="" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="image/menu/store.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Margin="0,157,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="image/menu/settings.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="image/menu/about.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="53" Source="image/menu/home1.png"/>
+        <Label Content="Welcome back!" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="40"/>
+        <Label Content="NCX-News:" HorizontalAlignment="Left" Height="39" Margin="80,63,0,0" VerticalAlignment="Top" Width="120" Foreground="#FF00FFC9" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="187,68,0,0" Text="Loading NCX-News... Please wait." TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+    </Grid>
+</Page>

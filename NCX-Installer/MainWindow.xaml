@@ -29,8 +29,7 @@
                 <ImageBrush ImageSource="image/ncxnewsplus.png"/>
             </Button.Background>
         </Button>
-        <Button Content="Reload" HorizontalAlignment="Left" Margin="227,400,0,0" VerticalAlignment="Top" Height="22" Width="75" Foreground="White" Background="Black" Click="Button_Click_2"/>
-        <TextBlock Text="If software doesn't appear after installing or the news won't update, click &quot;Reload&quot;" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="310,398,0,0" VerticalAlignment="Top" Foreground="White" Height="42" Width="286"/>
+        <Button Content="Development Menu" HorizontalAlignment="Left" Margin="227,400,0,0" VerticalAlignment="Top" Height="22" Width="152" Foreground="White" Background="Black" Click="Button_Click_2"/>
 
     </Grid>
 </Window>
