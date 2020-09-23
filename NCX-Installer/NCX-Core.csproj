@@ -46,6 +46,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="image\c64titleloader.png" />
     <Resource Include="image\coreupdater.png" />
     <Resource Include="image\csharpcol.png" />
