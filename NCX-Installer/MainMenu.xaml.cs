@@ -88,7 +88,7 @@ namespace NCX_Installer
                     banner = "image/csharpcol.png";
                     break;
                 case "ncxnewsplus":
-                    banner = "image/ncxnewsplus.png";
+                    banner = "image/banner/ncxnewsplus.png";
                     break;
                 case "c64titleloader":
                     banner = "image/c64titleloader.png";
