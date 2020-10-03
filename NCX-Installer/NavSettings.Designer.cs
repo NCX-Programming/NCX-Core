@@ -38,12 +38,12 @@ namespace NCX_Installer {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool mainReload {
+        public bool filesDownloaded {
             get {
-                return ((bool)(this["mainReload"]));
+                return ((bool)(this["filesDownloaded"]));
             }
             set {
-                this["mainReload"] = value;
+                this["filesDownloaded"] = value;
             }
         }
     }

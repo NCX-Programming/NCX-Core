@@ -50,5 +50,17 @@ namespace NCX_Installer
             XWareHome page = new XWareHome();
             NavigationService.Navigate(page);
         }
+
+        private void btn4_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu page = new MainMenu();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn3_Click_1(object sender, RoutedEventArgs e)
+        {
+            Library page = new Library();
+            NavigationService.Navigate(page);
+        }
     }
 }

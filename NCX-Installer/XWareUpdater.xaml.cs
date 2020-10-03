@@ -115,7 +115,7 @@ namespace NCX_Installer
             ZipFile.ExtractToDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip"), System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater"), true);
             File.Delete(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip"));
             label1.Content = "Download Complete";
-            NavSettings.Default.mainReload = true;
+            NavSettings.Default.filesDownloaded = true;
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)

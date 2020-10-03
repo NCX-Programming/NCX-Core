@@ -5,7 +5,7 @@
     <Setting Name="comingFrom" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="mainReload" Type="System.Boolean" Scope="User">
+    <Setting Name="filesDownloaded" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>

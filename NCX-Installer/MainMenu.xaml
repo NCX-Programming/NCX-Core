@@ -7,13 +7,13 @@
       mc:Ignorable="d" 
       Title="MainMenu" Height="450" Width="800" Background="Black">
 
-    <Grid>
-        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070">
+    <Grid x:Name="btn8">
+        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,162,0,0" VerticalAlignment="Top" Height="80" Width="56" BorderBrush="#00707070" Click="btn1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/store.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,157,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070">
+        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/settings.png"/>
             </Button.Background>
@@ -40,6 +40,10 @@
         <TextBlock x:Name="label3" Text="" HorizontalAlignment="Left" Margin="260,304,0,0" VerticalAlignment="Top" Foreground="White" TextWrapping="Wrap" Height="37" Width="98"/>
         <TextBlock x:Name="label4" Text="" HorizontalAlignment="Left" Margin="463,304,0,0" VerticalAlignment="Top" Foreground="White" TextWrapping="Wrap" Height="37" Width="87"/>
         <TextBlock x:Name="label5" Text="" HorizontalAlignment="Left" Margin="655,305,0,0" VerticalAlignment="Top" Foreground="White" TextWrapping="Wrap" Height="37" Width="98"/>
-
+        <Button x:Name="btn9" Content="" HorizontalAlignment="Left" Margin="0,83,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070" Click="btn9_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="image/menu/library.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

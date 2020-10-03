@@ -28,6 +28,8 @@
     <None Remove="image\menu\about1.png" />
     <None Remove="image\menu\home.png" />
     <None Remove="image\menu\home1.png" />
+    <None Remove="image\menu\library.png" />
+    <None Remove="image\menu\library1.png" />
     <None Remove="image\menu\settings.png" />
     <None Remove="image\menu\settings1.png" />
     <None Remove="image\menu\store.png" />
@@ -59,6 +61,8 @@
     <Resource Include="image\menu\about1.png" />
     <Resource Include="image\menu\home.png" />
     <Resource Include="image\menu\home1.png" />
+    <Resource Include="image\menu\library.png" />
+    <Resource Include="image\menu\library1.png" />
     <Resource Include="image\menu\settings.png" />
     <Resource Include="image\menu\settings1.png" />
     <Resource Include="image\menu\store.png" />

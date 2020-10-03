@@ -5,31 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NCX_Installer"
         mc:Ignorable="d"
-        Title="Main Menu" Height="476" Width="758" Background="Black">
+        Title="NCX-Core" Height="450" Width="800" Background="Black">
     <Grid>
-        <Label x:Name="label1" Content="placeholder text" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
-        <Label Content="v2.9" HorizontalAlignment="Left" Margin="707,0,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label x:Name="label2" Content="News:" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White"/>
-        <Label Content="Quick Launch" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="White"/>
-        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="99,122,0,0" VerticalAlignment="Top" Height="82" Width="82" Click="Button_Click_1" Visibility="Hidden">
-            <Button.Background>
-                <ImageBrush ImageSource="image/csharpcol.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn3" Content="Show All" HorizontalAlignment="Left" Margin="12,122,0,0" VerticalAlignment="Top" Height="82" Width="82" FontSize="16" FontWeight="Bold" Background="{x:Null}" Click="Button_Click_3" Foreground="White"/>
-        <Button x:Name="btn6" Content="Exit" HorizontalAlignment="Left" Margin="663,404,0,0" VerticalAlignment="Top" Height="23" Width="75" Click="Button_Click" Foreground="White" Background="Black"/>
-        <Button x:Name="btn5" Content="Updates" HorizontalAlignment="Left" Margin="663,375,0,0" VerticalAlignment="Top" Height="23" Width="74" Click="btn5_Click" Background="Black" Foreground="White"/>
-        <Button x:Name="btn7" Content="Settings" HorizontalAlignment="Left" Margin="663,347,0,0" VerticalAlignment="Top" Height="23" Width="75" Click="btn7_Click" Background="Black" Foreground="White">
-        </Button>
-        <Button x:Name="btn8" Content="X-Store" HorizontalAlignment="Left" Margin="12,391,0,0" VerticalAlignment="Top" Height="36" Width="104" FontSize="16" Click="btn8_Click" Foreground="White" Background="Black" BorderBrush="#FFA6A6A6"/>
-        <Button x:Name="btn9" Content="Archived Projects" HorizontalAlignment="Left" Margin="121,391,0,0" VerticalAlignment="Top" Height="36" Width="104" Visibility="Visible" Click="btn9_Click" Background="Black" Foreground="White"/>
-        <TextBlock x:Name="label3" HorizontalAlignment="Left" Margin="65,49,0,0" Text="Fetching News... Please wait." TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="635" FontSize="14" Foreground="White"/>
-        <Button x:Name="btn10" Content="" HorizontalAlignment="Left" Margin="186,122,0,0" VerticalAlignment="Top" Height="82" Width="82" Click="btn10_Click" Visibility="Hidden">
-            <Button.Background>
-                <ImageBrush ImageSource="image/ncxnewsplus.png"/>
-            </Button.Background>
-        </Button>
-        <Button Content="Development Menu" HorizontalAlignment="Left" Margin="227,400,0,0" VerticalAlignment="Top" Height="22" Width="152" Foreground="White" Background="Black" Click="Button_Click_2"/>
-
+        <Frame Content="" x:Name="_NavigationFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

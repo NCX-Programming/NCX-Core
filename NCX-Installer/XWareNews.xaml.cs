@@ -110,7 +110,7 @@ namespace NCX_Installer
             ZipFile.ExtractToDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip"), System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"), true);
             File.Delete(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip"));
             label1.Content = "Download Complete";
-            NavSettings.Default.mainReload = true;
+            NavSettings.Default.filesDownloaded = true;
         }
 
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
