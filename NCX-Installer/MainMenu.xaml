@@ -8,22 +8,22 @@
       Title="MainMenu" Height="450" Width="800" Background="Black">
 
     <Grid x:Name="btn8">
-        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,162,0,0" VerticalAlignment="Top" Height="80" Width="56" BorderBrush="#00707070" Click="btn1_Click">
+        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,158,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/store.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070">
+        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,316,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/settings.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070">
+        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="0,237,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/about.png"/>
             </Button.Background>
         </Button>
-        <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="53" Source="image/menu/home1.png"/>
+        <Image HorizontalAlignment="Left" Height="79" Margin="0,-1,0,0" VerticalAlignment="Top" Width="53" Source="image/menu/home1.png"/>
         <Label x:Name="label1" Content="Welcome back!" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="40"/>
         <Label Content="NCX-News:" HorizontalAlignment="Left" Height="39" Margin="80,47,0,0" VerticalAlignment="Top" Width="120" Foreground="#FF00FFC9" FontSize="20"/>
         <TextBlock x:Name="label2" HorizontalAlignment="Left" Margin="188,57,0,0" Text="Loading NCX-News... Please wait." TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="15"/>
@@ -40,7 +40,7 @@
         <TextBlock x:Name="label3" Text="" HorizontalAlignment="Left" Margin="260,304,0,0" VerticalAlignment="Top" Foreground="White" TextWrapping="Wrap" Height="37" Width="98"/>
         <TextBlock x:Name="label4" Text="" HorizontalAlignment="Left" Margin="463,304,0,0" VerticalAlignment="Top" Foreground="White" TextWrapping="Wrap" Height="37" Width="87"/>
         <TextBlock x:Name="label5" Text="" HorizontalAlignment="Left" Margin="655,305,0,0" VerticalAlignment="Top" Foreground="White" TextWrapping="Wrap" Height="37" Width="98"/>
-        <Button x:Name="btn9" Content="" HorizontalAlignment="Left" Margin="0,83,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070" Click="btn9_Click">
+        <Button x:Name="btn9" Content="" HorizontalAlignment="Left" Margin="0,79,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn9_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/library.png"/>
             </Button.Background>

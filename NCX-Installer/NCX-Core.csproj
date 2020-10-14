@@ -18,6 +18,7 @@
   <ItemGroup>
     <None Remove="AutoMod.png" />
     <None Remove="CSharp.png" />
+    <None Remove="image\banner\csharpcollection.png" />
     <None Remove="image\banner\ncxnewsplus.png" />
     <None Remove="image\c64titleloader.png" />
     <None Remove="image\coreupdater.png" />
@@ -53,6 +54,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="image\banner\csharpcollection.png" />
     <Resource Include="image\banner\ncxnewsplus.png" />
     <Resource Include="image\c64titleloader.png" />
     <Resource Include="image\coreupdater.png" />

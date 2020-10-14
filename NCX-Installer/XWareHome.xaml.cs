@@ -25,17 +25,47 @@ namespace NCX_Installer
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            XStoreHome page = new XStoreHome();
+            MainMenu page = new MainMenu();
             NavigationService.Navigate(page);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            XWareNews page = new XWareNews();
+            Library page = new Library();
             NavigationService.Navigate(page);
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            Library page = new Library();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn4_Click(object sender, RoutedEventArgs e)
+        {
+            About page = new About();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+            FirstTime2 page = new FirstTime2();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            XStoreHome page = new XStoreHome();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn6_Click(object sender, RoutedEventArgs e)
+        {
+            XWareNews page = new XWareNews();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn7_Click(object sender, RoutedEventArgs e)
         {
             XWareUpdater page = new XWareUpdater();
             NavigationService.Navigate(page);

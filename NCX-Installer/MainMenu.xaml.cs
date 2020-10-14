@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -244,7 +245,7 @@ namespace NCX_Installer
             switch (menu.Featured)
             {
                 case "cscol":
-                    banner = "image/csharpcol.png";
+                    banner = "image/banner/csharpcollection.png";
                     break;
                 case "ncxnewsplus":
                     banner = "image/banner/ncxnewsplus.png";
@@ -528,6 +529,14 @@ namespace NCX_Installer
         {
             Library page = new Library();
             NavigationService.Navigate(page);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            {
+                Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
+            }
         }
     }
 }

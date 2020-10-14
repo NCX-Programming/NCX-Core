@@ -9,49 +9,44 @@
       Title="X-Store" Background="Black">
 
     <Grid>
-        <Label Content="Welcome to X-Store!" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="270,70,0,0"/>
-        <Label Content="Currently Available Software" HorizontalAlignment="Left" Margin="258,120,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <Button x:Name="tmpbtn1" Content="" HorizontalAlignment="Left" Margin="517,215,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="btn1_Click">
+        <Label Content="XStore" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="61,10,0,0"/>
+        <Button x:Name="tmpbtn1" Content="" HorizontalAlignment="Left" Margin="67,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/csharpcol.png"/>
             </Button.Background>
         </Button>
-        <Label Content="Please note: X-Store does not include archived projects, they are only available from GitHub" HorizontalAlignment="Left" Margin="270,368,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button x:Name="tmpbtn2" Content="" HorizontalAlignment="Left" Margin="467,92,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="btn2_Click">
+        <Button x:Name="tmpbtn2" Content="" HorizontalAlignment="Left" Margin="247,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn2_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/dsidownloader.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="tmpbtn3" Content="" HorizontalAlignment="Left" Margin="589,97,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="btn3_Click">
+        <Button x:Name="tmpbtn3" Content="" HorizontalAlignment="Left" Margin="157,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn3_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/c64titleloader.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Margin="375,236,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="Button_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="image/xware.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070">
+        <Button Content="XWare" HorizontalAlignment="Left" Margin="709,10,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="Button_Click" Background="Black" Foreground="White" FontSize="19"/>
+        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn1_Click_1">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/settings.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070">
+        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/about.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="0,83,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070" Click="btn3_Click_1">
+        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn3_Click_1">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/library.png"/>
             </Button.Background>
         </Button>
-        <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="53" Source="image/menu/store1.png" Margin="2,157,0,0"/>
-        <Button x:Name="btn4" Content="" HorizontalAlignment="Left" Margin="0,-1,0,0" VerticalAlignment="Top" Height="79" Width="56" BorderBrush="#00707070" Click="btn4_Click">
+        <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="53" Source="image/menu/store1.png" Margin="0,157,0,0"/>
+        <Button x:Name="btn4" Content="" HorizontalAlignment="Left" Margin="0,-1,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn4_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/home.png"/>
             </Button.Background>
         </Button>
+        <Label Content="The best place to download programs from small creators!" HorizontalAlignment="Left" Margin="61,40,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
     </Grid>
 </Page>

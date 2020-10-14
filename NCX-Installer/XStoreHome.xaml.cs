@@ -62,5 +62,10 @@ namespace NCX_Installer
             Library page = new Library();
             NavigationService.Navigate(page);
         }
+
+        private void btn1_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
