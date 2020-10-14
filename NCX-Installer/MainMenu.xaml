@@ -13,12 +13,12 @@
                 <ImageBrush ImageSource="image/menu/store.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,316,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070">
+        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,316,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn2_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/settings.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="0,237,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070">
+        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="0,237,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn3_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/about.png"/>
             </Button.Background>

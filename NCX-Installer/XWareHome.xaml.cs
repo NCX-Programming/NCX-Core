@@ -49,7 +49,7 @@ namespace NCX_Installer
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-            FirstTime2 page = new FirstTime2();
+            Settings page = new Settings();
             NavigationService.Navigate(page);
         }
 

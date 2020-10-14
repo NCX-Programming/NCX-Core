@@ -65,7 +65,8 @@ namespace NCX_Installer
 
         private void btn1_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Settings page = new Settings();
+            NavigationService.Navigate(page);
         }
     }
 }

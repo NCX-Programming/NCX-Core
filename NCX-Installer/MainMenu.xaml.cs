@@ -538,5 +538,17 @@ namespace NCX_Installer
                 Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
             }
         }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            Settings page = new Settings();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            About page = new About();
+            NavigationService.Navigate(page);
+        }
     }
 }

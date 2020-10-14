@@ -34,18 +34,17 @@
                 <ImageBrush ImageSource="image/menu/settings.png"/>
             </Button.Background>
         </Button>
-        <Label Content="XWare" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="233,100,0,0"/>
-        <Label Content="Stuff to add functionality to NCX-Core!" HorizontalAlignment="Left" Margin="323,78,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <Button x:Name="btn6" Content="" HorizontalAlignment="Left" Margin="264,208,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="btn6_Click">
+        <Label Content="XWare" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="61,10,0,0"/>
+        <Label Content="Stuff to add functionality to NCX-Core!" HorizontalAlignment="Left" Margin="61,40,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White"/>
+        <Button x:Name="btn6" Content="" HorizontalAlignment="Left" Margin="157,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn6_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/ncxnewsplus.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn7" Content="" HorizontalAlignment="Left" Margin="328,141,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="btn7_Click">
+        <Button x:Name="btn7" Content="" HorizontalAlignment="Left" Margin="67,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn7_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/coreupdater.png"/>
             </Button.Background>
         </Button>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="203,168,0,0" VerticalAlignment="Top" Height="23" Width="75" Click="btn1_Click" Background="Black" Foreground="White"/>
     </Grid>
 </Page>

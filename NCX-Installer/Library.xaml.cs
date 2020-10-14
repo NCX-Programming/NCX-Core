@@ -105,5 +105,11 @@ namespace NCX_Installer
             proc.StartInfo.Verb = "runas";
             proc.Start();
         }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            Settings page = new Settings();
+            NavigationService.Navigate(page);
+        }
     }
 }
