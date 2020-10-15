@@ -1,10 +1,10 @@
 <p align="center">
-<img src="https://ninjacheetah-gaming.site/WindowsIconNCXInstaller.png"/>
+<img src="https://ninjacheetah-gaming.site/NewNCXCoreLogo.png"/>
 <h1>NCX-Core</h1>
 
  For more info visit:	
+</p>
 <p align="center">
-</a>	
 <a href="https://discord.com/invite/TbPXuFr" style="padding-left: 5px; padding-right: 5px;">
 		<img src="https://img.shields.io/badge/Discord-Server-purple.svg" height="20">
 </a>
@@ -12,9 +12,8 @@
 		<img src="https://img.shields.io/badge/YouTube-Channel-red.svg" height="20">
   </a>
 </p>    
-Stats
 <p align="center">
-</a>	
+Stats	
 <a href="https://github.com/NinjaCheetah/CSharp-Collection/workflows/.NET%20Core/badge.svg?branch=master" style="padding-left: 5px; padding-right: 5px;">
 		<img src="https://github.com/NinjaCheetah/CSharp-Collection/workflows/.NET%20Core/badge.svg?branch=master" height="20">
 	</a>	
@@ -32,3 +31,4 @@ You do not need to update the program to get the latest releases of my projects!
 
 # Credits
 [@IanSkinner1982](https://github.com/IanSkinner1982/) For writing my README
+[@Garhoogin](https://github.com/Garhoogin/) For making the settings icon (Used in v3.0+)
