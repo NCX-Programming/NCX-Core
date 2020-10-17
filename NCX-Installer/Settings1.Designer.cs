@@ -85,10 +85,10 @@ namespace NCX_Installer {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2.9")]
-        public decimal version {
+        [global::System.Configuration.DefaultSettingValueAttribute("3.0 Beta 2")]
+        public string version {
             get {
-                return ((decimal)(this["version"]));
+                return ((string)(this["version"]));
             }
         }
     }

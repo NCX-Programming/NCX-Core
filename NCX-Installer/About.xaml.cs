@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,9 +20,12 @@ namespace NCX_Installer
     /// </summary>
     public partial class About : Page
     {
+        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
         public About()
         {
             InitializeComponent();
+            label1.Content = Settings1.Default.version;
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
@@ -52,6 +56,37 @@ namespace NCX_Installer
         {
             string url = "https://github.com/NinjaCheetah/NCX-Core";
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (!File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe")))
+            {
+                string message = "As of NCX-Core v3.0, the built-in update menu has been removed. Please install NCX-Core Updater from XStore.\n \nGo to Store > XWare > NCX-Core Updater, then click Install.";
+                string caption = "NCX-Core Updater Not Installed";
+                MessageBoxButton buttons = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Exclamation;
+                if (MessageBox.Show(message, caption, buttons, icon) == MessageBoxResult.OK)
+                {
+                    
+                }
+            }
+            else
+            {
+                if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe")))
+                {
+                    ExecuteAsAdmin(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
+                }
+            }
+        }
+
+        public void ExecuteAsAdmin(string fileName)
+        {
+            Process proc = new Process();
+            proc.StartInfo.FileName = fileName;
+            proc.StartInfo.UseShellExecute = true;
+            proc.StartInfo.Verb = "runas";
+            proc.Start();
         }
     }
 }

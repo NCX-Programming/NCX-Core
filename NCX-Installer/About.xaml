@@ -38,6 +38,6 @@
         <Button x:Name="btn5" Content="GitHub Page" HorizontalAlignment="Left" Margin="61,370,0,0" VerticalAlignment="Top" Height="24" Width="84" Click="btn5_Click" Foreground="White" Background="Black"/>
         <Label Content="NCX-News+ stories written by IanSkinner1982 (Link in repo)" HorizontalAlignment="Left" Margin="61,184,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
         <Label Content="Settings icon by Garhoogin (Link in Repo)" HorizontalAlignment="Left" Margin="61,215,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
-        <Button Content="Updates" HorizontalAlignment="Left" Margin="689,10,0,0" VerticalAlignment="Top" Foreground="White" Background="Black" Height="50" Width="84" FontWeight="Bold"/>
+        <Button Content="Updates" HorizontalAlignment="Left" Margin="689,10,0,0" VerticalAlignment="Top" Foreground="White" Background="Black" Height="50" Width="84" FontWeight="Bold" Click="Button_Click"/>
     </Grid>
 </Page>

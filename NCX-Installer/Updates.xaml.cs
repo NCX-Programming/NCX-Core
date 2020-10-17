@@ -30,7 +30,7 @@ namespace NCX_Installer
         }
 
         static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        public decimal updateNum;
+        public string updateNum;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -59,25 +59,20 @@ namespace NCX_Installer
 
         public void DownloadCompleted(object sender, EventArgs e)
         {
-            string text = File.ReadAllText(System.IO.Path.Combine(SavePath, "updateNotice.txt"));
+            string updateNum = File.ReadAllText(System.IO.Path.Combine(SavePath, "updateNotice.txt"));
             // updateNum = Decimal.Parse(text);
-            updateNum = Convert.ToDecimal(text);
+            // updateNum = Convert.ToDecimal(text);
             label1.Content = "Fetching release data...";
             if (updateNum == Settings1.Default.version)
             {
                 label1.Content = "You are using the latest release!";
                 btn2.Content = "Check Again";
             }
-            else if (updateNum > Settings1.Default.version)
+            else
             {
                 label1.Content = "There is an update available: v" + updateNum;
                 btn4.Visibility = Visibility.Visible;
                 btn3.Visibility = Visibility.Hidden;
-            }
-            else if (updateNum < Settings1.Default.version)
-            {
-                label1.Content = "Either this is a beta or something has gone very wrong";
-                btn2.Content = "Check Again";
             }
         }
 
