@@ -26,10 +26,7 @@ namespace NCX_Installer
         public XSC64TL()
         {
             InitializeComponent();
-            if (Settings1.Default.betaVer == true)
-            {
-                btn4.Visibility = Visibility.Visible;
-            }
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -85,6 +82,77 @@ namespace NCX_Installer
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btn6_Click(object sender, RoutedEventArgs e)
+        {
+            img1.Source = (ImageSource)FindResource("image1");
+        }
+
+        private void btn9_Click(object sender, RoutedEventArgs e)
+        {
+            img1.Source = (ImageSource)FindResource("image2");
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu page = new MainMenu();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            Library page = new Library();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            XStoreHome page = new XStoreHome();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn4_Click(object sender, RoutedEventArgs e)
+        {
+            About page = new About();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+            Settings page = new Settings();
+            NavigationService.Navigate(page);
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            if (Settings1.Default.betaVer == true)
+            {
+                btn11.Visibility = Visibility.Hidden;
+                btn10.Visibility = Visibility.Visible;
+                btn8.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                using (WebClient wc = new WebClient())
+                {
+                    btn5.Visibility = Visibility.Hidden;
+                    label1.Visibility = Visibility.Visible;
+                    wc.DownloadFileCompleted += DownloadCompleted;
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://github.com/IanSkinner1982/C64-title-loader/raw/master/build/loader.prg"),
+                        // Param2 = Path to save
+                        System.IO.Path.Combine(SavePath, "loader-nightly.prg")
+                    );
+                }
+            }
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
         {
             using (WebClient wc = new WebClient())
             {
