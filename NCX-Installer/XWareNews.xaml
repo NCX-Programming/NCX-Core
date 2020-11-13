@@ -5,21 +5,44 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NCX_Installer"
       mc:Ignorable="d" 
-      d:DesignHeight="350" d:DesignWidth="600"
+      d:DesignHeight="450" d:DesignWidth="800"
       Title="X-Store" Background="Black">
 
     <Grid>
-        <Image HorizontalAlignment="Left" Height="175" Margin="10,10,0,0" VerticalAlignment="Top" Width="175" Source="image/ncxnewsplus.png"/>
-        <Label Content="NCX News Plus" HorizontalAlignment="Left" Margin="185,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="26" Foreground="White"/>
-        <Label Content="By NinjaCheetah" HorizontalAlignment="Left" Margin="185,42,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
-        <Button x:Name="btn1" Content="User Page" HorizontalAlignment="Left" Margin="190,79,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Button_Click_1" Background="{x:Null}" Foreground="White"/>
-        <Button x:Name="btn2" Content="GitHub" HorizontalAlignment="Left" Margin="269,79,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Button_Click" Background="{x:Null}" Foreground="White"/>
-        <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="19" Margin="10,198,0,0" VerticalAlignment="Top" Width="175" Background="#FF323232"/>
-        <Label x:Name="label1" Content="Downloading... Please wait." HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="175" FontSize="13" Visibility="Hidden" Foreground="White"/>
-        <Button x:Name="btn5" Content="Install" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click_4" Foreground="White" Background="Black"/>
-        <TextBlock HorizontalAlignment="Left" Margin="190,107,0,0" Text="NCX News Plus provides full news stories when I release them, along with the ability to see the edition and date of each article." TextWrapping="Wrap" VerticalAlignment="Top" Height="84" Width="290" FontSize="15" Foreground="White"/>
-        <Button x:Name="btn3" Content="Back" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Button_Click_2" Background="{x:Null}" Foreground="White"/>
-        <Button x:Name="btn6" Content="Launch" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="btn6_Click" Background="{x:Null}" Visibility="Hidden" Foreground="White"/>
-
+        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,-1,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn1_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="image/menu/home.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn2_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="image/menu/library.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="0,157,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn3_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="image/menu/store.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn4" Content="" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn4_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="image/menu/about.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn5" Content="" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn5_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="image/menu/settings.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="73,10,0,0" VerticalAlignment="Top" Width="100" Source="image/ncxnewsplus.png"/>
+        <Label Content="NCX-News+" HorizontalAlignment="Left" Margin="173,4,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="32" Foreground="White"/>
+        <Label Content="By NinjaCheetah" HorizontalAlignment="Left" Margin="173,40,0,0" VerticalAlignment="Top" FontSize="23" Foreground="White"/>
+        <Button Content="User Page" HorizontalAlignment="Left" Margin="178,78,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Button_Click_1" Background="{x:Null}" Foreground="White"/>
+        <Button Content="GitHub" HorizontalAlignment="Left" Margin="257,78,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Button_Click" Background="{x:Null}" Foreground="White"/>
+        <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="336,80,0,0" VerticalAlignment="Top" Width="175" Background="#FF323232"/>
+        <Label x:Name="label1" Content="Downloading... Please wait." HorizontalAlignment="Left" Margin="336,98,0,0" VerticalAlignment="Top" Width="174" FontSize="13" Visibility="Hidden" Foreground="White"/>
+        <Button x:Name="btn8" Content="Add to NCX-Core" HorizontalAlignment="Left" Margin="336,78,0,0" VerticalAlignment="Top" Height="23" Width="174" Click="Button_Click_4" Foreground="White" Background="Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="73,118,0,0" Text="NCX-News+ is the best place to read full length NCX-News stories with information about things like software updates. News kindly written by IanSkinner1982." TextWrapping="Wrap" VerticalAlignment="Top" Height="96" Width="388" FontSize="18" Foreground="White"/>
+        <Button x:Name="btn7" Content="Launch" HorizontalAlignment="Left" Margin="73,214,0,0" VerticalAlignment="Top" Width="74" Height="24" Click="btn7_Click" Background="{x:Null}" Visibility="Hidden" Foreground="White"/>
     </Grid>
 </Page>

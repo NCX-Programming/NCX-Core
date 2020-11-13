@@ -27,6 +27,10 @@ namespace NCX_Installer
         public XWareNews()
         {
             InitializeComponent();
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            {
+                btn7.Visibility = Visibility.Visible;
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -55,7 +59,7 @@ namespace NCX_Installer
                 {
                     using (WebClient wc = new WebClient())
                     {
-                        btn5.Visibility = Visibility.Hidden;
+                        btn8.Visibility = Visibility.Hidden;
                         label1.Visibility = Visibility.Visible;
                         wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                         wc.DownloadFileCompleted += DownloadCompleted;
@@ -72,7 +76,7 @@ namespace NCX_Installer
                     Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"));
                     using (WebClient wc = new WebClient())
                     {
-                        btn5.Visibility = Visibility.Hidden;
+                        btn8.Visibility = Visibility.Hidden;
                         label1.Visibility = Visibility.Visible;
                         wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                         wc.DownloadFileCompleted += DownloadCompleted;
@@ -91,7 +95,7 @@ namespace NCX_Installer
                 Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"));
                 using (WebClient wc = new WebClient())
                 {
-                    btn5.Visibility = Visibility.Hidden;
+                    btn8.Visibility = Visibility.Hidden;
                     label1.Visibility = Visibility.Visible;
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileCompleted += DownloadCompleted;
@@ -123,6 +127,44 @@ namespace NCX_Installer
             if (File.Exists("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe"))
             {
                 Process.Start("C:/Program Files/NCX/CSharp Collection/CSharpCollectionVol1.exe");
+            }
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu page = new MainMenu();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            Library page = new Library();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            XStoreHome page = new XStoreHome();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn4_Click(object sender, RoutedEventArgs e)
+        {
+            About page = new About();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+            Settings page = new Settings();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn7_Click(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            {
+                Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
             }
         }
     }

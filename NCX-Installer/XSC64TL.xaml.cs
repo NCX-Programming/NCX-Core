@@ -47,17 +47,12 @@ namespace NCX_Installer
             NavigationService.Navigate(page);
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            XSC64TLP page = new XSC64TLP();
-            NavigationService.Navigate(page);
-        }
-
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             using (WebClient wc = new WebClient())
             {
-                btn5.Visibility = Visibility.Hidden;
+                btn8.Visibility = Visibility.Hidden;
+                btn10.Visibility = Visibility.Hidden;
                 label1.Visibility = Visibility.Visible;
                 wc.DownloadFileCompleted += DownloadCompleted;
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
@@ -138,15 +133,15 @@ namespace NCX_Installer
             {
                 using (WebClient wc = new WebClient())
                 {
-                    btn5.Visibility = Visibility.Hidden;
+                    btn11.Visibility = Visibility.Hidden;
                     label1.Visibility = Visibility.Visible;
                     wc.DownloadFileCompleted += DownloadCompleted;
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        new System.Uri("https://github.com/IanSkinner1982/C64-title-loader/raw/master/build/loader.prg"),
+                        new System.Uri("https://github.com/IanSkinner1982/C64-title-loader/releases/latest/download/loader.d64"),
                         // Param2 = Path to save
-                        System.IO.Path.Combine(SavePath, "loader-nightly.prg")
+                        System.IO.Path.Combine(SavePath, "loader.d64")
                     );
                 }
             }
@@ -156,7 +151,8 @@ namespace NCX_Installer
         {
             using (WebClient wc = new WebClient())
             {
-                btn5.Visibility = Visibility.Hidden;
+                btn8.Visibility = Visibility.Hidden;
+                btn10.Visibility = Visibility.Hidden;
                 label1.Visibility = Visibility.Visible;
                 wc.DownloadFileCompleted += DownloadCompleted;
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
