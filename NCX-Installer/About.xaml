@@ -31,10 +31,10 @@
             </Button.Background>
         </Button>
         <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="53" Source="image/menu/about1.png" Margin="0,236,0,0"/>
-        <Label x:Name="label1" Content="v2.9" HorizontalAlignment="Left" Margin="61,60,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <Label x:Name="label1" Content="v3.0 Release Candidate" HorizontalAlignment="Left" Margin="61,60,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
         <Label Content="© NinjaCheetah 2020" HorizontalAlignment="Left" Margin="61,91,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
         <Label Content="Written in C Sharp using Visual Studio 2019" HorizontalAlignment="Left" Margin="61,122,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <Label Content="Powered by the .NET Core 3.1" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="61,153,0,0" Foreground="White"/>
+        <Label Content="Powered by .NET 5.0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="61,153,0,0" Foreground="White"/>
         <Button x:Name="btn5" Content="GitHub Page" HorizontalAlignment="Left" Margin="61,370,0,0" VerticalAlignment="Top" Height="24" Width="84" Click="btn5_Click" Foreground="White" Background="Black"/>
         <Label Content="NCX-News+ stories written by IanSkinner1982 (Link in repo)" HorizontalAlignment="Left" Margin="61,184,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
         <Label Content="Settings icon by Garhoogin (Link in Repo)" HorizontalAlignment="Left" Margin="61,215,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>

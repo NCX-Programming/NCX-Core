@@ -155,7 +155,19 @@ namespace NCX_Installer
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe")))
+            {
+                ExecuteAsAdmin(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
+            }
+        }
 
+        public void ExecuteAsAdmin(string fileName)
+        {
+            Process proc = new Process();
+            proc.StartInfo.FileName = fileName;
+            proc.StartInfo.UseShellExecute = true;
+            proc.StartInfo.Verb = "runas";
+            proc.Start();
         }
     }
 }
