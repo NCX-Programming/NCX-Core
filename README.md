@@ -2,9 +2,11 @@
 <img src="https://ninjacheetah-gaming.site/NewNCXCoreLogo.png"/>
 <h1>NCX-Core</h1>
 
- For more info visit:	
+	
 </p>
-<p align="center">
+<p align="center"> 
+For more info visit:
+<br>
 <a href="https://discord.com/invite/TbPXuFr" style="padding-left: 5px; padding-right: 5px;">
 		<img src="https://img.shields.io/badge/Discord-Server-purple.svg" height="20">
 </a>
@@ -12,8 +14,10 @@
 		<img src="https://img.shields.io/badge/YouTube-Channel-red.svg" height="20">
   </a>
 </p>  
-Stats
+
 <p align="center">
+Stats
+<br>
 <a href="https://github.com/NinjaCheetah/CSharp-Collection/workflows/.NET%20Core/badge.svg?branch=master" style="padding-left: 5px; padding-right: 5px;">
 		<img src="https://github.com/NinjaCheetah/CSharp-Collection/workflows/.NET%20Core/badge.svg?branch=master" height="20">
 	</a>	
