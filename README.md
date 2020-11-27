@@ -26,12 +26,17 @@ Stats
 	</p>	
 
 
-## The easy to use hub for all my Visual Studio projects. Here to stop you from having to chase new commits and releases.
+## The easy to use one-stop shop to download and update programs made not just by me, but by other small developers. Now easier to use than ever!
 ## Features
-- Semi-Auto updating: Will download the latest installer file and run it
-- Can download and auto run installers for my programs that support being installed
+- Able to dowload and update other programs
+- Built-in "app store" to easily find and install programs
+- NCX-News, a service to tell you when new programs or updates are available
+- Featured programs, as well as recently updated programs shown on the main menu (As of v3.0)
 
-You do not need to update the program to get the latest releases of my projects! It will get the latest release from GitHub. Updates for NCX-Installer are only pushed to fix bugs and to add options to install newly released programs, that were not presesnt in the previous release.
+# System Requirements
+- Windows 10, 64-bit
+- .NET 5.0 Runtime
+- (If you can run Windows, you can run this program)
 
 # Credits
 - [@IanSkinner1982](https://github.com/IanSkinner1982/) For writing my README
