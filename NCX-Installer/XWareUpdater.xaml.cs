@@ -158,6 +158,8 @@ namespace NCX_Installer
             if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe")))
             {
                 ExecuteAsAdmin(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
+                string text = Settings1.Default.version;
+                File.WriteAllText(System.IO.Path.Combine(SavePath, "version.txt"), text);
             }
         }
 

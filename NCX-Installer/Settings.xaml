@@ -36,9 +36,10 @@
         <CheckBox x:Name="checkBox2" Content="Enable Archived Projects" HorizontalAlignment="Left" Margin="61,162,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
         <CheckBox x:Name="checkBox1" Content="Enable Beta Versions" HorizontalAlignment="Left" Margin="61,142,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
         <Label Content="Theme" HorizontalAlignment="Left" Margin="336,60,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
-        <RadioButton Content="Dark" HorizontalAlignment="Left" Margin="336,94,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
+        <RadioButton x:Name="radioButton1" Content="Dark" HorizontalAlignment="Left" Margin="336,94,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232"/>
         <Button x:Name="btn6" Content="Save" HorizontalAlignment="Left" Margin="61,371,0,0" VerticalAlignment="Top" Width="76" Height="23" Click="btn6_Click" Background="Black" Foreground="White"/>
         <Button x:Name="btn7" Content="RESET" HorizontalAlignment="Left" Margin="142,371,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn7_Click" Background="Black" Foreground="White"/>
+        <RadioButton x:Name="radioButton2" Content="Light" HorizontalAlignment="Left" Margin="336,118,0,0" VerticalAlignment="Top" Background="#FF323232" Foreground="White"/>
 
     </Grid>
 </Page>

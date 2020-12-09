@@ -25,7 +25,7 @@ namespace NCX_Installer
         public About()
         {
             InitializeComponent();
-            label1.Content = Settings1.Default.version;
+            label1.Content = "v" + Settings1.Default.version;
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
@@ -76,6 +76,8 @@ namespace NCX_Installer
                 if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe")))
                 {
                     ExecuteAsAdmin(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
+                    string text = Settings1.Default.version;
+                    File.WriteAllText(System.IO.Path.Combine(SavePath, "version.txt"), text);
                 }
             }
         }

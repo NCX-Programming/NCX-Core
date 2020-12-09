@@ -85,10 +85,22 @@ namespace NCX_Installer {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("3.0 Release Candidate")]
+        [global::System.Configuration.DefaultSettingValueAttribute("3.0")]
         public string version {
             get {
                 return ((string)(this["version"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool lightTheme {
+            get {
+                return ((bool)(this["lightTheme"]));
+            }
+            set {
+                this["lightTheme"] = value;
             }
         }
     }

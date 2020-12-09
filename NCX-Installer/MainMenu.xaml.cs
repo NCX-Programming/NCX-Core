@@ -47,6 +47,13 @@ namespace NCX_Installer
             {
                 label1.Content = "Welcome back!";
             }
+            if (Settings1.Default.lightTheme == true)
+            {
+                this.Background = Brushes.White;
+                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
+                label4.Foreground = Brushes.Black; label5.Foreground = Brushes.Black; label6.Foreground = Brushes.Black;
+                label7.Foreground = Brushes.Black;
+            }
             if (NavSettings.Default.filesDownloaded == false)
             {
                 using (WebClient wc = new WebClient())
@@ -224,6 +231,10 @@ namespace NCX_Installer
                     brush4.ImageSource = temp4;
 
                     btn7.Background = brush4;
+                }
+                if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+                {
+                    btn10.Visibility = Visibility.Visible;
                 }
             }
         }
@@ -549,6 +560,14 @@ namespace NCX_Installer
         {
             About page = new About();
             NavigationService.Navigate(page);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            {
+                Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
+            }
         }
     }
 }

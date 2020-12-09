@@ -25,6 +25,8 @@ namespace NCX_Installer
             textBox1.Text = Settings1.Default.name;
             checkBox1.IsChecked = Settings1.Default.betaVer;
             checkBox2.IsChecked = Settings1.Default.oldVer;
+            if (Settings1.Default.lightTheme == true) radioButton2.IsChecked = true;
+            else radioButton1.IsChecked = true;
             if (Settings1.Default.firstTime == false)
             {
                 btn7.Visibility = Visibility.Visible;
@@ -37,6 +39,8 @@ namespace NCX_Installer
             Settings1.Default.name = textBox1.Text;
             Settings1.Default.betaVer = (bool)checkBox1.IsChecked;
             Settings1.Default.oldVer = (bool)checkBox2.IsChecked;
+            if (radioButton1.IsChecked == true) Settings1.Default.lightTheme = false;
+            else if (radioButton2.IsChecked == true) Settings1.Default.lightTheme = true;
             Settings1.Default.Save();
 
             string message = "Your settings have been saved. Some changes might require a restart to take effect.";

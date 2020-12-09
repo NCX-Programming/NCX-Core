@@ -74,6 +74,8 @@ namespace NCX_Installer
             {
                 ExecuteAsAdmin(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
                 // Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
+                string text = Settings1.Default.version;
+                File.WriteAllText(System.IO.Path.Combine(SavePath, "version.txt"), text);
             }
         }
 
