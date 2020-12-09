@@ -171,5 +171,10 @@ namespace NCX_Installer
                 );
             }
         }
+
+        private void btn13_Click(object sender, RoutedEventArgs e)
+        {
+            img1.Source = (ImageSource)FindResource("image3");
+        }
     }
 }

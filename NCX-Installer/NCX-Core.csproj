@@ -40,6 +40,7 @@
     <None Remove="image\screen\am2.png" />
     <None Remove="image\screen\c64tl1.png" />
     <None Remove="image\screen\c64tl2.png" />
+    <None Remove="image\screen\c64tl3.png" />
     <None Remove="image\screen\cscol1.png" />
     <None Remove="image\screen\cscol2.png" />
     <None Remove="image\screen\ldsi1.png" />
@@ -80,6 +81,7 @@
     <Resource Include="image\screen\am1.png" />
     <Resource Include="image\screen\am2.png" />
     <Resource Include="image\screen\c64tl1.png" />
+    <Resource Include="image\screen\c64tl3.png" />
     <Resource Include="image\screen\cscol1.png" />
     <Resource Include="image\screen\cscol2.png" />
     <Resource Include="image\screen\ldsi1.png" />
