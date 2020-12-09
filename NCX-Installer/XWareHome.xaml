@@ -34,8 +34,8 @@
                 <ImageBrush ImageSource="image/menu/settings.png"/>
             </Button.Background>
         </Button>
-        <Label Content="XWare" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="61,10,0,0"/>
-        <Label Content="Stuff to add functionality to NCX-Core!" HorizontalAlignment="Left" Margin="61,40,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White"/>
+        <Label x:Name="label1" Content="XWare" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="61,10,0,0"/>
+        <Label x:Name="label2" Content="Stuff to add functionality to NCX-Core!" HorizontalAlignment="Left" Margin="61,40,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White"/>
         <Button x:Name="btn6" Content="" HorizontalAlignment="Left" Margin="157,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn6_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/ncxnewsplus.png"/>

@@ -9,7 +9,7 @@
       Title="About" Background="Black">
 
     <Grid>
-        <Label Content="About NCX-Core" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="61,10,0,0"/>
+        <Label x:Name="label2" Content="About NCX-Core" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="61,10,0,0"/>
         <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,-1,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/home.png"/>
@@ -32,12 +32,12 @@
         </Button>
         <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="53" Source="image/menu/about1.png" Margin="0,236,0,0"/>
         <Label x:Name="label1" Content="v0.0" HorizontalAlignment="Left" Margin="61,60,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <Label Content="© NinjaCheetah 2020" HorizontalAlignment="Left" Margin="61,91,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <Label Content="Written in C Sharp using Visual Studio 2019" HorizontalAlignment="Left" Margin="61,122,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <Label Content="Powered by .NET 5.0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="61,153,0,0" Foreground="White"/>
-        <Button x:Name="btn5" Content="GitHub Page" HorizontalAlignment="Left" Margin="61,370,0,0" VerticalAlignment="Top" Height="24" Width="84" Click="btn5_Click" Foreground="White" Background="Black"/>
-        <Label Content="NCX-News+ stories written by IanSkinner1982 (Link in repo)" HorizontalAlignment="Left" Margin="61,184,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
-        <Label Content="Settings icon by Garhoogin (Link in Repo)" HorizontalAlignment="Left" Margin="61,215,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
-        <Button Content="Updates" HorizontalAlignment="Left" Margin="689,10,0,0" VerticalAlignment="Top" Foreground="White" Background="Black" Height="50" Width="84" FontWeight="Bold" Click="Button_Click"/>
+        <Label x:Name="label3" Content="© NinjaCheetah 2020" HorizontalAlignment="Left" Margin="61,91,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <Label x:Name="label4" Content="Written in C Sharp using Visual Studio 2019" HorizontalAlignment="Left" Margin="61,122,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <Label x:Name="label5" Content="Powered by .NET 5.0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="61,153,0,0" Foreground="White"/>
+        <Button x:Name="btn5" Content="GitHub Page" HorizontalAlignment="Left" Margin="61,370,0,0" VerticalAlignment="Top" Height="24" Width="84" Click="btn5_Click" Foreground="White" Background="#00000000"/>
+        <Label x:Name="label6" Content="NCX-News+ stories written by IanSkinner1982 (Link in repo)" HorizontalAlignment="Left" Margin="61,184,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+        <Label x:Name="label7" Content="Settings icon by Garhoogin (Link in Repo)" HorizontalAlignment="Left" Margin="61,215,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+        <Button x:Name="btn6" Content="Updates" HorizontalAlignment="Left" Margin="689,10,0,0" VerticalAlignment="Top" Foreground="White" Background="#00000000" Height="50" Width="84" FontWeight="Bold" Click="Button_Click"/>
     </Grid>
 </Page>

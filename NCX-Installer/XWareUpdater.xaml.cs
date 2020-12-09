@@ -27,6 +27,13 @@ namespace NCX_Installer
         public XWareUpdater()
         {
             InitializeComponent();
+            if (Settings1.Default.lightTheme == true)
+            {
+                this.Background = Brushes.White;
+                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
+                label4.Foreground = Brushes.Black; btn6.Foreground = Brushes.Black; btn7.Foreground = Brushes.Black;
+                btn9.Foreground = Brushes.Black; btn8.Foreground = Brushes.Black; btn8.Background = Brushes.White;
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

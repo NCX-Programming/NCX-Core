@@ -21,6 +21,11 @@ namespace NCX_Installer
         public XWareHome()
         {
             InitializeComponent();
+            if (Settings1.Default.lightTheme == true)
+            {
+                this.Background = Brushes.White;
+                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black;
+            }
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)

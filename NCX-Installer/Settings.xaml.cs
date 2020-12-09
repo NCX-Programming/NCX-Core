@@ -25,6 +25,13 @@ namespace NCX_Installer
             textBox1.Text = Settings1.Default.name;
             checkBox1.IsChecked = Settings1.Default.betaVer;
             checkBox2.IsChecked = Settings1.Default.oldVer;
+            if (Settings1.Default.lightTheme == true)
+            {
+                this.Background = Brushes.White;
+                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
+                btn6.Foreground = Brushes.Black; btn7.Foreground = Brushes.Black; checkBox1.Foreground = Brushes.Black;
+                checkBox2.Foreground = Brushes.Black; radioButton1.Foreground = Brushes.Black; radioButton2.Foreground = Brushes.Black;
+            }
             if (Settings1.Default.lightTheme == true) radioButton2.IsChecked = true;
             else radioButton1.IsChecked = true;
             if (Settings1.Default.firstTime == false)

@@ -35,8 +35,8 @@
                 <ImageBrush ImageSource="image/csharpcol.png"/>
             </Button.Background>
         </Button>
-        <Label Content="Library" HorizontalAlignment="Left" Margin="61,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24"/>
-        <Button x:Name="btn6" Content="View in Store" HorizontalAlignment="Left" Margin="78,152,0,0" VerticalAlignment="Top" Width="90" Height="21" Background="Black" Foreground="White" Visibility="Hidden" Click="btn6_Click"/>
+        <Label x:Name="label1" Content="Library" HorizontalAlignment="Left" Margin="61,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24"/>
+        <Button x:Name="btn6" Content="View in Store" HorizontalAlignment="Left" Margin="78,152,0,0" VerticalAlignment="Top" Width="90" Height="21" Background="#00000000" Foreground="White" Visibility="Hidden" Click="btn6_Click"/>
         <Button x:Name="btn7" Content="" HorizontalAlignment="Left" Margin="173,57,0,0" VerticalAlignment="Top" Width="90" Height="90" Foreground="White" Visibility="Hidden" Click="btn7_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/coreupdater.png"/>
@@ -47,13 +47,13 @@
                 <ImageBrush ImageSource="image/ncxnewsplus.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn10" Content="View in Store" HorizontalAlignment="Left" Margin="268,152,0,0" VerticalAlignment="Top" Width="90" Height="21" Background="Black" Foreground="White" Visibility="Hidden" Click="btn10_Click"/>
-        <Button x:Name="btn11" Content="" HorizontalAlignment="Left" Margin="363,57,0,0" VerticalAlignment="Top" Width="90" Height="90" Background="Black" Foreground="White" Visibility="Hidden"/>
-        <Button x:Name="btn12" Content="View in Store" HorizontalAlignment="Left" Margin="363,152,0,0" VerticalAlignment="Top" Width="90" Height="21" Background="Black" Foreground="White" Visibility="Hidden"/>
+        <Button x:Name="btn10" Content="View in Store" HorizontalAlignment="Left" Margin="268,152,0,0" VerticalAlignment="Top" Width="90" Height="21" Background="#00000000" Foreground="White" Visibility="Hidden" Click="btn10_Click"/>
+        <Button x:Name="btn11" Content="" HorizontalAlignment="Left" Margin="363,57,0,0" VerticalAlignment="Top" Width="90" Height="90" Background="#00000000" Foreground="White" Visibility="Hidden"/>
+        <Button x:Name="btn12" Content="View in Store" HorizontalAlignment="Left" Margin="363,152,0,0" VerticalAlignment="Top" Width="90" Height="21" Background="#00000000" Foreground="White" Visibility="Hidden"/>
 
-        <Button x:Name="btn13" Content="" HorizontalAlignment="Left" Margin="458,57,0,0" VerticalAlignment="Top" Width="90" Height="90" Background="Black" Foreground="White" Visibility="Hidden"/>
-        <Button x:Name="btn8" Content="View in Store" HorizontalAlignment="Left" Margin="173,152,0,0" VerticalAlignment="Top" Width="90" Height="21" Background="Black" Foreground="White" Visibility="Hidden" Click="btn8_Click"/>
-        <Button x:Name="btn14" Content="View in Store" HorizontalAlignment="Left" Margin="458,152,0,0" VerticalAlignment="Top" Width="90" Height="21" Background="Black" Foreground="White" Visibility="Hidden"/>
+        <Button x:Name="btn13" Content="" HorizontalAlignment="Left" Margin="458,57,0,0" VerticalAlignment="Top" Width="90" Height="90" Background="#00000000" Foreground="White" Visibility="Hidden"/>
+        <Button x:Name="btn8" Content="View in Store" HorizontalAlignment="Left" Margin="173,152,0,0" VerticalAlignment="Top" Width="90" Height="21" Background="#00000000" Foreground="White" Visibility="Hidden" Click="btn8_Click"/>
+        <Button x:Name="btn14" Content="View in Store" HorizontalAlignment="Left" Margin="458,152,0,0" VerticalAlignment="Top" Width="90" Height="21" Background="#00000000" Foreground="White" Visibility="Hidden"/>
 
     </Grid>
 </Page>

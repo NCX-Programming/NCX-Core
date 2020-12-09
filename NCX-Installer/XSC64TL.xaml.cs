@@ -26,7 +26,14 @@ namespace NCX_Installer
         public XSC64TL()
         {
             InitializeComponent();
-            
+            if (Settings1.Default.lightTheme == true)
+            {
+                this.Background = Brushes.White;
+                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
+                btn7.Foreground = Brushes.Black; btn12.Foreground = Brushes.Black; btn8.Foreground = Brushes.Black;
+                btn8.Background = Brushes.White; btn10.Foreground = Brushes.Black; btn10.Background = Brushes.White;
+                btn11.Foreground = Brushes.Black; btn11.Background = Brushes.White; label4.Foreground = Brushes.Black;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -158,9 +165,9 @@ namespace NCX_Installer
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
-                    new System.Uri("https://github.com/IanSkinner1982/C64-title-loader/raw/master/build/loader.prg"),
+                    new System.Uri("https://ncx-programming.github.io/ncxprogramming.github.io/loader-nightly.d64"),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, "loader-nightly.prg")
+                    System.IO.Path.Combine(SavePath, "loader-nightly.d64")
                 );
             }
         }

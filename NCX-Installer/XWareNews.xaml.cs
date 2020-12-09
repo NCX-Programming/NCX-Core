@@ -31,6 +31,13 @@ namespace NCX_Installer
             {
                 btn7.Visibility = Visibility.Visible;
             }
+            if (Settings1.Default.lightTheme == true)
+            {
+                this.Background = Brushes.White;
+                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
+                label4.Foreground = Brushes.Black; btn6.Foreground = Brushes.Black; btn9.Foreground = Brushes.Black;
+                btn8.Foreground = Brushes.Black; btn8.Background = Brushes.White; btn7.Foreground = Brushes.Black;
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

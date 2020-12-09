@@ -9,7 +9,7 @@
       Title="X-Store" Background="Black">
 
     <Grid>
-        <Label Content="XStore" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="61,10,0,0"/>
+        <Label x:Name="label1" Content="XStore" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="61,10,0,0"/>
         <Button x:Name="tmpbtn1" Content="" HorizontalAlignment="Left" Margin="67,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/csharpcol.png"/>
@@ -25,7 +25,7 @@
                 <ImageBrush ImageSource="image/c64titleloader.png"/>
             </Button.Background>
         </Button>
-        <Button Content="XWare" HorizontalAlignment="Left" Margin="709,10,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="Button_Click" Background="Black" Foreground="White" FontSize="19"/>
+        <Button x:Name="btn6" Content="XWare" HorizontalAlignment="Left" Margin="709,10,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="Button_Click" Background="#00000000" Foreground="White" FontSize="19"/>
         <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn1_Click_1">
             <Button.Background>
                 <ImageBrush ImageSource="image/menu/settings.png"/>
@@ -47,6 +47,6 @@
                 <ImageBrush ImageSource="image/menu/home.png"/>
             </Button.Background>
         </Button>
-        <Label Content="The best place to download programs from small creators!" HorizontalAlignment="Left" Margin="61,40,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Label x:Name="label2" Content="The best place to download programs from small creators!" HorizontalAlignment="Left" Margin="61,40,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
     </Grid>
 </Page>

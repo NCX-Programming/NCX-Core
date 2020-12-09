@@ -25,6 +25,13 @@ namespace NCX_Installer
         public Library()
         {
             InitializeComponent();
+            if (Settings1.Default.lightTheme == true)
+            {
+                this.Background = Brushes.White;
+                label1.Foreground = Brushes.Black; btn5.Foreground = Brushes.Black; btn6.Foreground = Brushes.Black;
+                btn7.Foreground = Brushes.Black; btn8.Foreground = Brushes.Black; btn9.Foreground = Brushes.Black;
+                btn10.Foreground = Brushes.Black;
+            }
             if (File.Exists("C:/Program Files/NCX/CSharpCollection/CSharpCollection.exe"))
             {
                 btn5.Visibility = Visibility.Visible;
