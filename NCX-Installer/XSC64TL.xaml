@@ -44,11 +44,23 @@
         <Image HorizontalAlignment="Left" Height="100" Margin="73,10,0,0" VerticalAlignment="Top" Width="100" Source="image/c64titleloader.png"/>
         <Label x:Name="label4" Content="C64 Title Loader" HorizontalAlignment="Left" Margin="173,4,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="32" Foreground="White"/>
         <Label x:Name="label3" Content="By IanSkinner1982" HorizontalAlignment="Left" Margin="173,40,0,0" VerticalAlignment="Top" FontSize="23" Foreground="White"/>
-        <Button x:Name="btn7" Content="User Page" HorizontalAlignment="Left" Margin="178,78,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Button_Click_1" Background="{x:Null}" Foreground="White"/>
-        <Button x:Name="btn12" Content="GitHub" HorizontalAlignment="Left" Margin="257,78,0,0" VerticalAlignment="Top" Width="74" Height="23" Click="Button_Click" Background="{x:Null}" Foreground="White"/>
-        <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="336,80,0,0" VerticalAlignment="Top" Width="175" Foreground="#FF00FFC9"/>
-        <Label x:Name="label1" Content="Downloading... Please wait." HorizontalAlignment="Left" Margin="336,98,0,0" VerticalAlignment="Top" Width="174" FontSize="13" Visibility="Hidden" Foreground="White"/>
-        <Button x:Name="btn8" Content="Release" HorizontalAlignment="Left" Margin="336,78,0,0" VerticalAlignment="Top" Height="23" Width="87" Click="Button_Click_4" Foreground="White" Background="Black" Visibility="Hidden"/>
+        <Button x:Name="btn7" Content="" HorizontalAlignment="Left" Margin="173,75,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="Button_Click_1" Foreground="White" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="image/button/user.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn12" Content="" HorizontalAlignment="Left" Margin="208,75,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="Button_Click" Foreground="White" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="image/button/source.png"/>
+            </Button.Background>
+        </Button>
+        <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="248,82,0,0" VerticalAlignment="Top" Width="175" Foreground="#FF00FFC9" Visibility="Hidden"/>
+        <Label x:Name="label1" Content="Downloading... Please wait." HorizontalAlignment="Left" Margin="243,98,0,0" VerticalAlignment="Top" Width="174" FontSize="13" Visibility="Hidden" Foreground="White"/>
+        <Button x:Name="btn8" Content="" HorizontalAlignment="Left" Margin="243,75,0,0" VerticalAlignment="Top" Height="35" Width="35" Click="Button_Click_4" Foreground="White" Visibility="Hidden" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="image/button/download-release.png"/>
+            </Button.Background>
+        </Button>
         <TextBlock x:Name="label2" HorizontalAlignment="Left" Margin="73,118,0,0" Text="One disk to rule them all... A program to load all of IanSkinner1982's Commodore 64 Programs. Requires External Software, Vice Emulator, and downloads to your desktop as &quot;loader.d64&quot;" TextWrapping="Wrap" VerticalAlignment="Top" Height="101" Width="388" FontSize="18" Foreground="White"/>
         <Image x:Name="img1" HorizontalAlignment="Left" Height="202" Margin="422,202,0,0" VerticalAlignment="Top" Width="362" Source="image/screen/c64tl1.png" Stretch="Uniform"/>
         <Button x:Name="btn6" Content="" HorizontalAlignment="Left" Margin="284,232,0,0" VerticalAlignment="Top" Height="82" Width="133" Click="btn6_Click">
@@ -61,8 +73,16 @@
                 <ImageBrush ImageSource="image/screen/c64tl2.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn10" Content="Nightly" HorizontalAlignment="Left" Width="86" Height="23" Margin="424,78,0,0" VerticalAlignment="Top" Foreground="White" Background="Black" Visibility="Hidden" Click="Button_Click_7"/>
-        <Button x:Name="btn11" Content="Download" HorizontalAlignment="Left" Margin="336,78,0,0" VerticalAlignment="Top" Width="174" Height="23" Background="Black" Foreground="White" Click="Button_Click_6"/>
+        <Button x:Name="btn10" Content="" HorizontalAlignment="Left" Width="35" Height="35" Margin="278,75,0,0" VerticalAlignment="Top" Foreground="White" Visibility="Hidden" Click="Button_Click_7" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="image/button/download-beta.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn11" Content="" HorizontalAlignment="Left" Margin="243,75,0,0" VerticalAlignment="Top" Width="35" Height="35" Foreground="White" Click="Button_Click_6" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="image/button/download.png"/>
+            </Button.Background>
+        </Button>
         <Button x:Name="btn13" Content="" HorizontalAlignment="Left" Margin="146,320,0,0" VerticalAlignment="Top" Height="82" Width="133" Click="btn13_Click">
             <Button.Background>
                 <ImageBrush ImageSource="image/screen/c64tl3.png" Stretch="Uniform"/>

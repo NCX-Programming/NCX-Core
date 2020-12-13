@@ -30,9 +30,13 @@ namespace NCX_Installer
             {
                 this.Background = Brushes.White;
                 label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
-                btn7.Foreground = Brushes.Black; btn12.Foreground = Brushes.Black; btn8.Foreground = Brushes.Black;
-                btn8.Background = Brushes.White; btn10.Foreground = Brushes.Black; btn10.Background = Brushes.White;
-                btn11.Foreground = Brushes.Black; btn11.Background = Brushes.White; label4.Foreground = Brushes.Black;
+            }
+            if (Settings1.Default.betaVer == true)
+            {
+                btn8.Visibility = Visibility.Visible;
+                btn10.Visibility = Visibility.Visible;
+                btn11.Visibility = Visibility.Hidden;
+
             }
         }
 
@@ -61,6 +65,7 @@ namespace NCX_Installer
                 btn8.Visibility = Visibility.Hidden;
                 btn10.Visibility = Visibility.Hidden;
                 label1.Visibility = Visibility.Visible;
+                progressBar1.Visibility = Visibility.Visible;
                 wc.DownloadFileCompleted += DownloadCompleted;
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(
@@ -130,27 +135,19 @@ namespace NCX_Installer
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            if (Settings1.Default.betaVer == true)
+            using (WebClient wc = new WebClient())
             {
                 btn11.Visibility = Visibility.Hidden;
-                btn10.Visibility = Visibility.Visible;
-                btn8.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                using (WebClient wc = new WebClient())
-                {
-                    btn11.Visibility = Visibility.Hidden;
-                    label1.Visibility = Visibility.Visible;
-                    wc.DownloadFileCompleted += DownloadCompleted;
-                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
-                    wc.DownloadFileAsync(
-                        // Param1 = Link of file
-                        new System.Uri("https://github.com/IanSkinner1982/C64-title-loader/releases/latest/download/loader.d64"),
-                        // Param2 = Path to save
-                        System.IO.Path.Combine(SavePath, "loader.d64")
-                    );
-                }
+                label1.Visibility = Visibility.Visible;
+                progressBar1.Visibility = Visibility.Visible;
+                wc.DownloadFileCompleted += DownloadCompleted;
+                wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                wc.DownloadFileAsync(
+                    // Param1 = Link of file
+                    new System.Uri("https://github.com/IanSkinner1982/C64-title-loader/releases/latest/download/loader.d64"),
+                    // Param2 = Path to save
+                    System.IO.Path.Combine(SavePath, "loader.d64")
+                );
             }
         }
 
@@ -161,6 +158,7 @@ namespace NCX_Installer
                 btn8.Visibility = Visibility.Hidden;
                 btn10.Visibility = Visibility.Hidden;
                 label1.Visibility = Visibility.Visible;
+                progressBar1.Visibility = Visibility.Visible;
                 wc.DownloadFileCompleted += DownloadCompleted;
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(
