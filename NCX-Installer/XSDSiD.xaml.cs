@@ -30,8 +30,7 @@ namespace NCX_Installer
             {
                 this.Background = Brushes.White;
                 label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
-                label4.Foreground = Brushes.Black; btn7.Foreground = Brushes.Black; btn10.Foreground = Brushes.Black;
-                btn8.Foreground = Brushes.Black; btn8.Background = Brushes.White;
+                label4.Foreground = Brushes.Black;
             }
         }
 
@@ -53,6 +52,7 @@ namespace NCX_Installer
             {
                 btn8.Visibility = Visibility.Hidden;
                 label1.Visibility = Visibility.Visible;
+                progressBar1.Visibility = Visibility.Visible;
                 wc.DownloadFileCompleted += DownloadCompleted;
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(

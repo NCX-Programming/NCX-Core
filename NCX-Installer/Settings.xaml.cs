@@ -50,6 +50,21 @@ namespace NCX_Installer
             else if (radioButton2.IsChecked == true) Settings1.Default.lightTheme = true;
             Settings1.Default.Save();
 
+            if(Settings1.Default.lightTheme == true)
+            {
+                this.Background = Brushes.White;
+                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
+                btn6.Foreground = Brushes.Black; btn7.Foreground = Brushes.Black; checkBox1.Foreground = Brushes.Black;
+                checkBox2.Foreground = Brushes.Black; radioButton1.Foreground = Brushes.Black; radioButton2.Foreground = Brushes.Black;
+            }
+            else if(Settings1.Default.lightTheme == false)
+            {
+                this.Background = Brushes.Black;
+                label1.Foreground = Brushes.White; label2.Foreground = Brushes.White; label3.Foreground = Brushes.White;
+                btn6.Foreground = Brushes.White; btn7.Foreground = Brushes.White; checkBox1.Foreground = Brushes.White;
+                checkBox2.Foreground = Brushes.White; radioButton1.Foreground = Brushes.White; radioButton2.Foreground = Brushes.White;
+            }
+
             string message = "Your settings have been saved. Some changes might require a restart to take effect.";
             string caption = "Changes Saved";
             MessageBoxButton buttons = MessageBoxButton.OK;
