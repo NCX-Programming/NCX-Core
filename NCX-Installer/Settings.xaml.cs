@@ -64,15 +64,6 @@ namespace NCX_Installer
                 btn6.Foreground = Brushes.White; btn7.Foreground = Brushes.White; checkBox1.Foreground = Brushes.White;
                 checkBox2.Foreground = Brushes.White; radioButton1.Foreground = Brushes.White; radioButton2.Foreground = Brushes.White;
             }
-
-            string message = "Your settings have been saved. Some changes might require a restart to take effect.";
-            string caption = "Changes Saved";
-            MessageBoxButton buttons = MessageBoxButton.OK;
-            MessageBoxImage icon = MessageBoxImage.Information;
-            if (MessageBox.Show(message, caption, buttons, icon) == MessageBoxResult.OK)
-            {
-                
-            }
         }
 
         private void btn7_Click(object sender, RoutedEventArgs e)

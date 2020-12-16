@@ -62,8 +62,9 @@ namespace NCX_Installer
                 {
                     using (WebClient wc = new WebClient())
                     {
-                        btn5.Visibility = Visibility.Hidden;
+                        btn8.Visibility = Visibility.Hidden;
                         label1.Visibility = Visibility.Visible;
+                        progressBar1.Visibility = Visibility.Visible;
                         wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                         wc.DownloadFileCompleted += DownloadCompleted;
                         wc.DownloadFileAsync(
@@ -79,8 +80,9 @@ namespace NCX_Installer
                     Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater"));
                     using (WebClient wc = new WebClient())
                     {
-                        btn5.Visibility = Visibility.Hidden;
+                        btn8.Visibility = Visibility.Hidden;
                         label1.Visibility = Visibility.Visible;
+                        progressBar1.Visibility = Visibility.Visible;
                         wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                         wc.DownloadFileCompleted += DownloadCompleted;
                         wc.DownloadFileAsync(
@@ -98,8 +100,9 @@ namespace NCX_Installer
                 Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater"));
                 using (WebClient wc = new WebClient())
                 {
-                    btn5.Visibility = Visibility.Hidden;
+                    btn8.Visibility = Visibility.Hidden;
                     label1.Visibility = Visibility.Visible;
+                    progressBar1.Visibility = Visibility.Visible;
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileCompleted += DownloadCompleted;
                     wc.DownloadFileAsync(

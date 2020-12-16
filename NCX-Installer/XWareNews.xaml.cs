@@ -68,6 +68,7 @@ namespace NCX_Installer
                     {
                         btn8.Visibility = Visibility.Hidden;
                         label1.Visibility = Visibility.Visible;
+                        progressBar1.Visibility = Visibility.Visible;
                         wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                         wc.DownloadFileCompleted += DownloadCompleted;
                         wc.DownloadFileAsync(
@@ -85,6 +86,7 @@ namespace NCX_Installer
                     {
                         btn8.Visibility = Visibility.Hidden;
                         label1.Visibility = Visibility.Visible;
+                        progressBar1.Visibility = Visibility.Visible;
                         wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                         wc.DownloadFileCompleted += DownloadCompleted;
                         wc.DownloadFileAsync(
@@ -104,6 +106,7 @@ namespace NCX_Installer
                 {
                     btn8.Visibility = Visibility.Hidden;
                     label1.Visibility = Visibility.Visible;
+                    progressBar1.Visibility = Visibility.Visible;
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileCompleted += DownloadCompleted;
                     wc.DownloadFileAsync(
