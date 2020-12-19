@@ -12,7 +12,7 @@ namespace NCX_Installer {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class NavSettings : global::System.Configuration.ApplicationSettingsBase {
         
         private static NavSettings defaultInstance = ((NavSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new NavSettings())));
@@ -25,13 +25,13 @@ namespace NCX_Installer {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string comingFrom {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int slot {
             get {
-                return ((string)(this["comingFrom"]));
+                return ((int)(this["slot"]));
             }
             set {
-                this["comingFrom"] = value;
+                this["slot"] = value;
             }
         }
         

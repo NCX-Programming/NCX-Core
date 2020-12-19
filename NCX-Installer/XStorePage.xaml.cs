@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using System.Net;
 using System.Diagnostics;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace NCX_Installer
 {
@@ -21,11 +22,39 @@ namespace NCX_Installer
     /// </summary>
     public partial class XSC64TL : Page
     {
-        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static readonly string SavePath2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        public int slot;
+
+        public class Store
+        {
+            public string name1 { get; set; }
+            public string auth1 { get; set; }
+            public string desc1 { get; set; }
+            public string icon1 { get; set; }
+            public string down1 { get; set; }
+            public string beta1 { get; set; }
+            public string file1 { get; set; }
+            public string name2 { get; set; }
+            public string auth2 { get; set; }
+            public string desc2 { get; set; }
+            public string icon2 { get; set; }
+            public string down2 { get; set; }
+            public string file2 { get; set; }
+            public string name3 { get; set; }
+            public string auth3 { get; set; }
+            public string desc3 { get; set; }
+            public string icon3 { get; set; }
+            public string down3 { get; set; }
+            public string file3 { get; set; }
+        }
 
         public XSC64TL()
         {
             InitializeComponent();
+            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "XStore.json"));
+            Store store = JsonConvert.DeserializeObject<Store>(json);
+            slot = NavSettings.Default.slot;
             if (Settings1.Default.lightTheme == true)
             {
                 this.Background = Brushes.White;
@@ -36,8 +65,21 @@ namespace NCX_Installer
                 btn8.Visibility = Visibility.Visible;
                 btn10.Visibility = Visibility.Visible;
                 btn11.Visibility = Visibility.Hidden;
-
             }
+            if (slot == 1) label4.Content = store.name1;
+            if (slot == 2) label4.Content = store.name2;
+            if (slot == 3) label4.Content = store.name3;
+
+            if (slot == 1) label3.Content = store.auth1;
+            if (slot == 2) label3.Content = store.auth2;
+            if (slot == 3) label3.Content = store.auth3;
+
+            if (slot == 1) label2.Text = store.desc1;
+            if (slot == 2) label2.Text = store.desc2;
+            if (slot == 3) label2.Text = store.desc3;
+
+            img1.Source = new BitmapImage(new Uri(System.IO.Path.Combine(SavePath, $"/NCX-Core/slot{slot}.png")));
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

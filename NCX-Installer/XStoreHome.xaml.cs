@@ -35,7 +35,20 @@ namespace NCX_Installer
             public string desc1 { get; set; }
             public string icon1 { get; set; }
             public string down1 { get; set; }
+            public string beta1 { get; set; }
             public string file1 { get; set; }
+            public string name2 { get; set; }
+            public string auth2 { get; set; }
+            public string desc2 { get; set; }
+            public string icon2 { get; set; }
+            public string down2 { get; set; }
+            public string file2 { get; set; }
+            public string name3 { get; set; }
+            public string auth3 { get; set; }
+            public string desc3 { get; set; }
+            public string icon3 { get; set; }
+            public string down3 { get; set; }
+            public string file3 { get; set; }
         }
 
         public XStoreHome()
@@ -58,18 +71,21 @@ namespace NCX_Installer
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            XSCSharpCol page = new XSCSharpCol();
+            NavSettings.Default.slot = 1;
+            XSC64TL page = new XSC64TL();
             NavigationService.Navigate(page);
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-            XSDSiD page = new XSDSiD();
+            NavSettings.Default.slot = 3;
+            XSC64TL page = new XSC64TL();
             NavigationService.Navigate(page);
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
+            NavSettings.Default.slot = 2;
             XSC64TL page = new XSC64TL();
             NavigationService.Navigate(page);
         }
@@ -120,18 +136,25 @@ namespace NCX_Installer
 
         public void DownloadCompleted(object sender, EventArgs e)
         {
-            // icon = System.IO.Path.Combine(SavePath, $"NCX-Core/slot1.png");
-            Uri resourceUri = new Uri(System.IO.Path.Combine(SavePath, $"NCX-Core/slot1.png"), UriKind.Absolute);
-            StreamResourceInfo streamInfo = Application.GetResourceStream(resourceUri);
-            BitmapFrame temp = BitmapFrame.Create(streamInfo.Stream);
+            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "XStore.json"));
+            Store store = JsonConvert.DeserializeObject<Store>(json);
             var brush = new ImageBrush();
-            brush.ImageSource = temp;
+            FileStream f = File.OpenRead(System.IO.Path.Combine(SavePath, $"NCX-Core/slot{slot}.png"));
+            var imageSource = new BitmapImage();
+            imageSource.BeginInit();
+            imageSource.StreamSource = f;
+            imageSource.EndInit();
+            brush.ImageSource = imageSource;
             switch (slot) {
                 case 1:
                     tmpbtn1.Background = brush;
+                    slot = 2;
+                    DownloadIcon(store.icon2);
                     break;
                 case 2:
                     tmpbtn2.Background = brush;
+                    slot = 3;
+                    DownloadIcon(store.icon3);
                     break;
                 case 3: 
                     tmpbtn3.Background = brush;
