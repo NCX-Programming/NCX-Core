@@ -30,6 +30,7 @@ namespace NCX_Installer
         {
             public string name1 { get; set; }
             public string auth1 { get; set; }
+            public string proj1 { get; set; }
             public string desc1 { get; set; }
             public string icon1 { get; set; }
             public string down1 { get; set; }
@@ -37,12 +38,14 @@ namespace NCX_Installer
             public string file1 { get; set; }
             public string name2 { get; set; }
             public string auth2 { get; set; }
+            public string proj2 { get; set; }
             public string desc2 { get; set; }
             public string icon2 { get; set; }
             public string down2 { get; set; }
             public string file2 { get; set; }
             public string name3 { get; set; }
             public string auth3 { get; set; }
+            public string proj3 { get; set; }
             public string desc3 { get; set; }
             public string icon3 { get; set; }
             public string down3 { get; set; }
@@ -78,20 +81,59 @@ namespace NCX_Installer
             if (slot == 2) label2.Text = store.desc2;
             if (slot == 3) label2.Text = store.desc3;
 
-            img1.Source = new BitmapImage(new Uri(System.IO.Path.Combine(SavePath, $"/NCX-Core/slot{slot}.png")));
+            var brush = new ImageBrush();
+            FileStream f = File.OpenRead(System.IO.Path.Combine(SavePath, $"NCX-Core/slot{slot}.png"));
+            var imageSource = new BitmapImage();
+            imageSource.BeginInit();
+            imageSource.StreamSource = f;
+            imageSource.EndInit();
 
+            img1.Source = imageSource;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string url = "https://github.com/IanSkinner1982/C64-title-loader";
-            Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "XStore.json"));
+            Store store = JsonConvert.DeserializeObject<Store>(json);
+            string url = "";
+            switch (slot)
+            {
+                case 1:
+                    url = $"https://github.com/{store.auth1}/{store.proj1}";
+                    Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+                    break;
+                case 2:
+                    url = $"https://github.com/{store.auth2}/{store.proj2}";
+                    Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+                    break;
+                case 3:
+                    url = $"https://github.com/{store.auth3}/{store.proj3}";
+                    Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+                    break;
+            }
+            //string url = "https://github.com/IanSkinner1982/C64-title-loader";
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            string url = "https://github.com/IanSkinner1982";
-            Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "XStore.json"));
+            Store store = JsonConvert.DeserializeObject<Store>(json);
+            string url = "";
+            switch (slot)
+            {
+                case 1:
+                    url = $"https://github.com/{store.auth1}";
+                    Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+                    break;
+                case 2:
+                    url = $"https://github.com/{store.auth2}";
+                    Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+                    break;
+                case 3:
+                    url = $"https://github.com/{store.auth3}";
+                    Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+                    break; 
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
