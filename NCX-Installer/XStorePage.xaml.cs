@@ -25,6 +25,8 @@ namespace NCX_Installer
         static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         static readonly string SavePath2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         public int slot;
+        public string downloadloc;
+        public string filename;
 
         public class Store
         {
@@ -111,7 +113,6 @@ namespace NCX_Installer
                     Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
                     break;
             }
-            //string url = "https://github.com/IanSkinner1982/C64-title-loader";
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -142,8 +143,25 @@ namespace NCX_Installer
             NavigationService.Navigate(page);
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void Button_Click_6(object sender, RoutedEventArgs e)
         {
+            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "XStore.json"));
+            Store store = JsonConvert.DeserializeObject<Store>(json);
+            switch (slot)
+            {
+                case 1:
+                    downloadloc = store.down1;
+                    filename = store.file1;
+                    break;
+                case 2:
+                    downloadloc = store.down2;
+                    filename = store.file2;
+                    break;
+                case 3:
+                    downloadloc = store.down3;
+                    filename = store.file3;
+                    break;
+            }
             using (WebClient wc = new WebClient())
             {
                 btn8.Visibility = Visibility.Hidden;
@@ -154,9 +172,9 @@ namespace NCX_Installer
                 wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
-                    new System.Uri("https://github.com/IanSkinner1982/C64-title-loader/releases/latest/download/loader.d64"),
+                    new System.Uri(downloadloc),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, "loader.d64")
+                    System.IO.Path.Combine(SavePath2, filename)
                 );
             }
         }
@@ -217,7 +235,7 @@ namespace NCX_Installer
             NavigationService.Navigate(page);
         }
 
-        private void Button_Click_6(object sender, RoutedEventArgs e)
+        private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             using (WebClient wc = new WebClient())
             {

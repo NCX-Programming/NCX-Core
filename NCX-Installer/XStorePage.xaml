@@ -54,8 +54,8 @@
                 <ImageBrush ImageSource="image/button/source.png"/>
             </Button.Background>
         </Button>
-        <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="248,82,0,0" VerticalAlignment="Top" Width="175" Foreground="#FF00FFC9" Visibility="Hidden"/>
-        <Label x:Name="label1" Content="Downloading... Please wait." HorizontalAlignment="Left" Margin="243,98,0,0" VerticalAlignment="Top" Width="174" FontSize="13" Visibility="Hidden" Foreground="White"/>
+        <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="278,82,0,0" VerticalAlignment="Top" Width="175" Foreground="#FF00FFC9" Visibility="Hidden"/>
+        <Label x:Name="label1" Content="Downloading... Please wait." HorizontalAlignment="Left" Margin="267,98,0,0" VerticalAlignment="Top" Width="174" FontSize="13" Visibility="Hidden" Foreground="White"/>
         <Button x:Name="btn8" Content="" HorizontalAlignment="Left" Margin="243,75,0,0" VerticalAlignment="Top" Height="35" Width="35" Click="Button_Click_4" Foreground="White" Visibility="Hidden" BorderBrush="#00707070" ToolTip="Download Release">
             <Button.Background>
                 <ImageBrush ImageSource="image/button/download-release.png"/>
