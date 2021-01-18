@@ -49,6 +49,13 @@ namespace NCX_Installer
             public string icon3 { get; set; }
             public string down3 { get; set; }
             public string file3 { get; set; }
+            public string name4 { get; set; }
+            public string auth4 { get; set; }
+            public string proj4 { get; set; }
+            public string desc4 { get; set; }
+            public string icon4 { get; set; }
+            public string down4 { get; set; }
+            public string file4 { get; set; }
         }
 
         public XStoreHome()
@@ -59,13 +66,18 @@ namespace NCX_Installer
                 this.Background = Brushes.White;
                 label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; btn6.Foreground = Brushes.Black;
             }
-            if (File.Exists(System.IO.Path.Combine(SavePath, "XStore.json")))
+            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json")))
             {
-                string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "XStore.json"));
+                string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
                 Store store = JsonConvert.DeserializeObject<Store>(json);
 
+                if (store.name4 == "")
+                {
+                    tmpbtn4.Visibility = Visibility.Hidden;
+                }
+
                 slot = 1;
-                DownloadIcon(store.icon1);
+                LoadIcon();
             }
         }
 
@@ -86,6 +98,13 @@ namespace NCX_Installer
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
             NavSettings.Default.slot = 2;
+            XSC64TL page = new XSC64TL();
+            NavigationService.Navigate(page);
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+            NavSettings.Default.slot = 4;
             XSC64TL page = new XSC64TL();
             NavigationService.Navigate(page);
         }
@@ -120,24 +139,8 @@ namespace NCX_Installer
             NavigationService.Navigate(page);
         }
 
-        public void DownloadIcon(string link)
+        public void LoadIcon()
         {
-            using (WebClient wc = new WebClient())
-            {
-                wc.DownloadFileCompleted += DownloadCompleted;
-                wc.DownloadFileAsync(
-                    // Param1 = Link of file
-                    new System.Uri($"{link}"),
-                    // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, $"NCX-Core/slot{slot}.png")
-                );
-            }
-        }
-
-        public void DownloadCompleted(object sender, EventArgs e)
-        {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "XStore.json"));
-            Store store = JsonConvert.DeserializeObject<Store>(json);
             var brush = new ImageBrush();
             FileStream f = File.OpenRead(System.IO.Path.Combine(SavePath, $"NCX-Core/slot{slot}.png"));
             var imageSource = new BitmapImage();
@@ -145,21 +148,36 @@ namespace NCX_Installer
             imageSource.StreamSource = f;
             imageSource.EndInit();
             brush.ImageSource = imageSource;
-            switch (slot) {
+            switch (slot)
+            {
                 case 1:
                     tmpbtn1.Background = brush;
-                    slot = 2;
-                    DownloadIcon(store.icon2);
+                    if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot2.png")))
+                    {
+                        slot = 2;
+                        LoadIcon();
+                    }
                     break;
                 case 2:
                     tmpbtn2.Background = brush;
-                    slot = 3;
-                    DownloadIcon(store.icon3);
+                    if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot3.png")))
+                    {
+                        slot = 3;
+                        LoadIcon();
+                    }
                     break;
-                case 3: 
+                case 3:
                     tmpbtn3.Background = brush;
+                    if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot4.png")))
+                    {
+                        slot = 4;
+                        LoadIcon();
+                    }
                     break;
-            } 
+                case 4:
+                    tmpbtn4.Background = brush;
+                    break;
+            }
         }
     }
 }

@@ -13,6 +13,7 @@
         <Button x:Name="tmpbtn1" Content="" HorizontalAlignment="Left" Margin="67,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn1_Click" Background="#00000000"/>
         <Button x:Name="tmpbtn3" Content="" HorizontalAlignment="Left" Margin="247,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn2_Click" Background="#00000000"/>
         <Button x:Name="tmpbtn2" Content="" HorizontalAlignment="Left" Margin="157,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn3_Click" Background="#00000000"/>
+        <Button x:Name="tmpbtn4" Content="" HorizontalAlignment="Left" Margin="337,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn5_Click" Background="#00000000"/>
         <Button x:Name="btn6" Content="XWare" HorizontalAlignment="Left" Margin="709,10,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="Button_Click" Background="#00000000" Foreground="White" FontSize="19"/>
         <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn1_Click_1">
             <Button.Background>

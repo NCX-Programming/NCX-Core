@@ -62,13 +62,13 @@
             </Button.Background>
         </Button>
         <TextBlock x:Name="label2" HorizontalAlignment="Left" Margin="73,118,0,0" Text="Description" TextWrapping="Wrap" VerticalAlignment="Top" Height="101" Width="388" FontSize="18" Foreground="White"/>
-        <Image x:Name="img2" HorizontalAlignment="Left" Height="202" Margin="422,202,0,0" VerticalAlignment="Top" Width="362" Source="image/screen/c64tl1.png" Stretch="Uniform"/>
-        <Button x:Name="btn6" Content="" HorizontalAlignment="Left" Margin="284,232,0,0" VerticalAlignment="Top" Height="82" Width="133" Click="btn6_Click">
+        <Image x:Name="img2" HorizontalAlignment="Left" Height="202" Margin="422,202,0,0" VerticalAlignment="Top" Width="362" Source="image/screen/c64tl1.png" Stretch="Uniform" Visibility="Hidden"/>
+        <Button x:Name="btn6" Content="" HorizontalAlignment="Left" Margin="284,232,0,0" VerticalAlignment="Top" Height="82" Width="133" Click="btn6_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="image/screen/c64tl1.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn9" Content="" HorizontalAlignment="Left" Margin="284,319,0,0" VerticalAlignment="Top" Height="85" Width="133" Click="btn9_Click">
+        <Button x:Name="btn9" Content="" HorizontalAlignment="Left" Margin="284,319,0,0" VerticalAlignment="Top" Height="85" Width="133" Click="btn9_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="image/screen/c64tl2.png" Stretch="Uniform"/>
             </Button.Background>
@@ -83,7 +83,7 @@
                 <ImageBrush ImageSource="image/button/download.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn13" Content="" HorizontalAlignment="Left" Margin="146,320,0,0" VerticalAlignment="Top" Height="82" Width="133" Click="btn13_Click">
+        <Button x:Name="btn13" Content="" HorizontalAlignment="Left" Margin="146,320,0,0" VerticalAlignment="Top" Height="82" Width="133" Click="btn13_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="image/screen/c64tl3.png" Stretch="Uniform"/>
             </Button.Background>

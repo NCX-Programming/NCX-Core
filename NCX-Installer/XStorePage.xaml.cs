@@ -52,6 +52,13 @@ namespace NCX_Installer
             public string icon3 { get; set; }
             public string down3 { get; set; }
             public string file3 { get; set; }
+            public string name4 { get; set; }
+            public string auth4 { get; set; }
+            public string proj4 { get; set; }
+            public string desc4 { get; set; }
+            public string icon4 { get; set; }
+            public string down4 { get; set; }
+            public string file4 { get; set; }
         }
 
         public XSC64TL()
@@ -74,14 +81,17 @@ namespace NCX_Installer
             if (slot == 1) label4.Content = store.name1;
             if (slot == 2) label4.Content = store.name2;
             if (slot == 3) label4.Content = store.name3;
+            if (slot == 4) label4.Content = store.name4;
 
             if (slot == 1) label3.Content = store.auth1;
             if (slot == 2) label3.Content = store.auth2;
             if (slot == 3) label3.Content = store.auth3;
+            if (slot == 4) label3.Content = store.auth4;
 
             if (slot == 1) label2.Text = store.desc1;
             if (slot == 2) label2.Text = store.desc2;
             if (slot == 3) label2.Text = store.desc3;
+            if (slot == 4) label2.Text = store.desc4;
 
             var brush = new ImageBrush();
             FileStream f = File.OpenRead(System.IO.Path.Combine(SavePath, $"NCX-Core/slot{slot}.png"));

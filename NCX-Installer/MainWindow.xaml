@@ -8,5 +8,6 @@
         Title="NCX-Core" Height="450" Width="800" Background="Black">
     <Grid>
         <Frame Content="" x:Name="_NavigationFrame" NavigationUIVisibility="Hidden"/>
+        <Image x:Name="img1" HorizontalAlignment="Center" Height="256" VerticalAlignment="Center" Width="512" Source="image/banner.png"/>
     </Grid>
 </Window>
