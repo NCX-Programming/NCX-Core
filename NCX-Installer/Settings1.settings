@@ -18,7 +18,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="version" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Beta-Core 3.1 Rev 5</Value>
+      <Value Profile="(Default)">Beta-Core 3.1 Rev 6</Value>
     </Setting>
     <Setting Name="lightTheme" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

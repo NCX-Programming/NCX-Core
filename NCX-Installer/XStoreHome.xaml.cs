@@ -76,6 +76,7 @@ namespace NCX_Installer
                     tmpbtn4.Visibility = Visibility.Hidden;
                 }
 
+                tmpbtn1.ToolTip = store.name1;
                 slot = 1;
                 LoadIcon();
             }
@@ -141,6 +142,9 @@ namespace NCX_Installer
 
         public void LoadIcon()
         {
+            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
+            Store store = JsonConvert.DeserializeObject<Store>(json);
+
             var brush = new ImageBrush();
             FileStream f = File.OpenRead(System.IO.Path.Combine(SavePath, $"NCX-Core/slot{slot}.png"));
             var imageSource = new BitmapImage();
@@ -154,6 +158,7 @@ namespace NCX_Installer
                     tmpbtn1.Background = brush;
                     if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot2.png")))
                     {
+                        tmpbtn2.ToolTip = store.name2;
                         slot = 2;
                         LoadIcon();
                     }
@@ -162,6 +167,7 @@ namespace NCX_Installer
                     tmpbtn2.Background = brush;
                     if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot3.png")))
                     {
+                        tmpbtn3.ToolTip = store.name3;
                         slot = 3;
                         LoadIcon();
                     }
@@ -170,6 +176,7 @@ namespace NCX_Installer
                     tmpbtn3.Background = brush;
                     if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot4.png")))
                     {
+                        tmpbtn4.ToolTip = store.name4;
                         slot = 4;
                         LoadIcon();
                     }
