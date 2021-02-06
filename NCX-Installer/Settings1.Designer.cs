@@ -85,7 +85,7 @@ namespace NCX_Installer {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Beta-Core 3.1 Rev 6")]
+        [global::System.Configuration.DefaultSettingValueAttribute("3.1")]
         public string version {
             get {
                 return ((string)(this["version"]));
