@@ -64,7 +64,7 @@ namespace NCX_Installer
         public XSC64TL()
         {
             InitializeComponent();
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "XStore.json"));
+            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
             Store store = JsonConvert.DeserializeObject<Store>(json);
             slot = NavSettings.Default.slot;
             if (Settings1.Default.lightTheme == true)

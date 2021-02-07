@@ -50,9 +50,7 @@ namespace NCX_Installer
             if (Settings1.Default.lightTheme == true)
             {
                 this.Background = Brushes.White;
-                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
-                label4.Foreground = Brushes.Black; label5.Foreground = Brushes.Black; label6.Foreground = Brushes.Black;
-                label7.Foreground = Brushes.Black;
+                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label6.Foreground = Brushes.Black; 
             }
             if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/newsLatest.txt")))
             {
@@ -97,114 +95,6 @@ namespace NCX_Installer
                     brush.ImageSource = temp;
 
                     btn4.Background = brush;
-
-                    switch (menu.New1)
-                    {
-                        case "cscol":
-                            banner = "image/csharpcol.png";
-                            label3.Text = "CSharp Collection";
-                            break;
-                        case "ncxnewsplus":
-                            banner = "image/ncxnewsplus.png";
-                            label3.Text = "NCX-News+";
-                            break;
-                        case "c64titleloader":
-                            banner = "image/c64titleloader.png";
-                            label3.Text = "C64 Title Loader";
-                            break;
-                        case "dsidownloader":
-                            banner = "image/dsidownloader.png";
-                            label3.Text = "lazy-dsi-file-downloader";
-                            break;
-                        case "coreupdater":
-                            banner = "image/coreupdater.png";
-                            label3.Text = "NCX-Core Updater";
-                            break;
-                        default:
-                            btn4.Content = "An error has occured while loading the featured program.";
-                            break;
-                    }
-
-                    Uri resourceUri2 = new Uri(banner, UriKind.Relative);
-                    StreamResourceInfo streamInfo2 = Application.GetResourceStream(resourceUri2);
-
-                    BitmapFrame temp2 = BitmapFrame.Create(streamInfo2.Stream);
-                    var brush2 = new ImageBrush();
-                    brush2.ImageSource = temp2;
-
-                    btn5.Background = brush2;
-
-                    switch (menu.New2)
-                    {
-                        case "cscol":
-                            banner = "image/csharpcol.png";
-                            label4.Text = "CSharp Collection";
-                            break;
-                        case "ncxnewsplus":
-                            banner = "image/ncxnewsplus.png";
-                            label4.Text = "NCX-News+";
-                            break;
-                        case "c64titleloader":
-                            banner = "image/c64titleloader.png";
-                            label4.Text = "C64 Title Loader";
-                            break;
-                        case "dsidownloader":
-                            banner = "image/dsidownloader.png";
-                            label4.Text = "lazy-dsi-file-downloader";
-                            break;
-                        case "coreupdater":
-                            banner = "image/coreupdater.png";
-                            label4.Text = "NCX-Core Updater";
-                            break;
-                        default:
-                            btn4.Content = "An error has occured while loading the featured program.";
-                            break;
-                    }
-
-                    Uri resourceUri3 = new Uri(banner, UriKind.Relative);
-                    StreamResourceInfo streamInfo3 = Application.GetResourceStream(resourceUri3);
-
-                    BitmapFrame temp3 = BitmapFrame.Create(streamInfo3.Stream);
-                    var brush3 = new ImageBrush();
-                    brush3.ImageSource = temp3;
-
-                    btn6.Background = brush3;
-
-                    switch (menu.New3)
-                    {
-                        case "cscol":
-                            banner = "image/csharpcol.png";
-                            label5.Text = "CSharp Collection";
-                            break;
-                        case "ncxnewsplus":
-                            banner = "image/ncxnewsplus.png";
-                            label5.Text = "NCX-News+";
-                            break;
-                        case "c64titleloader":
-                            banner = "image/c64titleloader.png";
-                            label5.Text = "C64 Title Loader";
-                            break;
-                        case "dsidownloader":
-                            banner = "image/dsidownloader.png";
-                            label5.Text = "lazy-dsi-file-downloader";
-                            break;
-                        case "coreupdater":
-                            banner = "image/coreupdater.png";
-                            label5.Text = "NCX-Core Updater";
-                            break;
-                        default:
-                            btn4.Content = "An error has occured while loading the featured program.";
-                            break;
-                    }
-
-                    Uri resourceUri4 = new Uri(banner, UriKind.Relative);
-                    StreamResourceInfo streamInfo4 = Application.GetResourceStream(resourceUri4);
-
-                    BitmapFrame temp4 = BitmapFrame.Create(streamInfo4.Stream);
-                    var brush4 = new ImageBrush();
-                    brush4.ImageSource = temp4;
-
-                    btn7.Background = brush4;
                 }
                 if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
                 {
@@ -225,10 +115,6 @@ namespace NCX_Installer
 
             switch (menu.Featured)
             {
-                case "cscol":
-                    XSCSharpCol page = new XSCSharpCol();
-                    NavigationService.Navigate(page);
-                    break;
                 case "ncxnewsplus":
                     XWareNews page2 = new XWareNews();
                     NavigationService.Navigate(page2);
@@ -236,109 +122,6 @@ namespace NCX_Installer
                 case "c64titleloader":
                     XSC64TL page3 = new XSC64TL();
                     NavigationService.Navigate(page3);
-                    break;
-                case "dsidownloader":
-                    XSDSiD page4 = new XSDSiD();
-                    NavigationService.Navigate(page4);
-                    break;
-                case "coreupdater":
-                    XWareUpdater page5 = new XWareUpdater();
-                    NavigationService.Navigate(page5);
-                    break;
-                default:
-                    btn4.Content = "An error has occured while loading the featured program.";
-                    break;
-            }
-        }
-
-        private void btn5_Click(object sender, RoutedEventArgs e)
-        {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "ncxCoreMainMenu.json"));
-            Menu menu = JsonConvert.DeserializeObject<Menu>(json);
-
-            switch (menu.New1)
-            {
-                case "cscol":
-                    XSCSharpCol page = new XSCSharpCol();
-                    NavigationService.Navigate(page);
-                    break;
-                case "ncxnewsplus":
-                    XWareNews page2 = new XWareNews();
-                    NavigationService.Navigate(page2);
-                    break;
-                case "c64titleloader":
-                    XSC64TL page3 = new XSC64TL();
-                    NavigationService.Navigate(page3);
-                    break;
-                case "dsidownloader":
-                    XSDSiD page4 = new XSDSiD();
-                    NavigationService.Navigate(page4);
-                    break;
-                case "coreupdater":
-                    XWareUpdater page5 = new XWareUpdater();
-                    NavigationService.Navigate(page5);
-                    break;
-                default:
-                    btn4.Content = "An error has occured while loading the featured program.";
-                    break;
-            }
-        }
-
-        private void btn6_Click(object sender, RoutedEventArgs e)
-        {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "ncxCoreMainMenu.json"));
-            Menu menu = JsonConvert.DeserializeObject<Menu>(json);
-
-            switch (menu.New2)
-            {
-                case "cscol":
-                    XSCSharpCol page = new XSCSharpCol();
-                    NavigationService.Navigate(page);
-                    break;
-                case "ncxnewsplus":
-                    XWareNews page2 = new XWareNews();
-                    NavigationService.Navigate(page2);
-                    break;
-                case "c64titleloader":
-                    XSC64TL page3 = new XSC64TL();
-                    NavigationService.Navigate(page3);
-                    break;
-                case "dsidownloader":
-                    XSDSiD page4 = new XSDSiD();
-                    NavigationService.Navigate(page4);
-                    break;
-                case "coreupdater":
-                    XWareUpdater page5 = new XWareUpdater();
-                    NavigationService.Navigate(page5);
-                    break;
-                default:
-                    btn4.Content = "An error has occured while loading the featured program.";
-                    break;
-            }
-        }
-
-        private void btn7_Click(object sender, RoutedEventArgs e)
-        {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "ncxCoreMainMenu.json"));
-            Menu menu = JsonConvert.DeserializeObject<Menu>(json);
-
-            switch (menu.New3)
-            {
-                case "cscol":
-                    XSCSharpCol page = new XSCSharpCol();
-                    NavigationService.Navigate(page);
-                    break;
-                case "ncxnewsplus":
-                    XWareNews page2 = new XWareNews();
-                    NavigationService.Navigate(page2);
-                    break;
-                case "c64titleloader":
-                    XSC64TL page3 = new XSC64TL();
-                    NavigationService.Navigate(page3);
-                    break;
-                case "dsidownloader":
-                    XSDSiD page4 = new XSDSiD();
-                    NavigationService.Navigate(page4);
                     break;
                 case "coreupdater":
                     XWareUpdater page5 = new XWareUpdater();

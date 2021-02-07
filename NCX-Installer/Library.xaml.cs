@@ -71,8 +71,7 @@ namespace NCX_Installer
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
-            XSCSharpCol page = new XSCSharpCol();
-            NavigationService.Navigate(page);
+            
         }
 
         private void btn7_Click(object sender, RoutedEventArgs e)
