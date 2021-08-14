@@ -64,43 +64,53 @@ namespace NCX_Installer
         public XSC64TL()
         {
             InitializeComponent();
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
-            Store store = JsonConvert.DeserializeObject<Store>(json);
-            slot = NavSettings.Default.slot;
-            if (Settings1.Default.lightTheme == true)
+            try
             {
-                this.Background = Brushes.White;
-                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
+                string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
+                Store store = JsonConvert.DeserializeObject<Store>(json);
+                slot = NavSettings.Default.slot;
+                if (Settings1.Default.lightTheme == true)
+                {
+                    this.Background = Brushes.White;
+                    label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
+                }
+                if (Settings1.Default.betaVer == true)
+                {
+                    btn8.Visibility = Visibility.Visible;
+                    btn10.Visibility = Visibility.Visible;
+                    btn11.Visibility = Visibility.Hidden;
+                }
+                if (slot == 1) label4.Content = store.name1;
+                if (slot == 2) label4.Content = store.name2;
+                if (slot == 3) label4.Content = store.name3;
+                if (slot == 4) label4.Content = store.name4;
+
+                if (slot == 1) label3.Content = store.auth1;
+                if (slot == 2) label3.Content = store.auth2;
+                if (slot == 3) label3.Content = store.auth3;
+                if (slot == 4) label3.Content = store.auth4;
+
+                if (slot == 1) label2.Text = store.desc1;
+                if (slot == 2) label2.Text = store.desc2;
+                if (slot == 3) label2.Text = store.desc3;
+                if (slot == 4) label2.Text = store.desc4;
+
+                var brush = new ImageBrush();
+                FileStream f = File.OpenRead(System.IO.Path.Combine(SavePath, $"NCX-Core/slot{slot}.png"));
+                var imageSource = new BitmapImage();
+                imageSource.BeginInit();
+                imageSource.StreamSource = f;
+                imageSource.EndInit();
+
+                img1.Source = imageSource;
             }
-            if (Settings1.Default.betaVer == true)
+            catch(Exception)
             {
-                btn8.Visibility = Visibility.Visible;
-                btn10.Visibility = Visibility.Visible;
-                btn11.Visibility = Visibility.Hidden;
+                NavSettings.Default.errorcode = 2;
+                NavSettings.Default.Save();
+                Error page = new Error();
+                NavigationService.Navigate(page);
             }
-            if (slot == 1) label4.Content = store.name1;
-            if (slot == 2) label4.Content = store.name2;
-            if (slot == 3) label4.Content = store.name3;
-            if (slot == 4) label4.Content = store.name4;
-
-            if (slot == 1) label3.Content = store.auth1;
-            if (slot == 2) label3.Content = store.auth2;
-            if (slot == 3) label3.Content = store.auth3;
-            if (slot == 4) label3.Content = store.auth4;
-
-            if (slot == 1) label2.Text = store.desc1;
-            if (slot == 2) label2.Text = store.desc2;
-            if (slot == 3) label2.Text = store.desc3;
-            if (slot == 4) label2.Text = store.desc4;
-
-            var brush = new ImageBrush();
-            FileStream f = File.OpenRead(System.IO.Path.Combine(SavePath, $"NCX-Core/slot{slot}.png"));
-            var imageSource = new BitmapImage();
-            imageSource.BeginInit();
-            imageSource.StreamSource = f;
-            imageSource.EndInit();
-
-            img1.Source = imageSource;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

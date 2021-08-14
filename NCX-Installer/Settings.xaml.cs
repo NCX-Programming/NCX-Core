@@ -109,5 +109,11 @@ namespace NCX_Installer
             XStoreHome page = new XStoreHome();
             NavigationService.Navigate(page);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UtilsHome page = new UtilsHome();
+            NavigationService.Navigate(page);
+        }
     }
 }

@@ -66,19 +66,29 @@ namespace NCX_Installer
                 this.Background = Brushes.White;
                 label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; btn6.Foreground = Brushes.Black;
             }
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json")))
+            try
             {
-                string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
-                Store store = JsonConvert.DeserializeObject<Store>(json);
-
-                if (store.name4 == "")
+                if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json")))
                 {
-                    tmpbtn4.Visibility = Visibility.Hidden;
-                }
+                    string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
+                    Store store = JsonConvert.DeserializeObject<Store>(json);
 
-                tmpbtn1.ToolTip = store.name1;
-                slot = 1;
-                LoadIcon();
+                    if (store.name4 == "")
+                    {
+                        tmpbtn4.Visibility = Visibility.Hidden;
+                    }
+
+                    tmpbtn1.ToolTip = store.name1;
+                    slot = 1;
+                    LoadIcon();
+                }
+            }
+            catch (Exception)
+            {
+                NavSettings.Default.errorcode = 1;
+                NavSettings.Default.Save();
+                Error page = new Error();
+                NavigationService.Navigate(page);
             }
         }
 
@@ -145,45 +155,55 @@ namespace NCX_Installer
             string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
             Store store = JsonConvert.DeserializeObject<Store>(json);
 
-            var brush = new ImageBrush();
-            FileStream f = File.OpenRead(System.IO.Path.Combine(SavePath, $"NCX-Core/slot{slot}.png"));
-            var imageSource = new BitmapImage();
-            imageSource.BeginInit();
-            imageSource.StreamSource = f;
-            imageSource.EndInit();
-            brush.ImageSource = imageSource;
-            switch (slot)
+            try
             {
-                case 1:
-                    tmpbtn1.Background = brush;
-                    if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot2.png")))
-                    {
-                        tmpbtn2.ToolTip = store.name2;
-                        slot = 2;
-                        LoadIcon();
-                    }
-                    break;
-                case 2:
-                    tmpbtn2.Background = brush;
-                    if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot3.png")))
-                    {
-                        tmpbtn3.ToolTip = store.name3;
-                        slot = 3;
-                        LoadIcon();
-                    }
-                    break;
-                case 3:
-                    tmpbtn3.Background = brush;
-                    if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot4.png")))
-                    {
-                        tmpbtn4.ToolTip = store.name4;
-                        slot = 4;
-                        LoadIcon();
-                    }
-                    break;
-                case 4:
-                    tmpbtn4.Background = brush;
-                    break;
+                var brush = new ImageBrush();
+                FileStream f = File.OpenRead(System.IO.Path.Combine(SavePath, $"NCX-Core/slot{slot}.png"));
+                var imageSource = new BitmapImage();
+                imageSource.BeginInit();
+                imageSource.StreamSource = f;
+                imageSource.EndInit();
+                brush.ImageSource = imageSource;
+                switch (slot)
+                {
+                    case 1:
+                        tmpbtn1.Background = brush;
+                        if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot2.png")))
+                        {
+                            tmpbtn2.ToolTip = store.name2;
+                            slot = 2;
+                            LoadIcon();
+                        }
+                        break;
+                    case 2:
+                        tmpbtn2.Background = brush;
+                        if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot3.png")))
+                        {
+                            tmpbtn3.ToolTip = store.name3;
+                            slot = 3;
+                            LoadIcon();
+                        }
+                        break;
+                    case 3:
+                        tmpbtn3.Background = brush;
+                        if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/slot4.png")))
+                        {
+                            tmpbtn4.ToolTip = store.name4;
+                            slot = 4;
+                            LoadIcon();
+                        }
+                        break;
+                    case 4:
+                        tmpbtn4.Background = brush;
+                        break;
+                }
+            }
+            catch (Exception)
+            {
+                NavSettings.Default.errorcode = 1;
+                NavSettings.Default.Save();
+                Error page = new Error();
+                NavigationService.Navigate(page);
             }
         }
     }

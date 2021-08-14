@@ -40,6 +40,7 @@
         <Button x:Name="btn6" Content="Save" HorizontalAlignment="Left" Margin="61,371,0,0" VerticalAlignment="Top" Width="76" Height="23" Click="btn6_Click" Background="#00000000" Foreground="White"/>
         <Button x:Name="btn7" Content="RESET" HorizontalAlignment="Left" Margin="142,371,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn7_Click" Background="#00000000" Foreground="White"/>
         <RadioButton x:Name="radioButton2" Content="Light" HorizontalAlignment="Left" Margin="336,118,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button Content="Utilites" HorizontalAlignment="Left" Margin="222,371,0,0" VerticalAlignment="Top" Background="Black" Foreground="White" Width="75" Height="23" Click="Button_Click"/>
 
     </Grid>
 </Page>

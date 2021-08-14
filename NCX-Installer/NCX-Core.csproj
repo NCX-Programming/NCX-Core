@@ -54,6 +54,7 @@
     <None Remove="image\screen\ldsi1.png" />
     <None Remove="image\screen\ldsi2.png" />
     <None Remove="image\settings.png" />
+    <None Remove="image\utilbanner.png" />
     <None Remove="image\xware.png" />
     <None Remove="image\xwarelaunch.png" />
   </ItemGroup>
@@ -103,6 +104,7 @@
     <Resource Include="image\screen\ldsi1.png" />
     <Resource Include="image\screen\ldsi2.png" />
     <Resource Include="image\settings.png" />
+    <Resource Include="image\utilbanner.png" />
     <Resource Include="image\xware.png" />
     <Resource Include="image\xwarelaunch.png" />
   </ItemGroup>
