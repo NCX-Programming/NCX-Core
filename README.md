@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://ninjacheetah.github.io/NewNCXCoreLogo.png"/>
+<img src="https://cdn.ncxprogramming.com/file/icon/ncxcore.png"/>
 <h1>NCX-Core</h1>
 
 	
