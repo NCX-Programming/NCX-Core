@@ -126,30 +126,6 @@ namespace NCX_Installer
             NavigationService.Navigate(page);
         }
 
-        private void btn4_Click(object sender, RoutedEventArgs e)
-        {
-            MainMenu page = new MainMenu();
-            NavigationService.Navigate(page);
-        }
-
-        private void btn3_Click_1(object sender, RoutedEventArgs e)
-        {
-            Library page = new Library();
-            NavigationService.Navigate(page);
-        }
-
-        private void btn1_Click_1(object sender, RoutedEventArgs e)
-        {
-            Settings page = new Settings();
-            NavigationService.Navigate(page);
-        }
-
-        private void btn2_Click_1(object sender, RoutedEventArgs e)
-        {
-            About page = new About();
-            NavigationService.Navigate(page);
-        }
-
         public void LoadIcon()
         {
             string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));

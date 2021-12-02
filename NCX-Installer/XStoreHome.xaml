@@ -9,33 +9,12 @@
       Title="X-Store" Background="Black">
 
     <Grid>
-        <Label x:Name="label1" Content="XStore" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="61,10,0,0"/>
-        <Button x:Name="tmpbtn1" Content="" HorizontalAlignment="Left" Margin="67,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn1_Click" Background="#00000000"/>
-        <Button x:Name="tmpbtn3" Content="" HorizontalAlignment="Left" Margin="247,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn2_Click" Background="#00000000"/>
-        <Button x:Name="tmpbtn2" Content="" HorizontalAlignment="Left" Margin="157,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn3_Click" Background="#00000000"/>
-        <Button x:Name="tmpbtn4" Content="" HorizontalAlignment="Left" Margin="337,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn5_Click" Background="#00000000"/>
-        <Button x:Name="btn6" Content="XWare" HorizontalAlignment="Left" Margin="709,10,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="Button_Click" Background="#00000000" Foreground="White" FontSize="19"/>
-        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn1_Click_1">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/settings.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn2_Click_1">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/about.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn3_Click_1">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/library.png"/>
-            </Button.Background>
-        </Button>
-        <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="53" Source="image/menu/store1.png" Margin="0,157,0,0"/>
-        <Button x:Name="btn4" Content="" HorizontalAlignment="Left" Margin="0,-1,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn4_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/home.png"/>
-            </Button.Background>
-        </Button>
-        <Label x:Name="label2" Content="The best place to download programs from small creators!" HorizontalAlignment="Left" Margin="61,40,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Label x:Name="label1" Content="XStore" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="10,10,0,0"/>
+        <Button x:Name="tmpbtn1" Content="" HorizontalAlignment="Left" Margin="16,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn1_Click" Background="#00000000"/>
+        <Button x:Name="tmpbtn3" Content="" HorizontalAlignment="Left" Margin="196,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn2_Click" Background="#00000000"/>
+        <Button x:Name="tmpbtn2" Content="" HorizontalAlignment="Left" Margin="106,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn3_Click" Background="#00000000"/>
+        <Button x:Name="tmpbtn4" Content="" HorizontalAlignment="Left" Margin="286,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn5_Click" Background="#00000000"/>
+        <Button x:Name="btn6" Content="XWare" HorizontalAlignment="Left" Margin="658,10,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="Button_Click" Background="#00000000" Foreground="White" FontSize="19"/>
+        <Label x:Name="label2" Content="The best place to download programs from small creators!" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
     </Grid>
 </Page>

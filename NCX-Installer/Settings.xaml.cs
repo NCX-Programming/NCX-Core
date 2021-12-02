@@ -110,10 +110,5 @@ namespace NCX_Installer
             NavigationService.Navigate(page);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            UtilsHome page = new UtilsHome();
-            NavigationService.Navigate(page);
-        }
     }
 }

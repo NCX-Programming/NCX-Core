@@ -150,5 +150,30 @@ namespace NCX_Installer
             base.OnClosing(e);
             Environment.Exit(0);
         }
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            _NavigationFrame.Navigate(new MainMenu());
+        }
+
+        private void LibraryButton_Click(object sender, RoutedEventArgs e)
+        {
+            _NavigationFrame.Navigate(new Library());
+        }
+
+        private void StoreButton_Click(object sender, RoutedEventArgs e)
+        {
+            _NavigationFrame.Navigate(new XStoreHome());
+        }
+
+        private void AboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            _NavigationFrame.Navigate(new About());
+        }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            _NavigationFrame.Navigate(new Settings());
+        }
     }
 }
