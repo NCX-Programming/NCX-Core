@@ -49,18 +49,6 @@ namespace NCX_Installer
             }
         }
 
-        private void btn4_Click(object sender, RoutedEventArgs e)
-        {
-            MainMenu page = new MainMenu();
-            NavigationService.Navigate(page);
-        }
-
-        private void btn3_Click(object sender, RoutedEventArgs e)
-        {
-            XStoreHome page = new XStoreHome();
-            NavigationService.Navigate(page);
-        }
-
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
             if (File.Exists("C:/Program Files/NCX/CSharpCollection/CSharpCollection.exe"))

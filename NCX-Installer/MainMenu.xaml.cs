@@ -133,36 +133,12 @@ namespace NCX_Installer
             }
         }
 
-        private void btn1_Click(object sender, RoutedEventArgs e)
-        {
-            XStoreHome page = new XStoreHome();
-            NavigationService.Navigate(page);
-        }
-
-        private void btn9_Click(object sender, RoutedEventArgs e)
-        {
-            Library page = new Library();
-            NavigationService.Navigate(page);
-        }
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
             {
                 Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
             }
-        }
-
-        private void btn2_Click(object sender, RoutedEventArgs e)
-        {
-            Settings page = new Settings();
-            NavigationService.Navigate(page);
-        }
-
-        private void btn3_Click(object sender, RoutedEventArgs e)
-        {
-            About page = new About();
-            NavigationService.Navigate(page);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

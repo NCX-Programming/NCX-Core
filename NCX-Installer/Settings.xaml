@@ -9,37 +9,16 @@
       Title="Settings" Background="Black">
 
     <Grid>
-        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,-1,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn1_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/home.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn2_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/library.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="0,157,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn3_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/store.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn4" Content="" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn4_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/about.png"/>
-            </Button.Background>
-        </Button>
-        <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="53" Source="image/menu/settings1.png" Margin="0,315,0,0"/>
-        <Label x:Name="label1" Content="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="61,10,0,0"/>
-        <Label x:Name="label2" Content="Your Name (Optional)" HorizontalAlignment="Left" Margin="61,60,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="61,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="24" Foreground="Black" FontSize="16"/>
-        <CheckBox x:Name="checkBox2" Content="Enable Archived Projects" HorizontalAlignment="Left" Margin="61,162,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <CheckBox x:Name="checkBox1" Content="Enable Beta Versions" HorizontalAlignment="Left" Margin="61,142,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label x:Name="label3" Content="Theme" HorizontalAlignment="Left" Margin="336,60,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
-        <RadioButton x:Name="radioButton1" Content="Dark" HorizontalAlignment="Left" Margin="336,94,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button x:Name="btn6" Content="Save" HorizontalAlignment="Left" Margin="61,371,0,0" VerticalAlignment="Top" Width="76" Height="23" Click="btn6_Click" Background="#00000000" Foreground="White"/>
-        <Button x:Name="btn7" Content="Reset" HorizontalAlignment="Left" Margin="142,371,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn7_Click" Background="#00000000" Foreground="White"/>
-        <RadioButton x:Name="radioButton2" Content="Light" HorizontalAlignment="Left" Margin="336,118,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="label1" Content="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="16,12,0,0"/>
+        <Label x:Name="label2" Content="Your Name (Optional)" HorizontalAlignment="Left" Margin="16,62,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="16,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="24" Foreground="Black" FontSize="16"/>
+        <CheckBox x:Name="checkBox2" Content="Enable Archived Projects" HorizontalAlignment="Left" Margin="16,164,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox x:Name="checkBox1" Content="Enable Beta Versions" HorizontalAlignment="Left" Margin="16,144,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="label3" Content="Theme" HorizontalAlignment="Left" Margin="291,62,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <RadioButton x:Name="radioButton1" Content="Dark" HorizontalAlignment="Left" Margin="291,96,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="btn6" Content="Save" HorizontalAlignment="Left" Margin="16,372,0,0" VerticalAlignment="Top" Width="76" Height="24" Click="btn6_Click" Background="#00000000" Foreground="White"/>
+        <Button x:Name="btn7" Content="Reset" HorizontalAlignment="Left" Margin="97,372,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="btn7_Click" Background="#00000000" Foreground="White"/>
+        <RadioButton x:Name="radioButton2" Content="Light" HorizontalAlignment="Left" Margin="291,120,0,0" VerticalAlignment="Top" Foreground="White"/>
 
     </Grid>
 </Page>
