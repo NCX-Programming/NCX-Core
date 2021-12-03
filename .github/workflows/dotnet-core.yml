@@ -29,7 +29,6 @@ jobs:
         mv D:\a\NCX-Core\NCX-Core\NCX-Installer\bin\Release\net5.0-windows\* D:\a\NCX-Core\NCX-Core-nightly
         cd D:\a\NCX-Core
         7z a -tzip NCX-Core-nightly.zip NCX-Core-nightly\
-        - name: Publish Build Files
     - name: Publish Build Files
       uses: actions/upload-artifact@v2
       with:
