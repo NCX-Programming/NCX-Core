@@ -23,3 +23,15 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    - name: Pack Build Files
+      run: |
+        mkdir D:\a\NCX-Core\NCX-Core-nightly
+        mv D:\a\NCX-Core\NCX-Core\NCX-Installer\bin\Release\net5.0-windows\* D:\a\NCX-Core\NCX-Core-nightly
+        cd D:\a\NCX-Core
+        7z a -tzip NCX-Core-nightly.zip NCX-Core-nightly\
+        - name: Publish Build Files
+    - name: Publish Build Files
+      uses: actions/upload-artifact@v2
+      with:
+        path: D:\a\NCX-Core\NCX-Core-nightly.zip
+        name: NCX-Core-nightly
