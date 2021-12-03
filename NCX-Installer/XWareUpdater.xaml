@@ -9,53 +9,28 @@
       Title="XWareUpdater" Background="Black">
 
     <Grid>
-        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="0,-1,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn1_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/home.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn2_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/library.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn3" Content="" HorizontalAlignment="Left" Margin="0,157,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn3_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/store.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn4" Content="" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn4_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/about.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn5" Content="" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="btn5_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="image/menu/settings.png"/>
-            </Button.Background>
-        </Button>
-        <Image HorizontalAlignment="Left" Height="100" Margin="73,10,0,0" VerticalAlignment="Top" Width="100" Source="image/coreupdater.png"/>
-        <Label x:Name="label2" Content="NCX-Core Updater" HorizontalAlignment="Left" Margin="173,4,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="32" Foreground="White"/>
-        <Label x:Name="label3" Content="By NinjaCheetah" HorizontalAlignment="Left" Margin="173,40,0,0" VerticalAlignment="Top" FontSize="23" Foreground="White"/>
-        <Button x:Name="btn6" Content="" HorizontalAlignment="Left" Margin="173,75,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="Button_Click_1" Foreground="White" BorderBrush="#00000000">
+        <Image HorizontalAlignment="Left" Height="100" Margin="12,10,0,0" VerticalAlignment="Top" Width="100" Source="image/coreupdater.png"/>
+        <Label x:Name="label2" Content="NCX-Core Updater" HorizontalAlignment="Left" Margin="112,4,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="32" Foreground="White"/>
+        <Label x:Name="label3" Content="By NinjaCheetah" HorizontalAlignment="Left" Margin="112,40,0,0" VerticalAlignment="Top" FontSize="23" Foreground="White"/>
+        <Button x:Name="btn6" Content="" HorizontalAlignment="Left" Margin="112,74,0,0" VerticalAlignment="Top" Width="35" Height="36" Click="Button_Click_1" Foreground="White" BorderBrush="#00000000">
             <Button.Background>
                 <ImageBrush ImageSource="image/button/user.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn9" Content="" HorizontalAlignment="Left" Margin="208,75,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="Button_Click" Foreground="White" BorderBrush="#00707070">
+        <Button x:Name="btn9" Content="" HorizontalAlignment="Left" Margin="147,74,0,0" VerticalAlignment="Top" Width="35" Height="36" Click="Button_Click" Foreground="White" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="image/button/source.png"/>
             </Button.Background>
         </Button>
         <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="248,82,0,0" VerticalAlignment="Top" Width="175" Foreground="#FF00FFC9" Visibility="Hidden"/>
         <Label x:Name="label1" Content="Downloading... Please wait." HorizontalAlignment="Left" Margin="243,98,0,0" VerticalAlignment="Top" Width="174" FontSize="13" Visibility="Hidden" Foreground="White"/>
-        <Button x:Name="btn8" Content="" HorizontalAlignment="Left" Margin="243,75,0,0" VerticalAlignment="Top" Height="35" Width="35" Click="Button_Click_4" Foreground="White" BorderBrush="#00707070">
+        <Button x:Name="btn8" Content="" HorizontalAlignment="Left" Margin="182,74,0,0" VerticalAlignment="Top" Height="36" Width="35" Click="Button_Click_4" Foreground="White" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="image/button/download.png"/>
             </Button.Background>
         </Button>
-        <TextBlock x:Name="label4" HorizontalAlignment="Left" Margin="73,118,0,0" Text="NCX-Core Updater is the (much better) replacement for the built-in update menu, with a full interface and an option to download the latest nightly build." TextWrapping="Wrap" VerticalAlignment="Top" Height="96" Width="388" FontSize="18" Foreground="White"/>
-        <Button x:Name="btn7" Content="" HorizontalAlignment="Left" Margin="73,219,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="btn7_Click" Visibility="Hidden" Foreground="White" BorderBrush="#00707070">
+        <TextBlock x:Name="label4" HorizontalAlignment="Left" Margin="12,118,0,0" Text="NCX-Core Updater is the (much better) replacement for the built-in update menu, with a full interface and an option to download the latest nightly build." TextWrapping="Wrap" VerticalAlignment="Top" Height="96" Width="388" FontSize="18" Foreground="White"/>
+        <Button x:Name="btn7" Content="" HorizontalAlignment="Left" Margin="12,218,0,0" VerticalAlignment="Top" Width="35" Height="36" Click="btn7_Click"  Foreground="White" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="image/button/launch.png"/>
             </Button.Background>

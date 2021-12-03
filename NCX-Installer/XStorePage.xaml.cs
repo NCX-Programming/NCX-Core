@@ -115,7 +115,7 @@ namespace NCX_Installer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "XStore.json"));
+            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
             Store store = JsonConvert.DeserializeObject<Store>(json);
             string url = "";
             switch (slot)
@@ -137,7 +137,7 @@ namespace NCX_Installer
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "XStore.json"));
+            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
             Store store = JsonConvert.DeserializeObject<Store>(json);
             string url = "";
             switch (slot)
@@ -165,7 +165,7 @@ namespace NCX_Installer
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "XStore.json"));
+            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
             Store store = JsonConvert.DeserializeObject<Store>(json);
             switch (slot)
             {

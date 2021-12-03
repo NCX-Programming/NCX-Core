@@ -143,6 +143,11 @@ namespace NCX_Installer
             }
             img1.Visibility = Visibility.Hidden;
             _NavigationFrame.Navigate(new MainMenu());
+            HomeButton.Visibility = Visibility.Visible;
+            LibraryButton.Visibility = Visibility.Visible;
+            StoreButton.Visibility = Visibility.Visible;
+            AboutButton.Visibility = Visibility.Visible;
+            SettingsButton.Visibility = Visibility.Visible;
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
