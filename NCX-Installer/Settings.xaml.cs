@@ -24,13 +24,12 @@ namespace NCX_Installer
             InitializeComponent();
             textBox1.Text = Settings1.Default.name;
             checkBox1.IsChecked = Settings1.Default.betaVer;
-            checkBox2.IsChecked = Settings1.Default.oldVer;
             if (Settings1.Default.lightTheme == true)
             {
                 this.Background = Brushes.White;
                 label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
                 btn6.Foreground = Brushes.Black; btn7.Foreground = Brushes.Black; checkBox1.Foreground = Brushes.Black;
-                checkBox2.Foreground = Brushes.Black; radioButton1.Foreground = Brushes.Black; radioButton2.Foreground = Brushes.Black;
+                radioButton1.Foreground = Brushes.Black; radioButton2.Foreground = Brushes.Black;
             }
             if (Settings1.Default.lightTheme == true) radioButton2.IsChecked = true;
             else radioButton1.IsChecked = true;
@@ -45,7 +44,6 @@ namespace NCX_Installer
             Settings1.Default.firstTime = false;
             Settings1.Default.name = textBox1.Text;
             Settings1.Default.betaVer = (bool)checkBox1.IsChecked;
-            Settings1.Default.oldVer = (bool)checkBox2.IsChecked;
             if (radioButton1.IsChecked == true) Settings1.Default.lightTheme = false;
             else if (radioButton2.IsChecked == true) Settings1.Default.lightTheme = true;
             Settings1.Default.Save();
@@ -55,14 +53,14 @@ namespace NCX_Installer
                 this.Background = Brushes.White;
                 label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
                 btn6.Foreground = Brushes.Black; btn7.Foreground = Brushes.Black; checkBox1.Foreground = Brushes.Black;
-                checkBox2.Foreground = Brushes.Black; radioButton1.Foreground = Brushes.Black; radioButton2.Foreground = Brushes.Black;
+                radioButton1.Foreground = Brushes.Black; radioButton2.Foreground = Brushes.Black;
             }
             else if(Settings1.Default.lightTheme == false)
             {
                 this.Background = Brushes.Black;
                 label1.Foreground = Brushes.White; label2.Foreground = Brushes.White; label3.Foreground = Brushes.White;
                 btn6.Foreground = Brushes.White; btn7.Foreground = Brushes.White; checkBox1.Foreground = Brushes.White;
-                checkBox2.Foreground = Brushes.White; radioButton1.Foreground = Brushes.White; radioButton2.Foreground = Brushes.White;
+                radioButton1.Foreground = Brushes.White; radioButton2.Foreground = Brushes.White;
             }
         }
 
@@ -76,7 +74,6 @@ namespace NCX_Installer
             {
                 Settings1.Default.firstTime = true;
                 Settings1.Default.name = "";
-                Settings1.Default.oldVer = false;
                 Settings1.Default.betaVer = false;
                 Settings1.Default.arch = false;
                 Settings1.Default.Save();

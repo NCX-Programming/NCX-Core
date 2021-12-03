@@ -12,7 +12,6 @@
         <Label x:Name="label1" Content="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="16,12,0,0"/>
         <Label x:Name="label2" Content="Your Name (Optional)" HorizontalAlignment="Left" Margin="16,62,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="16,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="24" Foreground="Black" FontSize="16"/>
-        <CheckBox x:Name="checkBox2" Content="Enable Archived Projects" HorizontalAlignment="Left" Margin="16,164,0,0" VerticalAlignment="Top" Foreground="White"/>
         <CheckBox x:Name="checkBox1" Content="Enable Beta Versions" HorizontalAlignment="Left" Margin="16,144,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label x:Name="label3" Content="Theme" HorizontalAlignment="Left" Margin="291,62,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
         <RadioButton x:Name="radioButton1" Content="Dark" HorizontalAlignment="Left" Margin="291,96,0,0" VerticalAlignment="Top" Foreground="White"/>
