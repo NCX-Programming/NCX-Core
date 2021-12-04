@@ -33,16 +33,6 @@
     <None Remove="image\csharpcol.png" />
     <None Remove="image\dsidownloader.png" />
     <None Remove="image\firsttime.png" />
-    <None Remove="image\menu\about.png" />
-    <None Remove="image\menu\about1.png" />
-    <None Remove="image\menu\home.png" />
-    <None Remove="image\menu\home1.png" />
-    <None Remove="image\menu\library.png" />
-    <None Remove="image\menu\library1.png" />
-    <None Remove="image\menu\settings.png" />
-    <None Remove="image\menu\settings1.png" />
-    <None Remove="image\menu\store.png" />
-    <None Remove="image\menu\store1.png" />
     <None Remove="image\ncxnewsplus.png" />
     <None Remove="image\screen\am1.png" />
     <None Remove="image\screen\am2.png" />
@@ -77,16 +67,6 @@
     <Resource Include="image\c64titleloader.png" />
     <Resource Include="image\coreupdater.png" />
     <Resource Include="image\csharpcol.png" />
-    <Resource Include="image\menu\about.png" />
-    <Resource Include="image\menu\about1.png" />
-    <Resource Include="image\menu\home.png" />
-    <Resource Include="image\menu\home1.png" />
-    <Resource Include="image\menu\library.png" />
-    <Resource Include="image\menu\library1.png" />
-    <Resource Include="image\menu\settings.png" />
-    <Resource Include="image\menu\settings1.png" />
-    <Resource Include="image\menu\store.png" />
-    <Resource Include="image\menu\store1.png" />
     <Resource Include="image\ncxnewsplus.png" />
     <Resource Include="image\screen\c64tl2.png" />
   </ItemGroup>

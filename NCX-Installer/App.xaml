@@ -5,6 +5,14 @@
              StartupUri="MainWindow.xaml"
              ShutdownMode="OnLastWindowClose">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary x:Name="HomeButton" Source="image/menu/home.xaml"/>
+                <ResourceDictionary x:Name="LibraryButton" Source="image/menu/library.xaml"/>
+                <ResourceDictionary x:Name="StoreButton" Source="image/menu/store.xaml"/>
+                <ResourceDictionary x:Name="AboutButton" Source="image/menu/about.xaml"/>
+                <ResourceDictionary x:Name="SettingsButton" Source="image/menu/settings.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

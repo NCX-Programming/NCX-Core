@@ -9,29 +9,29 @@
     <Grid>
         <Frame Content="" x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" Margin="54,0,0,0"/>
         <Image x:Name="img1" HorizontalAlignment="Center" Height="256" VerticalAlignment="Center" Width="512" Source="image/banner.png"/>
-        <Button x:Name="HomeButton" Content="" HorizontalAlignment="Left" Margin="0,-1,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="HomeButton_Click" Visibility="Hidden">
+        <Button x:Name="HomeButton" HorizontalAlignment="Left" Margin="0,-1,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="HomeButton_Click" Visibility="Hidden">
             <Button.Background>
-                <ImageBrush ImageSource="/image/menu/home.png"/>
+                <ImageBrush ImageSource="{StaticResource homeDrawingImage}"/>
             </Button.Background>
         </Button>
         <Button x:Name="LibraryButton" Content="" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="LibraryButton_Click" Visibility="Hidden">
             <Button.Background>
-                <ImageBrush ImageSource="/image/menu/library.png"/>
+                <ImageBrush ImageSource="{StaticResource libraryDrawingImage}"/>
             </Button.Background>
         </Button>
         <Button x:Name="StoreButton" Content="" HorizontalAlignment="Left" Margin="0,157,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="StoreButton_Click" Visibility="Hidden">
             <Button.Background>
-                <ImageBrush ImageSource="/image/menu/store.png"/>
+                <ImageBrush ImageSource="{StaticResource storeDrawingImage}"/>
             </Button.Background>
         </Button>
         <Button x:Name="AboutButton" Content="" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="AboutButton_Click" Visibility="Hidden">
             <Button.Background>
-                <ImageBrush ImageSource="/image/menu/about.png"/>
+                <ImageBrush ImageSource="{StaticResource aboutDrawingImage}"/>
             </Button.Background>
         </Button>
         <Button x:Name="SettingsButton" Content="" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top" Height="79" Width="53" BorderBrush="#00707070" Click="SettingsButton_Click" Visibility="Hidden">
             <Button.Background>
-                <ImageBrush ImageSource="/image/menu/settings.png"/>
+                <ImageBrush ImageSource="{StaticResource settingsDrawingImage}"/>
             </Button.Background>
         </Button>
     </Grid>
