@@ -21,13 +21,7 @@
     <None Remove="image\banner.png" />
     <None Remove="image\banner\csharpcollection.png" />
     <None Remove="image\banner\ncxnewsplus.png" />
-    <None Remove="image\button\download-beta.png" />
-    <None Remove="image\button\download-release.png" />
-    <None Remove="image\button\download.png" />
-    <None Remove="image\button\launch.png" />
     <None Remove="image\button\newsplus.png" />
-    <None Remove="image\button\source.png" />
-    <None Remove="image\button\user.png" />
     <None Remove="image\c64titleloader.png" />
     <None Remove="image\coreupdater.png" />
     <None Remove="image\csharpcol.png" />
@@ -57,13 +51,7 @@
     <Resource Include="image\banner.png" />
     <Resource Include="image\banner\csharpcollection.png" />
     <Resource Include="image\banner\ncxnewsplus.png" />
-    <Resource Include="image\button\download-beta.png" />
-    <Resource Include="image\button\download-release.png" />
-    <Resource Include="image\button\download.png" />
-    <Resource Include="image\button\launch.png" />
     <Resource Include="image\button\newsplus.png" />
-    <Resource Include="image\button\source.png" />
-    <Resource Include="image\button\user.png" />
     <Resource Include="image\c64titleloader.png" />
     <Resource Include="image\coreupdater.png" />
     <Resource Include="image\csharpcol.png" />

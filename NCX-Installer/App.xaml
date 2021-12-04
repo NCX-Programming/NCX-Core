@@ -12,6 +12,12 @@
                 <ResourceDictionary x:Name="StoreButton" Source="image/menu/store.xaml"/>
                 <ResourceDictionary x:Name="AboutButton" Source="image/menu/about.xaml"/>
                 <ResourceDictionary x:Name="SettingsButton" Source="image/menu/settings.xaml"/>
+                <ResourceDictionary x:Name="UserBtn" Source="image/button/user.xaml"/>
+                <ResourceDictionary x:Name="SourceBtn" Source="image/button/source.xaml"/>
+                <ResourceDictionary x:Name="LaunchBtn" Source="image/button/launch.xaml"/>
+                <ResourceDictionary x:Name="DownloadBtn" Source="image/button/download.xaml"/>
+                <ResourceDictionary x:Name="DownloadRBtn" Source="image/button/download-release.xaml"/>
+                <ResourceDictionary x:Name="DownloadBBtn" Source="image/button/download-beta.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -21,19 +21,19 @@
         <Label x:Name="label3" Content="Author" HorizontalAlignment="Left" Margin="115,41,0,0" VerticalAlignment="Top" FontSize="23" Foreground="White"/>
         <Button x:Name="btn7" Content="" HorizontalAlignment="Left" Margin="115,76,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="Button_Click_1" Foreground="White" BorderBrush="#00707070" ToolTip="User Profile">
             <Button.Background>
-                <ImageBrush ImageSource="image/button/user.png"/>
+                <ImageBrush ImageSource="{StaticResource userDrawingImage}"/>
             </Button.Background>
         </Button>
         <Button x:Name="btn12" Content="" HorizontalAlignment="Left" Margin="150,76,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="Button_Click" Foreground="White" BorderBrush="#00707070" ToolTip="Source (GitHub Repo)">
             <Button.Background>
-                <ImageBrush ImageSource="image/button/source.png"/>
+                <ImageBrush ImageSource="{StaticResource sourceDrawingImage}"/>
             </Button.Background>
         </Button>
         <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="220,83,0,0" VerticalAlignment="Top" Width="175" Foreground="#FF00FFC9" Visibility="Hidden"/>
         <Label x:Name="label1" Content="Downloading... Please wait." HorizontalAlignment="Left" Margin="209,99,0,0" VerticalAlignment="Top" Width="174" FontSize="13" Visibility="Hidden" Foreground="White"/>
         <Button x:Name="btn8" Content="" HorizontalAlignment="Left" Margin="185,76,0,0" VerticalAlignment="Top" Height="34" Width="35" Click="Button_Click_4" Foreground="White" Visibility="Hidden" BorderBrush="#00707070" ToolTip="Download Release">
             <Button.Background>
-                <ImageBrush ImageSource="image/button/download-release.png"/>
+                <ImageBrush ImageSource="{StaticResource download_releaseDrawingImage}"/>
             </Button.Background>
         </Button>
         <TextBlock x:Name="label2" HorizontalAlignment="Left" Margin="15,119,0,0" Text="Description" TextWrapping="Wrap" VerticalAlignment="Top" Height="101" Width="388" FontSize="18" Foreground="White"/>
@@ -50,12 +50,12 @@
         </Button>
         <Button x:Name="btn10" Content="" HorizontalAlignment="Left" Width="35" Height="35" Margin="220,76,0,0" VerticalAlignment="Top" Foreground="White" Visibility="Hidden" Click="Button_Click_7" BorderBrush="#00707070" ToolTip="Download Nightly">
             <Button.Background>
-                <ImageBrush ImageSource="image/button/download-beta.png"/>
+                <ImageBrush ImageSource="{StaticResource download_betaDrawingImage}"/>
             </Button.Background>
         </Button>
         <Button x:Name="btn11" Content="" HorizontalAlignment="Left" Margin="185,76,0,0" VerticalAlignment="Top" Width="35" Height="35" Foreground="White" Click="Button_Click_6" BorderBrush="#00707070" ToolTip="Download">
             <Button.Background>
-                <ImageBrush ImageSource="image/button/download.png"/>
+                <ImageBrush ImageSource="{StaticResource downloadDrawingImage}"/>
             </Button.Background>
         </Button>
         <Button x:Name="btn13" Content="" HorizontalAlignment="Left" Margin="88,321,0,0" VerticalAlignment="Top" Height="82" Width="133" Click="btn13_Click" Visibility="Hidden">

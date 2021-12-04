@@ -14,25 +14,25 @@
         <Label x:Name="label4" Content="By NinjaCheetah" HorizontalAlignment="Left" Margin="110,40,0,0" VerticalAlignment="Top" FontSize="23" Foreground="White"/>
         <Button x:Name="btn6" Content="" HorizontalAlignment="Left" Margin="110,75,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="Button_Click_1" Foreground="White" BorderBrush="#00707070">
             <Button.Background>
-                <ImageBrush ImageSource="image/button/user.png"/>
+                <ImageBrush ImageSource="{StaticResource userDrawingImage}"/>
             </Button.Background>
         </Button>
         <Button x:Name="btn9" Content="" HorizontalAlignment="Left" Margin="145,75,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="Button_Click" Foreground="White" BorderBrush="#00707070">
             <Button.Background>
-                <ImageBrush ImageSource="image/button/source.png"/>
+                <ImageBrush ImageSource="{StaticResource sourceDrawingImage}"/>
             </Button.Background>
         </Button>
         <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="248,82,0,0" VerticalAlignment="Top" Width="175" Foreground="#FF00FFC9" Visibility="Hidden"/>
         <Label x:Name="label1" Content="Downloading... Please wait." HorizontalAlignment="Left" Margin="243,98,0,0" VerticalAlignment="Top" Width="174" FontSize="13" Visibility="Hidden" Foreground="White"/>
         <Button x:Name="btn8" Content="" HorizontalAlignment="Left" Margin="180,75,0,0" VerticalAlignment="Top" Height="35" Width="35" Click="Button_Click_4" Foreground="White" BorderBrush="#00707070">
             <Button.Background>
-                <ImageBrush ImageSource="image/button/download.png"/>
+                <ImageBrush ImageSource="{StaticResource downloadDrawingImage}"/>
             </Button.Background>
         </Button>
         <TextBlock x:Name="label3" HorizontalAlignment="Left" Margin="10,118,0,0" Text="NCX-News+ is the best place to read full length NCX-News stories with information about things like software updates. News kindly written by IanSkinner1982." TextWrapping="Wrap" VerticalAlignment="Top" Height="96" Width="388" FontSize="18" Foreground="White"/>
         <Button x:Name="btn7" Content="" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="btn7_Click" Visibility="Hidden" Foreground="White" BorderBrush="#00000000">
             <Button.Background>
-                <ImageBrush ImageSource="image/button/launch.png"/>
+                <ImageBrush ImageSource="{StaticResource launchDrawingImage}"/>
             </Button.Background>
         </Button>
     </Grid>
