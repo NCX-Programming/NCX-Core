@@ -110,7 +110,7 @@ namespace NCX_Installer
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "ncxCoreMainMenu.json"));
+            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/ncxCoreMainMenu.json"));
             Menu menu = JsonConvert.DeserializeObject<Menu>(json);
 
             switch (menu.Featured)
