@@ -21,11 +21,7 @@
     <None Remove="image\banner.png" />
     <None Remove="image\banner\csharpcollection.png" />
     <None Remove="image\banner\ncxnewsplus.png" />
-    <None Remove="image\button\newsplus.png" />
-    <None Remove="image\c64titleloader.png" />
     <None Remove="image\coreupdater.png" />
-    <None Remove="image\csharpcol.png" />
-    <None Remove="image\dsidownloader.png" />
     <None Remove="image\firsttime.png" />
     <None Remove="image\ncxnewsplus.png" />
     <None Remove="image\screen\am1.png" />
@@ -40,7 +36,6 @@
     <None Remove="image\settings.png" />
     <None Remove="image\utilbanner.png" />
     <None Remove="image\xware.png" />
-    <None Remove="image\xwarelaunch.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,17 +46,12 @@
     <Resource Include="image\banner.png" />
     <Resource Include="image\banner\csharpcollection.png" />
     <Resource Include="image\banner\ncxnewsplus.png" />
-    <Resource Include="image\button\newsplus.png" />
-    <Resource Include="image\c64titleloader.png" />
     <Resource Include="image\coreupdater.png" />
-    <Resource Include="image\csharpcol.png" />
     <Resource Include="image\ncxnewsplus.png" />
     <Resource Include="image\screen\c64tl2.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="image\automod.png" />
-    <Resource Include="image\dsidownloader.png" />
     <Resource Include="image\firsttime.png" />
     <Resource Include="image\screen\am1.png" />
     <Resource Include="image\screen\am2.png" />
@@ -74,7 +64,6 @@
     <Resource Include="image\settings.png" />
     <Resource Include="image\utilbanner.png" />
     <Resource Include="image\xware.png" />
-    <Resource Include="image\xwarelaunch.png" />
   </ItemGroup>
 
   <ItemGroup>

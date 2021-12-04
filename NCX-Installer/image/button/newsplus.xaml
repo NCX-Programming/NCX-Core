@@ -1,0 +1,147 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Geometry x:Key="launchGeometry1">F1 M256,256z M0,0z M15.5,128C15.5,65.868 65.868,15.5 128,15.5 190.132,15.5 240.5,65.868 240.5,128 240.5,190.132 190.132,240.5 128,240.5 65.868,240.5 15.5,190.132 15.5,128z</Geometry>
+  <Geometry x:Key="launchGeometry2">F1 M256,256z M0,0z M84.6611,186.146L84.6611,69.8544C84.6611,61.8261,90.2973,58.5721,97.25,62.5862L197.961,120.732C204.914,124.746,204.914,131.254,197.961,135.268L97.25,193.414C90.2973,197.428,84.6611,194.174,84.6611,186.146z</Geometry>
+  <DrawingGroup x:Key="launchDrawingGroup" ClipGeometry="M0,0 V256 H256 V0 H0 Z">
+    <DrawingGroup Opacity="1">
+      <GeometryDrawing Geometry="{StaticResource launchGeometry1}">
+        <GeometryDrawing.Pen>
+          <Pen Brush="#FF45FFCA" Thickness="8" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="1" />
+        </GeometryDrawing.Pen>
+      </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingGroup Opacity="1">
+      <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource launchGeometry2}" />
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="launchDrawingImage" Drawing="{StaticResource launchDrawingGroup}" />
+  <Geometry x:Key="downloadGeometry1">F1 M256,256z M0,0z M15.5,128C15.5,65.868 65.868,15.5 128,15.5 190.132,15.5 240.5,65.868 240.5,128 240.5,190.132 190.132,240.5 128,240.5 65.868,240.5 15.5,190.132 15.5,128z</Geometry>
+  <Geometry x:Key="downloadGeometry2">F1 M256,256z M0,0z M135.186,217.001L192.67,152.892C196.639,148.467,195.037,144.879,189.092,144.879L66.9076,144.879C60.9631,144.879,59.3613,148.467,63.3298,152.892L120.814,217.001C124.783,221.427,131.217,221.427,135.186,217.001z</Geometry>
+  <Geometry x:Key="downloadGeometry3">F1 M256,256z M0,0z M111.244,48.0486L146.722,48.0486C155.979,48.0486,163.483,54.7325,163.483,62.9775L163.483,62.9775C163.483,71.2225,155.979,77.9063,146.722,77.9063L111.244,77.9063C101.987,77.9063,94.4832,71.2225,94.4832,62.9775L94.4832,62.9775C94.4832,54.7325,101.987,48.0486,111.244,48.0486z</Geometry>
+  <Geometry x:Key="downloadGeometry4">F1 M256,256z M0,0z M94.4396,62.9775L163.483,62.9775 163.483,152.578 94.4396,152.578 94.4396,62.9775z</Geometry>
+  <DrawingGroup x:Key="downloadDrawingGroup" ClipGeometry="M0,0 V256 H256 V0 H0 Z">
+    <DrawingGroup Opacity="1">
+      <GeometryDrawing Geometry="{StaticResource downloadGeometry1}">
+        <GeometryDrawing.Pen>
+          <Pen Brush="#FF45FFCA" Thickness="8" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="1" />
+        </GeometryDrawing.Pen>
+      </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingGroup Opacity="1">
+      <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource downloadGeometry2}" />
+      <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource downloadGeometry3}" />
+      <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource downloadGeometry4}" />
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="downloadDrawingImage" Drawing="{StaticResource downloadDrawingGroup}" />
+  <Geometry x:Key="download_betaGeometry1">F1 M256,256z M0,0z M15.5,128C15.5,65.868 65.868,15.5 128,15.5 190.132,15.5 240.5,65.868 240.5,128 240.5,190.132 190.132,240.5 128,240.5 65.868,240.5 15.5,190.132 15.5,128z</Geometry>
+  <Geometry x:Key="download_betaGeometry2">F1 M256,256z M0,0z M111.25,48.0625C101.993,48.0625,94.4688,54.7238,94.4688,62.9688L94.4375,62.9688 94.4375,144.875 66.9062,144.875C60.9618,144.875,59.3753,148.48,63.3438,152.906L120.812,217C124.781,221.426,131.219,221.426,135.188,217L192.656,152.906C196.625,148.48,195.038,144.875,189.094,144.875L163.469,144.875 163.469,62.9688C163.469,54.7238,155.975,48.0625,146.719,48.0625L111.25,48.0625z M103.5,90.3125L112.812,90.3125 131.812,90.3125C136.091,90.3125 139.822,91.1035 143.031,92.6562 146.24,94.209 148.737,96.3613 150.531,99.1562 152.326,101.951 153.219,105.211 153.219,108.938L153.219,109.062C153.219,111.65 152.642,114.091 151.469,116.438 150.296,118.784 148.692,120.771 146.656,122.375 144.62,123.979 142.307,124.964 139.719,125.344L139.719,125.562C143.307,125.977 146.412,127 149,128.656 151.588,130.313 153.557,132.457 154.938,135.062 156.318,137.668 157,140.625 157,143.938L157,144.031C157,148.413 155.987,152.159 153.969,155.281 151.95,158.404 149.074,160.826 145.312,162.5 141.551,164.174 137.001,165 131.688,165L112.812,165 103.5,165 103.5,90.3125z M112.812,98.5312L112.812,122.5 126.781,122.5C132.302,122.5 136.522,121.452 139.438,119.312 142.353,117.173 143.812,114.068 143.812,110.031L143.812,109.938C143.812,106.245 142.575,103.418 140.125,101.469 137.675,99.5192 134.208,98.5312 129.688,98.5312L112.812,98.5312z M112.812,130.531L112.812,156.781 130.312,156.781C135.902,156.781 140.147,155.663 143.062,153.438 145.978,151.212 147.438,147.966 147.438,143.688L147.438,143.562C147.438,140.664 146.752,138.245 145.406,136.312 144.061,134.38 142.049,132.935 139.375,131.969 136.701,131.003 133.406,130.531 129.438,130.531L112.812,130.531z</Geometry>
+  <DrawingGroup x:Key="download_betaDrawingGroup" ClipGeometry="M0,0 V256 H256 V0 H0 Z">
+    <DrawingGroup Opacity="1">
+      <GeometryDrawing Geometry="{StaticResource download_betaGeometry1}">
+        <GeometryDrawing.Pen>
+          <Pen Brush="#FFFA0C00" Thickness="8" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="1" />
+        </GeometryDrawing.Pen>
+      </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingGroup Opacity="1">
+      <GeometryDrawing Brush="#FFFA0C00" Geometry="{StaticResource download_betaGeometry2}" />
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="download_betaDrawingImage" Drawing="{StaticResource download_betaDrawingGroup}" />
+  <Geometry x:Key="download_releaseGeometry1">F1 M256,256z M0,0z M15.5,128C15.5,65.868 65.868,15.5 128,15.5 190.132,15.5 240.5,65.868 240.5,128 240.5,190.132 190.132,240.5 128,240.5 65.868,240.5 15.5,190.132 15.5,128z</Geometry>
+  <Geometry x:Key="download_releaseGeometry2">F1 M256,256z M0,0z M111.25,48.0625C101.993,48.0625,94.4688,54.7238,94.4688,62.9688L94.4375,62.9688 94.4375,144.875 66.9062,144.875C60.9618,144.875,59.3753,148.48,63.3438,152.906L120.812,217C124.781,221.426,131.219,221.426,135.188,217L192.656,152.906C196.625,148.48,195.038,144.875,189.094,144.875L163.469,144.875 163.469,62.9688C163.469,54.7238,155.975,48.0625,146.719,48.0625L111.25,48.0625z M103.5,90.3125L131.5,90.3125C136.296,90.3125 140.46,91.2477 144.031,93.0938 147.603,94.9398 150.377,97.514 152.344,100.844 154.311,104.174 155.312,108.077 155.312,112.562L155.312,112.688C155.312,117.863 153.955,122.315 151.281,126.094 148.607,129.872 144.939,132.516 140.281,134L157.594,165 146.656,165 130.656,135.438C130.553,135.438 130.461,135.438 130.375,135.438 130.289,135.438 130.197,135.438 130.094,135.438L112.812,135.438 112.812,165 103.5,165 103.5,90.3125z M112.812,98.5938L112.812,127.219 130.656,127.219C135.452,127.219 139.176,125.984 141.781,123.5 144.386,121.016 145.688,117.464 145.688,112.875L145.688,112.781C145.688,108.33 144.306,104.845 141.562,102.344 138.819,99.8421 135.046,98.5938 130.25,98.5938L112.812,98.5938z</Geometry>
+  <DrawingGroup x:Key="download_releaseDrawingGroup" ClipGeometry="M0,0 V256 H256 V0 H0 Z">
+    <DrawingGroup Opacity="1">
+      <GeometryDrawing Geometry="{StaticResource download_releaseGeometry1}">
+        <GeometryDrawing.Pen>
+          <Pen Brush="#FF45FFCA" Thickness="8" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="1" />
+        </GeometryDrawing.Pen>
+      </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingGroup Opacity="1">
+      <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource download_releaseGeometry2}" />
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="download_releaseDrawingImage" Drawing="{StaticResource download_releaseDrawingGroup}" />
+  <Geometry x:Key="userGeometry1">F1 M256,256z M0,0z M15.5,128C15.5,65.868 65.868,15.5 128,15.5 190.132,15.5 240.5,65.868 240.5,128 240.5,190.132 190.132,240.5 128,240.5 65.868,240.5 15.5,190.132 15.5,128z</Geometry>
+  <Geometry x:Key="userGeometry2">F1 M256,256z M0,0z M184.07,160.628L184.07,179.098C184.07,196.141,165.676,209.958,142.986,209.958L113.014,209.958C90.3237,209.958,71.93,196.141,71.93,179.098L71.93,160.628</Geometry>
+  <Geometry x:Key="userGeometry3">F1 M256,256z M0,0z M71.93,161.628C71.93,129.568 97.0327,103.577 127.999,103.577 158.964,103.577 184.067,129.568 184.067,161.628</Geometry>
+  <Geometry x:Key="userGeometry4">F1 M256,256z M0,0z M96.7706,62.4119C96.7706,45.8433 110.202,32.4119 126.771,32.4119 143.339,32.4119 156.771,45.8433 156.771,62.4119 156.771,78.9804 143.339,92.4119 126.771,92.4119 110.202,92.4119 96.7706,78.9804 96.7706,62.4119z</Geometry>
+  <DrawingGroup x:Key="userDrawingGroup" ClipGeometry="M0,0 V256 H256 V0 H0 Z">
+    <DrawingGroup Opacity="1">
+      <GeometryDrawing Geometry="{StaticResource userGeometry1}">
+        <GeometryDrawing.Pen>
+          <Pen Brush="#FF45FFCA" Thickness="8" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="1" />
+        </GeometryDrawing.Pen>
+      </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingGroup Opacity="1">
+      <DrawingGroup Opacity="1">
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource userGeometry2}">
+          <GeometryDrawing.Pen>
+            <Pen Brush="#FF45FFCA" Thickness="8" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="1" />
+          </GeometryDrawing.Pen>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource userGeometry3}">
+          <GeometryDrawing.Pen>
+            <Pen Brush="#FF45FFCA" Thickness="8" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="1" />
+          </GeometryDrawing.Pen>
+        </GeometryDrawing>
+      </DrawingGroup>
+      <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource userGeometry4}" />
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="userDrawingImage" Drawing="{StaticResource userDrawingGroup}" />
+  <Geometry x:Key="sourceGeometry1">F1 M256,256z M0,0z M15.5,128C15.5,65.868 65.868,15.5 128,15.5 190.132,15.5 240.5,65.868 240.5,128 240.5,190.132 190.132,240.5 128,240.5 65.868,240.5 15.5,190.132 15.5,128z</Geometry>
+  <Geometry x:Key="sourceGeometry2">F1 M256,256z M0,0z M48.7031,136.633L104.777,158.1 104.777,149.15 49.2695,128.363 49.2695,134.084 104.777,113.297 104.777,104.574 48.7031,126.041 48.7031,136.633z</Geometry>
+  <Geometry x:Key="sourceGeometry3">F1 M256,256z M0,0z M147.256,82.7676L137.854,82.7676 114.801,184.324 124.203,184.324 147.256,82.7676z</Geometry>
+  <Geometry x:Key="sourceGeometry4">F1 M256,256z M0,0z M213.297,126.041L157.223,104.574 157.223,113.523 212.73,134.311 212.73,128.59 157.223,149.377 157.223,158.1 213.297,136.633 213.297,126.041z</Geometry>
+  <DrawingGroup x:Key="sourceDrawingGroup" ClipGeometry="M0,0 V256 H256 V0 H0 Z">
+    <DrawingGroup Opacity="1">
+      <GeometryDrawing Geometry="{StaticResource sourceGeometry1}">
+        <GeometryDrawing.Pen>
+          <Pen Brush="#FF45FFCA" Thickness="8" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="1" />
+        </GeometryDrawing.Pen>
+      </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingGroup Opacity="1">
+      <DrawingGroup Opacity="1">
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource sourceGeometry2}" />
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource sourceGeometry3}" />
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource sourceGeometry4}" />
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="sourceDrawingImage" Drawing="{StaticResource sourceDrawingGroup}" />
+  <Geometry x:Key="newsplusGeometry1">F1 M256,128z M0,0z M25.4979,5.5L230.502,5.5C241.547,5.5,250.5,13.2527,250.5,22.8162L250.5,105.184C250.5,114.747,241.547,122.5,230.502,122.5L25.4979,122.5C14.4534,122.5,5.5,114.747,5.5,105.184L5.5,22.8162C5.5,13.2527,14.4534,5.5,25.4979,5.5z</Geometry>
+  <Geometry x:Key="newsplusGeometry2">F1 M256,128z M0,0z M20.4707,49.8086L25.0605,49.8086 39.5527,73.0508 39.5527,49.8086 43.2441,49.8086 43.2441,78.5 38.8887,78.5 24.1816,55.2773 24.1816,78.5 20.4707,78.5 20.4707,49.8086z</Geometry>
+  <Geometry x:Key="newsplusGeometry3">F1 M256,128z M0,0z M61.4473,49.0273C65.0801,49.0273 67.8991,49.9844 69.9043,51.8984 71.9095,53.8125 73.0228,55.987 73.2441,58.4219L69.4551,58.4219C69.0254,56.5729 68.1693,55.1081 66.8867,54.0273 65.6042,52.9466 63.804,52.4062 61.4863,52.4062 58.6608,52.4062 56.3789,53.3991 54.6406,55.3848 52.9023,57.3704 52.0332,60.4141 52.0332,64.5156 52.0332,67.875 52.8177,70.5996 54.3867,72.6895 55.9557,74.7793 58.2962,75.8242 61.4082,75.8242 64.2728,75.8242 66.4538,74.724 67.9512,72.5234 68.7454,71.3646 69.3379,69.8411 69.7285,67.9531L73.5176,67.9531C73.179,70.974 72.0592,73.5065 70.1582,75.5508 67.8796,78.0117 64.8066,79.2422 60.9395,79.2422 57.6061,79.2422 54.8066,78.2331 52.541,76.2148 49.5592,73.5456 48.0684,69.4245 48.0684,63.8516 48.0684,59.6198 49.1882,56.1497 51.4277,53.4414 53.8496,50.4987 57.1895,49.0273 61.4473,49.0273z</Geometry>
+  <Geometry x:Key="newsplusGeometry4">F1 M256,128z M0,0z M80.7051,78.5L76.0176,78.5 86.291,63.793 76.6621,49.8086 81.5254,49.8086 88.8496,60.7852 96.1152,49.8086 100.744,49.8086 91.1152,63.793 101.213,78.5 96.3887,78.5 88.6543,66.7031 80.7051,78.5z</Geometry>
+  <Geometry x:Key="newsplusGeometry5">F1 M256,128z M0,0z M103.537,65.5508L113.342,65.5508 113.342,69.1641 103.537,69.1641 103.537,65.5508z</Geometry>
+  <Geometry x:Key="newsplusGeometry6">F1 M256,128z M0,0z M118.244,49.8086L122.834,49.8086 137.326,73.0508 137.326,49.8086 141.018,49.8086 141.018,78.5 136.662,78.5 121.955,55.2773 121.955,78.5 118.244,78.5 118.244,49.8086z</Geometry>
+  <Geometry x:Key="newsplusGeometry7">F1 M256,128z M0,0z M155.373,57.1133C156.857,57.1133 158.296,57.4616 159.689,58.1582 161.083,58.8548 162.144,59.7565 162.873,60.8633 163.576,61.918 164.045,63.1484 164.279,64.5547 164.488,65.5182 164.592,67.0547 164.592,69.1641L149.26,69.1641C149.325,71.2865 149.826,72.9889 150.764,74.2715 151.701,75.554 153.153,76.1953 155.119,76.1953 156.955,76.1953 158.42,75.5898 159.514,74.3789 160.139,73.6758 160.581,72.862 160.842,71.9375L164.299,71.9375C164.208,72.7057 163.905,73.5618 163.391,74.5059 162.876,75.4499 162.3,76.2214 161.662,76.8203 160.594,77.862 159.273,78.5651 157.697,78.9297 156.851,79.138 155.894,79.2422 154.826,79.2422 152.222,79.2422 150.015,78.2949 148.205,76.4004 146.395,74.5059 145.49,71.8529 145.49,68.4414 145.49,65.082 146.402,62.3542 148.225,60.2578 150.048,58.1615 152.43,57.1133 155.373,57.1133z M160.979,66.3711C160.835,64.8477 160.503,63.6302 159.982,62.7188 159.019,61.026 157.411,60.1797 155.158,60.1797 153.544,60.1797 152.189,60.7624 151.096,61.9277 150.002,63.0931 149.423,64.5742 149.357,66.3711L160.979,66.3711z</Geometry>
+  <Geometry x:Key="newsplusGeometry8">F1 M256,128z M0,0z M170.529,57.582L174.553,74.0664 178.635,57.582 182.58,57.582 186.682,73.9688 190.959,57.582 194.475,57.582 188.4,78.5 184.748,78.5 180.49,62.3086 176.369,78.5 172.717,78.5 166.682,57.582 170.529,57.582z</Geometry>
+  <Geometry x:Key="newsplusGeometry9">F1 M256,128z M0,0z M199.885,71.9375C199.989,73.1094 200.282,74.0078 200.764,74.6328 201.649,75.7656 203.186,76.332 205.373,76.332 206.675,76.332 207.821,76.0488 208.811,75.4824 209.8,74.916 210.295,74.0404 210.295,72.8555 210.295,71.957 209.898,71.2734 209.104,70.8047 208.596,70.5182 207.593,70.1862 206.096,69.8086L203.303,69.1055C201.519,68.6628 200.204,68.168 199.357,67.6211 197.847,66.6706 197.092,65.3555 197.092,63.6758 197.092,61.6966 197.805,60.0951 199.23,58.8711 200.656,57.6471 202.574,57.0352 204.982,57.0352 208.133,57.0352 210.406,57.9596 211.799,59.8086 212.671,60.9805 213.094,62.2435 213.068,63.5977L209.748,63.5977C209.683,62.8034 209.403,62.0807 208.908,61.4297 208.101,60.5052 206.701,60.043 204.709,60.043 203.381,60.043 202.375,60.2969 201.691,60.8047 201.008,61.3125 200.666,61.9831 200.666,62.8164 200.666,63.7279 201.115,64.457 202.014,65.0039 202.535,65.3294 203.303,65.6159 204.318,65.8633L206.643,66.4297C209.169,67.0417 210.861,67.6341 211.721,68.207 213.088,69.1055 213.771,70.5182 213.771,72.4453 213.771,74.3073 213.065,75.9154 211.652,77.2695 210.24,78.6237 208.088,79.3008 205.197,79.3008 202.085,79.3008 199.882,78.5944 198.586,77.1816 197.29,75.7689 196.597,74.0208 196.506,71.9375L199.885,71.9375z</Geometry>
+  <Geometry x:Key="newsplusGeometry10">F1 M256,128z M0,0z M217.014,69.9453L217.014,66.6641 225.529,66.6641 225.529,58.0898 228.869,58.0898 228.869,66.6641 237.385,66.6641 237.385,69.9453 228.869,69.9453 228.869,78.5 225.529,78.5 225.529,69.9453 217.014,69.9453z</Geometry>
+  <DrawingGroup x:Key="newsplusDrawingGroup" ClipGeometry="M0,0 V128 H256 V0 H0 Z">
+    <DrawingGroup Opacity="1">
+      <GeometryDrawing Geometry="{StaticResource newsplusGeometry1}">
+        <GeometryDrawing.Pen>
+          <Pen Brush="#FF45FFCA" Thickness="8" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="1" />
+        </GeometryDrawing.Pen>
+      </GeometryDrawing>
+      <DrawingGroup Opacity="1">
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource newsplusGeometry2}" />
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource newsplusGeometry3}" />
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource newsplusGeometry4}" />
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource newsplusGeometry5}" />
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource newsplusGeometry6}" />
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource newsplusGeometry7}" />
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource newsplusGeometry8}" />
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource newsplusGeometry9}" />
+        <GeometryDrawing Brush="#FF45FFCA" Geometry="{StaticResource newsplusGeometry10}" />
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="newsplusDrawingImage" Drawing="{StaticResource newsplusDrawingGroup}" />
+</ResourceDictionary>

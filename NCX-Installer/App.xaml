@@ -18,6 +18,7 @@
                 <ResourceDictionary x:Name="DownloadBtn" Source="image/button/download.xaml"/>
                 <ResourceDictionary x:Name="DownloadRBtn" Source="image/button/download-release.xaml"/>
                 <ResourceDictionary x:Name="DownloadBBtn" Source="image/button/download-beta.xaml"/>
+                <ResourceDictionary x:Name="NewsPlusBtn" Source="image/button/newsplus.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
