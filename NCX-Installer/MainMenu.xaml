@@ -17,7 +17,7 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn10" Content="" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" Width="128" Height="64" Click="Button_Click_2" BorderBrush="#00707070">
+        <Button x:Name="btn10" Content="" HorizontalAlignment="Left" Margin="30,93,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" Width="64" Height="32" Click="Button_Click_2" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="{StaticResource newsplusDrawingImage}"/>
             </Button.Background>
