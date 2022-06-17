@@ -21,7 +21,7 @@ Stats
 <a href="https://github.com/NinjaCheetah/CSharp-Collection/workflows/.NET%20Core/badge.svg?branch=master" style="padding-left: 5px; padding-right: 5px;">
 		<img src="https://github.com/NinjaCheetah/CSharp-Collection/workflows/.NET%20Core/badge.svg?branch=master" height="20">
 	</a>	
-<a href="https://img.shields.io/maintenance/yes/2020?label=Maintained" style="padding-left: 5px; padding-right: 5px;">
+<a href="https://img.shields.io/maintenance/yes/2022?label=Maintained" style="padding-left: 5px; padding-right: 5px;">
 		<img src="https://img.shields.io/maintenance/yes/2022?label=Maintained" height="20">
 	</p>	
 
