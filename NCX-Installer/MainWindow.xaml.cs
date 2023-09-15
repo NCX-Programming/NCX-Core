@@ -21,7 +21,6 @@ namespace NCX_Installer
             {"https://github.com/NinjaCheetah/ncx-core-files/releases/latest/download/ncxCoreMainMenu.json", "NCX-Core/ncxCoreMainMenu.json"}, 
             {"https://github.com/NinjaCheetah/ncx-core-files/releases/latest/download/XStore.json", "NCX-Core/XStore2.json"} 
         };
-        public int slot;
 
         public class Store
         {
@@ -58,9 +57,7 @@ namespace NCX_Installer
                 }
                 string json = File.ReadAllText(Path.Combine(SavePath, "NCX-Core/XStore.json"));
                 Store store = JsonSerializer.Deserialize<Store>(json);
-                slot = 1;
                 string[] itemList = store.storeItems.Keys.ToArray();
-                Console.WriteLine($"{store.storeItems[itemList[0]].name}");
                 for (int i = 0; i < itemList.Length; i++)
                 {
                     using var client = new HttpClient();
