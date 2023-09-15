@@ -12,12 +12,12 @@ using System.Text.Json;
 namespace NCX_Installer
 {
     /// <summary>
-    /// Interaction logic for XSC64TL.xaml
+    /// Interaction logic for XStorePage.xaml
     /// </summary>
-    public partial class XSC64TL : Page
+    public partial class XStorePage : Page
     {
-        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        static readonly string SavePath2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        static readonly string docFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static readonly string deskFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         public int slot;
         public string downloadloc;
         public string filename;
@@ -55,61 +55,51 @@ namespace NCX_Installer
             public string file4 { get; set; }
         }
 
-        public XSC64TL()
+        public XStorePage()
         {
             InitializeComponent();
-            try
+            if (Settings1.Default.lightTheme == true)
             {
-                string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
-                Store store = JsonSerializer.Deserialize<Store>(json);
-                slot = NavSettings.Default.slot;
-                if (Settings1.Default.lightTheme == true)
-                {
-                    this.Background = Brushes.White;
-                    label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
-                }
-                if (Settings1.Default.betaVer == true)
-                {
-                    btn8.Visibility = Visibility.Visible;
-                    btn10.Visibility = Visibility.Visible;
-                    btn11.Visibility = Visibility.Hidden;
-                }
-                if (slot == 1) label4.Content = store.name1;
-                if (slot == 2) label4.Content = store.name2;
-                if (slot == 3) label4.Content = store.name3;
-                if (slot == 4) label4.Content = store.name4;
-
-                if (slot == 1) label3.Content = store.auth1;
-                if (slot == 2) label3.Content = store.auth2;
-                if (slot == 3) label3.Content = store.auth3;
-                if (slot == 4) label3.Content = store.auth4;
-
-                if (slot == 1) label2.Text = store.desc1;
-                if (slot == 2) label2.Text = store.desc2;
-                if (slot == 3) label2.Text = store.desc3;
-                if (slot == 4) label2.Text = store.desc4;
-
-                var brush = new ImageBrush();
-                FileStream f = File.OpenRead(System.IO.Path.Combine(SavePath, $"NCX-Core/slot{slot}.png"));
-                var imageSource = new BitmapImage();
-                imageSource.BeginInit();
-                imageSource.StreamSource = f;
-                imageSource.EndInit();
-
-                img1.Source = imageSource;
+                this.Background = Brushes.White;
+                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
             }
-            catch(Exception)
+            string json = File.ReadAllText(System.IO.Path.Combine(docFolderPath, "NCX-Core/XStore.json"));
+            Store store = JsonSerializer.Deserialize<Store>(json);
+            slot = NavSettings.Default.slot;
+            if (Settings1.Default.betaVer == true)
             {
-                NavSettings.Default.errorcode = 2;
-                NavSettings.Default.Save();
-                Error page = new Error();
-                NavigationService.Navigate(page);
+                btn8.Visibility = Visibility.Visible;
+                btn10.Visibility = Visibility.Visible;
+                btn11.Visibility = Visibility.Hidden;
             }
+            if (slot == 1) label4.Content = store.name1;
+            if (slot == 2) label4.Content = store.name2;
+            if (slot == 3) label4.Content = store.name3;
+            if (slot == 4) label4.Content = store.name4;
+
+            if (slot == 1) label3.Content = store.auth1;
+            if (slot == 2) label3.Content = store.auth2;
+            if (slot == 3) label3.Content = store.auth3;
+            if (slot == 4) label3.Content = store.auth4;
+
+            if (slot == 1) label2.Text = store.desc1;
+            if (slot == 2) label2.Text = store.desc2;
+            if (slot == 3) label2.Text = store.desc3;
+            if (slot == 4) label2.Text = store.desc4;
+
+            var brush = new ImageBrush();
+            FileStream f = File.OpenRead(System.IO.Path.Combine(docFolderPath, $"NCX-Core/slot{slot}.png"));
+            var imageSource = new BitmapImage();
+            imageSource.BeginInit();
+            imageSource.StreamSource = f;
+            imageSource.EndInit();
+
+            img1.Source = imageSource;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
+            string json = File.ReadAllText(System.IO.Path.Combine(docFolderPath, "NCX-Core/XStore.json"));
             Store store = JsonSerializer.Deserialize<Store>(json);
             string url = "";
             switch (slot)
@@ -131,7 +121,7 @@ namespace NCX_Installer
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
+            string json = File.ReadAllText(System.IO.Path.Combine(docFolderPath, "NCX-Core/XStore.json"));
             Store store = JsonSerializer.Deserialize<Store>(json);
             string url = "";
             switch (slot)
@@ -159,7 +149,7 @@ namespace NCX_Installer
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
+            string json = File.ReadAllText(System.IO.Path.Combine(docFolderPath, "NCX-Core/XStore.json"));
             Store store = JsonSerializer.Deserialize<Store>(json);
             switch (slot)
             {
@@ -188,7 +178,7 @@ namespace NCX_Installer
                     // Param1 = Link of file
                     new System.Uri(downloadloc),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath2, filename)
+                    System.IO.Path.Combine(deskFolderPath, filename)
                 );
             }
         }
@@ -196,7 +186,7 @@ namespace NCX_Installer
         public void DownloadCompleted(object sender, EventArgs e)
         {
             label1.Content = "Download Complete";
-            Directory.SetCurrentDirectory(SavePath);
+            Directory.SetCurrentDirectory(docFolderPath);
         }
 
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -262,7 +252,7 @@ namespace NCX_Installer
                     // Param1 = Link of file
                     new System.Uri("https://github.com/IanSkinner1982/C64-title-loader/releases/latest/download/loader.d64"),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, "loader.d64")
+                    System.IO.Path.Combine(docFolderPath, "loader.d64")
                 );
             }
         }
@@ -281,7 +271,7 @@ namespace NCX_Installer
                     // Param1 = Link of file
                     new System.Uri("https://ncx-programming.github.io/ncxprogramming.github.io/loader-nightly.d64"),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, "loader-nightly.d64")
+                    System.IO.Path.Combine(docFolderPath, "loader-nightly.d64")
                 );
             }
         }

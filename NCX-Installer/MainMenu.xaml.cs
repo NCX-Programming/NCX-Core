@@ -108,7 +108,7 @@ namespace NCX_Installer
                     NavigationService.Navigate(page2);
                     break;
                 case "c64titleloader":
-                    XSC64TL page3 = new XSC64TL();
+                    XStorePage page3 = new XStorePage();
                     NavigationService.Navigate(page3);
                     break;
                 case "coreupdater":

@@ -17,9 +17,9 @@ namespace NCX_Installer
     /// </summary>
     public partial class XStoreHome : Page
     {
-        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static readonly string docFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         public string icon;
-        public int slot;
+        //public int slot;
 
         public class Store
         {
@@ -46,26 +46,30 @@ namespace NCX_Installer
                 this.Background = Brushes.White;
                 label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; btn6.Foreground = Brushes.Black;
             }
-            if (File.Exists(Path.Combine(SavePath, "NCX-Core/XStore.json")))
+            // Make sure XStore.json exists before we try to read it
+            // TODO: Actually like, handle this? If it doesn't exist just nothing will happen, but we should probably obtain it
+            if (File.Exists(Path.Combine(docFolderPath, "NCX-Core/XStore.json")))
             {
-                string json = File.ReadAllText(Path.Combine(SavePath, "NCX-Core/XStore.json"));
+                // Parse XStore.json and build dictionaries and dictionary array
+                string json = File.ReadAllText(Path.Combine(docFolderPath, "NCX-Core/XStore.json"));
                 Store store = JsonSerializer.Deserialize<Store>(json);
                 string[] itemList = store.storeItems.Keys.ToArray();
-                Console.WriteLine($"{store.storeItems[itemList[0]].name}");
+                // Iterate over existing icons and set the buttons in the store to them
                 for (int i = 0; i < itemList.Length; i++)
                 {
                     var brush = new ImageBrush();
-                    FileStream f = File.OpenRead(Path.Combine(SavePath, $"NCX-Core/slot{i+1}.png"));
+                    FileStream f = File.OpenRead(Path.Combine(docFolderPath, $"NCX-Core/slot{i+1}.png"));
                     var imageSource = new BitmapImage();
                     imageSource.BeginInit();
                     imageSource.StreamSource = f;
                     imageSource.EndInit();
                     brush.ImageSource = imageSource;
                     buttonArray[i].Background = brush;
+                    // Set the tooltip to the name of the program
                     buttonArray[i].ToolTip = store.storeItems[itemList[i]].name;
                 }
 
-                /*string json = File.ReadAllText(Path.Combine(SavePath, "NCX-Core/XStore.json"));
+                /*string json = File.ReadAllText(Path.Combine(docFolderPath, "NCX-Core/XStore.json"));
                 Store store = JsonSerializer.Deserialize<Store>(json);
 
                 if (store.name4 == "")
@@ -82,28 +86,28 @@ namespace NCX_Installer
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             NavSettings.Default.slot = 1;
-            XSC64TL page = new XSC64TL();
+            XStorePage page = new XStorePage();
             NavigationService.Navigate(page);
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             NavSettings.Default.slot = 3;
-            XSC64TL page = new XSC64TL();
+            XStorePage page = new XStorePage();
             NavigationService.Navigate(page);
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
             NavSettings.Default.slot = 2;
-            XSC64TL page = new XSC64TL();
+            XStorePage page = new XStorePage();
             NavigationService.Navigate(page);
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
             NavSettings.Default.slot = 4;
-            XSC64TL page = new XSC64TL();
+            XStorePage page = new XStorePage();
             NavigationService.Navigate(page);
         }
 

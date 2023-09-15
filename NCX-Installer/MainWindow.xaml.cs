@@ -14,7 +14,7 @@ namespace NCX_Installer
     /// </summary>
     public partial class MainWindow : Window
     {
-        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static readonly string docFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         public string newstext;
         public string[,] downloads = { 
             {"https://github.com/NinjaCheetah/NCX-Installer-News/releases/latest/download/newsLatest.txt", "NCX-Core/newsLatest.txt"},
@@ -41,32 +41,41 @@ namespace NCX_Installer
         public MainWindow()
         {
             InitializeComponent();
+            // TODO: Figure out why this exists and if it does anything
             NavSettings.Default.filesDownloaded = false;
-            if (!Directory.Exists(Path.Combine(SavePath, "NCX-Core/")))
+            // Create the NCX-Core folder if it isn't already there
+            if (!Directory.Exists(Path.Combine(docFolderPath, "NCX-Core/")))
             {
-                Directory.CreateDirectory(Path.Combine(SavePath, "NCX-Core"));   
+                Directory.CreateDirectory(Path.Combine(docFolderPath, "NCX-Core"));   
             }
+            // Handle downloads async
+            // TODO: Handle download errors so that bad internet doesn't immediately crash it
             Task initDownloads = Task.Run(async () =>
             {
+                // Download all files in the file array
                 for (int i = 0; i < downloads.GetLength(0); i++)
                 {
                     using var client = new HttpClient();
                     using var s = await client.GetStreamAsync($"{downloads[i, 0]}");
-                    using var fs = new FileStream(Path.Combine(SavePath, $"{downloads[i, 1]}"), FileMode.OpenOrCreate);
+                    using var fs = new FileStream(Path.Combine(docFolderPath, $"{downloads[i, 1]}"), FileMode.OpenOrCreate);
                     await s.CopyToAsync(fs);
                 }
-                string json = File.ReadAllText(Path.Combine(SavePath, "NCX-Core/XStore.json"));
+                // Parse XStore.json to download all icons
+                string json = File.ReadAllText(Path.Combine(docFolderPath, "NCX-Core/XStore.json"));
+                // Create array of dictionaries of store items
                 Store store = JsonSerializer.Deserialize<Store>(json);
+                // Build a list of the available dictionaries
                 string[] itemList = store.storeItems.Keys.ToArray();
                 for (int i = 0; i < itemList.Length; i++)
                 {
                     using var client = new HttpClient();
                     using var s = await client.GetStreamAsync($"{store.storeItems[itemList[i]].iconURL}");
-                    using var fs = new FileStream(Path.Combine(SavePath, $"NCX-Core/slot{i+1}.png"), FileMode.OpenOrCreate);
+                    using var fs = new FileStream(Path.Combine(docFolderPath, $"NCX-Core/slot{i+1}.png"), FileMode.OpenOrCreate);
                     await s.CopyToAsync(fs);
                 }
             });
             initDownloads.Wait();
+            // Hide displayed launch image and show the main UI
             img1.Visibility = Visibility.Hidden;
             _NavigationFrame.Navigate(new MainMenu());
             HomeButton.Visibility = Visibility.Visible;
