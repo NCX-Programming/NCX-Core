@@ -64,22 +64,12 @@ namespace NCX_Installer
                     imageSource.StreamSource = f;
                     imageSource.EndInit();
                     brush.ImageSource = imageSource;
+                    // Reveal button and then paint it, that way only needed buttons appear
+                    buttonArray[i].Visibility = Visibility.Visible;
                     buttonArray[i].Background = brush;
                     // Set the tooltip to the name of the program
                     buttonArray[i].ToolTip = store.storeItems[itemList[i]].name;
                 }
-
-                /*string json = File.ReadAllText(Path.Combine(docFolderPath, "NCX-Core/XStore.json"));
-                Store store = JsonSerializer.Deserialize<Store>(json);
-
-                if (store.name4 == "")
-                {
-                    tmpbtn4.Visibility = Visibility.Hidden;
-                }
-
-                tmpbtn1.ToolTip = store.name1;
-                slot = 1;
-                LoadIcon();*/
             }
         }
 

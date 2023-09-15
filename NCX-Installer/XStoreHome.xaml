@@ -10,10 +10,10 @@
 
     <Grid>
         <Label x:Name="label1" Content="XStore" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" Foreground="White" Margin="10,10,0,0"/>
-        <Button x:Name="tmpbtn1" Content="" HorizontalAlignment="Left" Margin="16,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn1_Click" Background="#00000000"/>
-        <Button x:Name="tmpbtn3" Content="" HorizontalAlignment="Left" Margin="196,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn2_Click" Background="#00000000"/>
-        <Button x:Name="tmpbtn2" Content="" HorizontalAlignment="Left" Margin="106,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn3_Click" Background="#00000000"/>
-        <Button x:Name="tmpbtn4" Content="" HorizontalAlignment="Left" Margin="286,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn5_Click" Background="#00000000"/>
+        <Button x:Name="tmpbtn1" Content="" HorizontalAlignment="Left" Margin="16,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn1_Click" Background="#00000000" Visibility="Hidden"/>
+        <Button x:Name="tmpbtn3" Content="" HorizontalAlignment="Left" Margin="196,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn2_Click" Background="#00000000" Visibility="Hidden"/>
+        <Button x:Name="tmpbtn2" Content="" HorizontalAlignment="Left" Margin="106,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn3_Click" Background="#00000000" Visibility="Hidden"/>
+        <Button x:Name="tmpbtn4" Content="" HorizontalAlignment="Left" Margin="286,70,0,0" VerticalAlignment="Top" Width="85" Height="85" Click="btn5_Click" Background="#00000000" Visibility="Hidden"/>
         <Button x:Name="btn6" Content="XWare" HorizontalAlignment="Left" Margin="658,10,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="Button_Click" Background="#00000000" Foreground="White" FontSize="19"/>
         <Label x:Name="label2" Content="The best place to download programs from small creators!" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
     </Grid>
