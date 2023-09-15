@@ -24,7 +24,7 @@ namespace NCX_Installer
                 this.Background = Brushes.White;
                 label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label3.Foreground = Brushes.Black;
                 label4.Foreground = Brushes.Black; label5.Foreground = Brushes.Black; label6.Foreground = Brushes.Black;
-                label7.Foreground = Brushes.Black; btn5.Foreground = Brushes.Black; btn6.Foreground = Brushes.Black;
+                btn5.Foreground = Brushes.Black; btn6.Foreground = Brushes.Black;
             }
         }
 
