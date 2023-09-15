@@ -2,10 +2,10 @@
 using System.IO;
 using System.Net.Http;
 using System.Windows;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Text.Json;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace NCX_Installer
 {
@@ -19,20 +19,24 @@ namespace NCX_Installer
         public string[,] downloads = { 
             {"https://github.com/NinjaCheetah/NCX-Installer-News/releases/latest/download/newsLatest.txt", "NCX-Core/newsLatest.txt"},
             {"https://github.com/NinjaCheetah/ncx-core-files/releases/latest/download/ncxCoreMainMenu.json", "NCX-Core/ncxCoreMainMenu.json"}, 
-            {"https://github.com/NinjaCheetah/ncx-core-files/releases/latest/download/XStore.json", "NCX-Core/XStore.json"} 
+            {"https://github.com/NinjaCheetah/ncx-core-files/releases/latest/download/XStore.json", "NCX-Core/XStore2.json"} 
         };
         public int slot;
 
         public class Store
         {
-            public string name1 { get; set; }
-            public string icon1 { get; set; }
-            public string name2 { get; set; }
-            public string icon2 { get; set; }
-            public string name3 { get; set; }
-            public string icon3 { get; set; }
-            public string name4 { get; set; }
-            public string icon4 { get; set; }
+            public Dictionary<string, StoreItem> storeItems { get; set; }
+        }
+
+        public class StoreItem
+        {
+            public string name { get; set; }
+            public string author { get; set; }
+            public string project { get; set; }
+            public string desc { get; set; }
+            public string iconURL { get; set; }
+            public string downloadURL { get; set; }
+            public string file { get; set; }
         }
 
         public MainWindow()
@@ -55,32 +59,14 @@ namespace NCX_Installer
                 string json = File.ReadAllText(Path.Combine(SavePath, "NCX-Core/XStore.json"));
                 Store store = JsonSerializer.Deserialize<Store>(json);
                 slot = 1;
-                DownloadIcon(store.icon1);
-                switch (slot)
+                string[] itemList = store.storeItems.Keys.ToArray();
+                Console.WriteLine($"{store.storeItems[itemList[0]].name}");
+                for (int i = 0; i < itemList.Length; i++)
                 {
-                    case 1:
-                        if (store.name2 != "")
-                        {
-                            slot = 2;
-                            DownloadIcon(store.icon2);
-                        }
-                        break;
-                    case 2:
-                        if (store.name3 != "")
-                        {
-                            slot = 3;
-                            DownloadIcon(store.icon3);
-                        }
-                        break;
-                    case 3:
-                        if (store.name4 != "")
-                        {
-                            slot = 4;
-                            DownloadIcon(store.icon4);
-                        }
-                        break;
-                    case 4:
-                        break;
+                    using var client = new HttpClient();
+                    using var s = await client.GetStreamAsync($"{store.storeItems[itemList[i]].iconURL}");
+                    using var fs = new FileStream(Path.Combine(SavePath, $"NCX-Core/slot{i+1}.png"), FileMode.OpenOrCreate);
+                    await s.CopyToAsync(fs);
                 }
             });
             initDownloads.Wait();
@@ -91,20 +77,6 @@ namespace NCX_Installer
             StoreButton.Visibility = Visibility.Visible;
             AboutButton.Visibility = Visibility.Visible;
             SettingsButton.Visibility = Visibility.Visible;
-        }
-
-        public void DownloadIcon(string link)
-        {
-            using (var client = new HttpClient())
-            {
-                using (var s = client.GetStreamAsync($"{link}"))
-                {
-                    using (var fs = new FileStream(Path.Combine(SavePath, $"NCX-Core/slot{slot}.png"), FileMode.OpenOrCreate))
-                    {
-                        s.Result.CopyTo(fs);
-                    }
-                }
-            }
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
