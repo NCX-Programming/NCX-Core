@@ -7,7 +7,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Resources;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace NCX_Installer
 {
@@ -56,7 +56,7 @@ namespace NCX_Installer
                 if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/ncxCoreMainMenu.json")))
                 {
                     string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/ncxCoreMainMenu.json"));
-                    Menu menu = JsonConvert.DeserializeObject<Menu>(json);
+                    Menu menu = JsonSerializer.Deserialize<Menu>(json);
 
                     switch (menu.Featured)
                     {
@@ -96,15 +96,10 @@ namespace NCX_Installer
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
             string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/ncxCoreMainMenu.json"));
-            Menu menu = JsonConvert.DeserializeObject<Menu>(json);
+            Menu menu = JsonSerializer.Deserialize<Menu>(json);
 
             switch (menu.Featured)
             {

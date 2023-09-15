@@ -5,7 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace NCX_Installer
 {
@@ -61,7 +61,7 @@ namespace NCX_Installer
                 if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json")))
                 {
                     string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
-                    Store store = JsonConvert.DeserializeObject<Store>(json);
+                    Store store = JsonSerializer.Deserialize<Store>(json);
 
                     if (store.name4 == "")
                     {
@@ -119,7 +119,7 @@ namespace NCX_Installer
         public void LoadIcon()
         {
             string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
-            Store store = JsonConvert.DeserializeObject<Store>(json);
+            Store store = JsonSerializer.Deserialize<Store>(json);
 
             try
             {

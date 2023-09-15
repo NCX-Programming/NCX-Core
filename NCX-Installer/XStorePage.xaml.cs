@@ -7,7 +7,7 @@ using System.Windows.Navigation;
 using System.Net;
 using System.Diagnostics;
 using System.IO;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace NCX_Installer
 {
@@ -61,7 +61,7 @@ namespace NCX_Installer
             try
             {
                 string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
-                Store store = JsonConvert.DeserializeObject<Store>(json);
+                Store store = JsonSerializer.Deserialize<Store>(json);
                 slot = NavSettings.Default.slot;
                 if (Settings1.Default.lightTheme == true)
                 {
@@ -110,7 +110,7 @@ namespace NCX_Installer
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
-            Store store = JsonConvert.DeserializeObject<Store>(json);
+            Store store = JsonSerializer.Deserialize<Store>(json);
             string url = "";
             switch (slot)
             {
@@ -132,7 +132,7 @@ namespace NCX_Installer
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
-            Store store = JsonConvert.DeserializeObject<Store>(json);
+            Store store = JsonSerializer.Deserialize<Store>(json);
             string url = "";
             switch (slot)
             {
@@ -160,7 +160,7 @@ namespace NCX_Installer
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
             string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/XStore.json"));
-            Store store = JsonConvert.DeserializeObject<Store>(json);
+            Store store = JsonSerializer.Deserialize<Store>(json);
             switch (slot)
             {
                 case 1:

@@ -40,10 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="image\banner.png" />
     <Resource Include="image\banner\csharpcollection.png" />
     <Resource Include="image\banner\ncxnewsplus.png" />
