@@ -19,7 +19,7 @@ Stats
 		<img src="https://github.com/NinjaCheetah/NCX-Core/workflows/.NET%20Core/badge.svg?branch=master" height="20">
 	</a>	
 <a href="https://img.shields.io/maintenance/yes/2023?label=Maintained" style="padding-left: 5px; padding-right: 5px;">
-		<img src="https://img.shields.io/maintenance/yes/2022?label=Maintained" height="20">
+		<img src="https://img.shields.io/maintenance/yes/2023?label=Maintained" height="20">
 	</p>	
 
 
@@ -28,13 +28,13 @@ Stats
 - Able to dowload and update other programs
 - Built-in "app store" to easily find and install programs
 - NCX-News, a service to tell you when new programs or updates are available
-- Featured programs, as well as recently updated programs shown on the main menu (As of v3.0)
+- Featured programs (As of v3.0)
 
 # System Requirements
 - Windows 10, 64-bit
-- .NET 5.0 Runtime
+- .NET 7.0 Runtime
 - (If you can run Windows, you can run this program)
 
 # Credits
-- [@IanSkinner1982](https://github.com/IanSkinner1982/) For writing my README
+- [@rvtr](https://github.com/rvtr/) For writing my README
 - [@Garhoogin](https://github.com/Garhoogin/) For making the settings icon (Used in v3.0+)
