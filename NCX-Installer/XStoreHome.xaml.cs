@@ -76,28 +76,28 @@ namespace NCX_Installer
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             NavSettings.Default.slot = 1;
-            XStorePage page = new XStorePage();
+            XStorePage page = new XStorePage(1);
             NavigationService.Navigate(page);
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             NavSettings.Default.slot = 3;
-            XStorePage page = new XStorePage();
+            XStorePage page = new XStorePage(3);
             NavigationService.Navigate(page);
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
             NavSettings.Default.slot = 2;
-            XStorePage page = new XStorePage();
+            XStorePage page = new XStorePage(2);
             NavigationService.Navigate(page);
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
             NavSettings.Default.slot = 4;
-            XStorePage page = new XStorePage();
+            XStorePage page = new XStorePage(4);
             NavigationService.Navigate(page);
         }
 

@@ -7,60 +7,27 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="XStorePage" Background="Black">
-    <Page.Resources>
-        <ResourceDictionary>
-            <ImageSource x:Key="image1">image/screen/c64tl1.png</ImageSource>
-            <ImageSource x:Key="image2">image/screen/c64tl2.png</ImageSource>
-            <ImageSource x:Key="image3">image/screen/c64tl3.png</ImageSource>
-        </ResourceDictionary>
-    </Page.Resources>
 
     <Grid>
         <Image x:Name="img1" HorizontalAlignment="Left" Height="100" Margin="15,11,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label x:Name="label4" Content="Application Name" HorizontalAlignment="Left" Margin="115,5,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="32" Foreground="White"/>
-        <Label x:Name="label3" Content="Author" HorizontalAlignment="Left" Margin="115,41,0,0" VerticalAlignment="Top" FontSize="23" Foreground="White"/>
-        <Button x:Name="btn7" Content="" HorizontalAlignment="Left" Margin="115,76,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="Button_Click_1" Foreground="White" BorderBrush="#00707070" ToolTip="User Profile">
+        <Label x:Name="appNameLbl" Content="Application Name" HorizontalAlignment="Left" Margin="115,5,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="32" Foreground="White"/>
+        <Label x:Name="authNameLbl" Content="Author" HorizontalAlignment="Left" Margin="115,41,0,0" VerticalAlignment="Top" FontSize="23" Foreground="White"/>
+        <Button x:Name="authorBtn" Content="" HorizontalAlignment="Left" Margin="115,76,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="authorBtn_Click" Foreground="White" BorderBrush="#00707070" ToolTip="User Profile">
             <Button.Background>
                 <ImageBrush ImageSource="{StaticResource userDrawingImage}"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn12" Content="" HorizontalAlignment="Left" Margin="150,76,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="Button_Click" Foreground="White" BorderBrush="#00707070" ToolTip="Source (GitHub Repo)">
+        <Button x:Name="sourceBtn" Content="" HorizontalAlignment="Left" Margin="150,76,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="sourceBtn_Click" Foreground="White" BorderBrush="#00707070" ToolTip="Source (GitHub Repo)">
             <Button.Background>
                 <ImageBrush ImageSource="{StaticResource sourceDrawingImage}"/>
             </Button.Background>
         </Button>
         <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="220,83,0,0" VerticalAlignment="Top" Width="175" Foreground="#FF00FFC9" Visibility="Hidden"/>
         <Label x:Name="label1" Content="Downloading... Please wait." HorizontalAlignment="Left" Margin="209,99,0,0" VerticalAlignment="Top" Width="174" FontSize="13" Visibility="Hidden" Foreground="White"/>
-        <Button x:Name="btn8" Content="" HorizontalAlignment="Left" Margin="185,76,0,0" VerticalAlignment="Top" Height="34" Width="35" Click="Button_Click_4" Foreground="White" Visibility="Hidden" BorderBrush="#00707070" ToolTip="Download Release">
-            <Button.Background>
-                <ImageBrush ImageSource="{StaticResource download_releaseDrawingImage}"/>
-            </Button.Background>
-        </Button>
-        <TextBlock x:Name="label2" HorizontalAlignment="Left" Margin="15,119,0,0" Text="Description" TextWrapping="Wrap" VerticalAlignment="Top" Height="101" Width="388" FontSize="18" Foreground="White"/>
-        <Image x:Name="img2" HorizontalAlignment="Left" Height="202" Margin="364,203,0,0" VerticalAlignment="Top" Width="362" Source="image/screen/c64tl1.png" Stretch="Uniform" Visibility="Hidden"/>
-        <Button x:Name="btn6" Content="" HorizontalAlignment="Left" Margin="226,233,0,0" VerticalAlignment="Top" Height="82" Width="133" Click="btn6_Click" Visibility="Hidden">
-            <Button.Background>
-                <ImageBrush ImageSource="image/screen/c64tl1.png" Stretch="Uniform"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn9" Content="" HorizontalAlignment="Left" Margin="226,320,0,0" VerticalAlignment="Top" Height="85" Width="133" Click="btn9_Click" Visibility="Hidden">
-            <Button.Background>
-                <ImageBrush ImageSource="image/screen/c64tl2.png" Stretch="Uniform"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn10" Content="" HorizontalAlignment="Left" Width="35" Height="35" Margin="220,76,0,0" VerticalAlignment="Top" Foreground="White" Visibility="Hidden" Click="Button_Click_7" BorderBrush="#00707070" ToolTip="Download Nightly">
-            <Button.Background>
-                <ImageBrush ImageSource="{StaticResource download_betaDrawingImage}"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn11" Content="" HorizontalAlignment="Left" Margin="185,76,0,0" VerticalAlignment="Top" Width="35" Height="35" Foreground="White" Click="Button_Click_6" BorderBrush="#00707070" ToolTip="Download">
+        <TextBlock x:Name="descText" HorizontalAlignment="Left" Margin="15,119,0,0" Text="Description" TextWrapping="Wrap" VerticalAlignment="Top" Height="101" Width="388" FontSize="18" Foreground="White"/>
+        <Button x:Name="downloadBtn" Content="" HorizontalAlignment="Left" Margin="185,76,0,0" VerticalAlignment="Top" Width="35" Height="35" Foreground="White" Click="downloadBtn_Click" BorderBrush="#00707070" ToolTip="Download">
             <Button.Background>
                 <ImageBrush ImageSource="{StaticResource downloadDrawingImage}"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn13" Content="" HorizontalAlignment="Left" Margin="88,321,0,0" VerticalAlignment="Top" Height="82" Width="133" Click="btn13_Click" Visibility="Hidden">
-            <Button.Background>
-                <ImageBrush ImageSource="image/screen/c64tl3.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
     </Grid>
