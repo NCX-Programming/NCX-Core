@@ -1,4 +1,4 @@
-﻿<Page x:Class="NCX_Installer.Error"
+﻿<Page x:Class="NCX_Installer.ErrorPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -11,7 +11,7 @@
     <Grid>
         <Label Content="An Error Has Occurred" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" Foreground="#FF707070" FontSize="48" FontWeight="Bold"/>
         <Label x:Name="label1" Content="Error Code: 00 (Unhandled Error)" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Foreground="#FF707070" FontSize="24"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,193,0,0" Text="Please exit and relaunch NCX-Core. We appologize for the inconvience. If this error has occurred more than once and was caused by XStore, open NCX-Core Utilities and choose Reset -> Reset XStore. You can also ask for help or report a bug on our Discord server."  TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF707070" FontSize="24" Width="736" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,193,0,0" Text="We apologize for the inconvience. Please exit and relaunch NCX-Core. If this error has occurred more than once, please open an issue on our GitHub Repository."  TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF707070" FontSize="24" Width="736" TextAlignment="Center"/>
 
     </Grid>
 </Page>

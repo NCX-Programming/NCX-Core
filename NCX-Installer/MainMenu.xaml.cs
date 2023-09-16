@@ -16,89 +16,90 @@ namespace NCX_Installer
     /// </summary>
     public partial class MainMenu : Page
     {
-        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        public string newstext;
+        static readonly string docFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static readonly string userName = Environment.UserName;
         public string banner;
         public string navigation;
 
         public class Menu
         {
             public string Featured { get; set; }
-            public string New1 { get; set; }
-            public string New2 { get; set; }
-            public string New3 { get; set; }
         }
 
         public MainMenu()
         {
             InitializeComponent();
+            // Load saved name, if there is one, if not use the current Windows user's name
             if (Settings1.Default.name != "")
             {
-                label1.Content = "Welcome back, " + Settings1.Default.name + "!";
+                welcomeLbl.Content = "Welcome back, " + Settings1.Default.name + "!";
             }
-            else if (Settings1.Default.name == "")
+            else
             {
-                label1.Content = "Welcome back!";
+                welcomeLbl.Content = "Welcome back, " + userName + "!";
             }
             if (Settings1.Default.lightTheme == true)
             {
-                this.Background = Brushes.White;
-                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; label6.Foreground = Brushes.Black; 
+                Background = Brushes.White;
+                welcomeLbl.Foreground = Brushes.Black; newsText.Foreground = Brushes.Black; label6.Foreground = Brushes.Black; 
             }
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/newsLatest.txt")))
+            // Read the latest news file, display error message if it can't be found
+            if (File.Exists(Path.Combine(docFolderPath, "NCX-Core/newsLatest.txt")))
             {
-                TextReader tr = new StreamReader(System.IO.Path.Combine(SavePath, "NCX-Core/newsLatest.txt"));
+                TextReader tr = new StreamReader(Path.Combine(docFolderPath, "NCX-Core/newsLatest.txt"));
                 string newsString = tr.ReadLine();
-                newstext = Convert.ToString(newsString);
                 tr.Close();
-                label2.Text = newsString;
+                newsText.Text = newsString;
             }
-                if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/ncxCoreMainMenu.json")))
+            else
+            {
+                newsText.Text = "NCX-News could not be loaded.";
+            }
+            // Read the main menu file and load the featured program
+            if (File.Exists(Path.Combine(docFolderPath, "NCX-Core/ncxCoreMainMenu.json")))
+            {
+                string json = File.ReadAllText(Path.Combine(docFolderPath, "NCX-Core/ncxCoreMainMenu.json"));
+                Menu menu = JsonSerializer.Deserialize<Menu>(json);
+                switch (menu.Featured)
                 {
-                    string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/ncxCoreMainMenu.json"));
-                    Menu menu = JsonSerializer.Deserialize<Menu>(json);
-
-                    switch (menu.Featured)
-                    {
-                        case "cscol":
-                            banner = "image/csharpcol.png";
-                            break;
-                        case "ncxnewsplus":
-                            banner = "image/banner/ncxnewsplus.png";
-                            break;
-                        case "c64titleloader":
-                            banner = "image/c64titleloader.png";
-                            break;
-                        case "dsidownloader":
-                            banner = "image/dsidownloader.png";
-                            break;
-                        case "coreupdater":
-                            banner = "image/coreupdater.png";
-                            break;
-                        default:
-                            btn4.Content = "An error has occured while loading the featured program.";
-                            break;
-                    }
-
-                    Uri resourceUri = new Uri(banner, UriKind.Relative);
-                    StreamResourceInfo streamInfo = Application.GetResourceStream(resourceUri);
-
-                    BitmapFrame temp = BitmapFrame.Create(streamInfo.Stream);
-                    var brush = new ImageBrush();
-                    brush.ImageSource = temp;
-
-                    btn4.Background = brush;
+                    case "cscol":
+                        banner = "image/csharpcol.png";
+                        break;
+                    case "ncxnewsplus":
+                        banner = "image/banner/ncxnewsplus.png";
+                        break;
+                    case "c64titleloader":
+                        banner = "image/c64titleloader.png";
+                        break;
+                    case "dsidownloader":
+                        banner = "image/dsidownloader.png";
+                        break;
+                    case "coreupdater":
+                        banner = "image/coreupdater.png";
+                        break;
+                    default:
+                        featuredPgrmBtn.Content = "An error has occured while loading the featured program.";
+                        break;
                 }
-                if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
-                {
-                    btn10.Visibility = Visibility.Visible;
-                }
-            
+                // Paint the banner on the button for the featured program
+                Uri resourceUri = new Uri(banner, UriKind.Relative);
+                StreamResourceInfo streamInfo = Application.GetResourceStream(resourceUri);
+                BitmapFrame temp = BitmapFrame.Create(streamInfo.Stream);
+                var brush = new ImageBrush();
+                brush.ImageSource = temp;
+                featuredPgrmBtn.Background = brush;
+            }
+            // If we can find NCX-News+, offer to launch it
+            if (File.Exists(Path.Combine(docFolderPath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            {
+                newsPlusBtn.Visibility = Visibility.Visible;
+            }
         }
 
-        private void btn4_Click(object sender, RoutedEventArgs e)
+        private void featuredPgrmBtn_Click(object sender, RoutedEventArgs e)
         {
-            string json = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/ncxCoreMainMenu.json"));
+            // Navigate to the page for the featured program
+            string json = File.ReadAllText(Path.Combine(docFolderPath, "NCX-Core/ncxCoreMainMenu.json"));
             Menu menu = JsonSerializer.Deserialize<Menu>(json);
 
             switch (menu.Featured)
@@ -107,33 +108,21 @@ namespace NCX_Installer
                     XWareNews page2 = new XWareNews();
                     NavigationService.Navigate(page2);
                     break;
-                case "c64titleloader":
-                    //XStorePage page3 = new XStorePage();
-                    //NavigationService.Navigate(page3);
-                    break;
                 case "coreupdater":
                     XWareUpdater page5 = new XWareUpdater();
                     NavigationService.Navigate(page5);
                     break;
                 default:
-                    btn4.Content = "An error has occured while loading the featured program.";
+                    featuredPgrmBtn.Content = "An error has occured while loading the featured program.";
                     break;
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void newsPlusBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            if (File.Exists(Path.Combine(docFolderPath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
             {
-                Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
-            }
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
-            {
-                Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
+                Process.Start(Path.Combine(docFolderPath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
             }
         }
     }

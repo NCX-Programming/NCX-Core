@@ -8,16 +8,16 @@
       Title="MainMenu" Height="450" Width="800" Background="Black">
 
     <Grid x:Name="btn8">
-        <Label x:Name="label1" Content="Welcome back!" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="40" RenderTransformOrigin="-0.144,0.546"/>
+        <Label x:Name="welcomeLbl" Content="Welcome back!" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="40" RenderTransformOrigin="-0.144,0.546"/>
         <Label Content="NCX-News:" HorizontalAlignment="Left" Height="39" Margin="10,54,0,0" VerticalAlignment="Top" Width="120" Foreground="#FF00FFC9" FontSize="20"/>
-        <TextBlock x:Name="label2" HorizontalAlignment="Left" Margin="118,64,0,0" Text="Loading NCX-News... Please wait." TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="15"/>
+        <TextBlock x:Name="newsText" HorizontalAlignment="Left" Margin="118,64,0,0" Text="Loading NCX-News... Please wait." TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="15"/>
         <Label x:Name="label6" Content="Featured" HorizontalAlignment="Left" Margin="30,161,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
-        <Button x:Name="btn4" Content="" HorizontalAlignment="Left" Margin="30,198,0,0" VerticalAlignment="Top" Height="166" Width="615" Foreground="White" Click="btn4_Click">
+        <Button x:Name="featuredPgrmBtn" Content="" HorizontalAlignment="Left" Margin="30,198,0,0" VerticalAlignment="Top" Height="166" Width="615" Foreground="White" Click="featuredPgrmBtn_Click">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn10" Content="" HorizontalAlignment="Left" Margin="30,93,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" Width="64" Height="32" Click="Button_Click_2" BorderBrush="#00707070">
+        <Button x:Name="newsPlusBtn" Content="" HorizontalAlignment="Left" Margin="30,93,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" Width="64" Height="32" Click="newsPlusBtn_Click" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="{StaticResource newsplusDrawingImage}"/>
             </Button.Background>

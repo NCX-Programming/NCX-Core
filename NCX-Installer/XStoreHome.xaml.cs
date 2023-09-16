@@ -8,7 +8,6 @@ using System.Windows.Navigation;
 using System.Text.Json;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 
 namespace NCX_Installer
 {
@@ -18,8 +17,6 @@ namespace NCX_Installer
     public partial class XStoreHome : Page
     {
         static readonly string docFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        public string icon;
-        //public int slot;
 
         public class Store
         {
@@ -40,11 +37,11 @@ namespace NCX_Installer
         public XStoreHome()
         {
             InitializeComponent();
-            Button[] buttonArray = { tmpbtn1, tmpbtn2, tmpbtn3, tmpbtn4 };
+            Button[] buttonArray = { prgmBtn1, prgmBtn2, prgmBtn3, prgmBtn4 };
             if (Settings1.Default.lightTheme == true)
             {
-                this.Background = Brushes.White;
-                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; btn6.Foreground = Brushes.Black;
+                Background = Brushes.White;
+                label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; XWareBtn.Foreground = Brushes.Black;
             }
             // Make sure XStore.json exists before we try to read it
             // TODO: Actually like, handle this? If it doesn't exist just nothing will happen, but we should probably obtain it
@@ -71,37 +68,39 @@ namespace NCX_Installer
                     buttonArray[i].ToolTip = store.storeItems[itemList[i]].name;
                 }
             }
+            else
+            {
+                //Error errPage = new Error(1);
+                //NavigationService.Navigate(errPage);
+                NavigationService.Navigate(new ErrorPage(0));
+            }
         }
 
-        private void btn1_Click(object sender, RoutedEventArgs e)
+        private void prgmBtn1_Click(object sender, RoutedEventArgs e)
         {
-            NavSettings.Default.slot = 1;
             XStorePage page = new XStorePage(1);
             NavigationService.Navigate(page);
         }
 
-        private void btn2_Click(object sender, RoutedEventArgs e)
+        private void prgmBtn2_Click(object sender, RoutedEventArgs e)
         {
-            NavSettings.Default.slot = 3;
-            XStorePage page = new XStorePage(3);
-            NavigationService.Navigate(page);
-        }
-
-        private void btn3_Click(object sender, RoutedEventArgs e)
-        {
-            NavSettings.Default.slot = 2;
             XStorePage page = new XStorePage(2);
             NavigationService.Navigate(page);
         }
 
-        private void btn5_Click(object sender, RoutedEventArgs e)
+        private void prgmBtn3_Click(object sender, RoutedEventArgs e)
         {
-            NavSettings.Default.slot = 4;
+            XStorePage page = new XStorePage(3);
+            NavigationService.Navigate(page);
+        }
+
+        private void prgmBtn4_Click(object sender, RoutedEventArgs e)
+        {
             XStorePage page = new XStorePage(4);
             NavigationService.Navigate(page);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void XWareBtn_Click(object sender, RoutedEventArgs e)
         {
             XWareHome page = new XWareHome();
             NavigationService.Navigate(page);
