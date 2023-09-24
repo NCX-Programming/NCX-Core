@@ -24,7 +24,7 @@
         </Button>
         <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="20" Margin="220,83,0,0" VerticalAlignment="Top" Width="175" Foreground="#FF00FFC9" Visibility="Hidden"/>
         <Label x:Name="label1" Content="Downloading... Please wait." HorizontalAlignment="Left" Margin="209,99,0,0" VerticalAlignment="Top" Width="174" FontSize="13" Visibility="Hidden" Foreground="White"/>
-        <TextBlock x:Name="descText" HorizontalAlignment="Left" Margin="15,119,0,0" Text="Description" TextWrapping="Wrap" VerticalAlignment="Top" Height="101" Width="388" FontSize="18" Foreground="White"/>
+        <TextBlock x:Name="descText" HorizontalAlignment="Left" Margin="15,119,0,0" Text="Description" TextWrapping="Wrap" VerticalAlignment="Top" Height="169" Width="464" FontSize="18" Foreground="White"/>
         <Button x:Name="downloadBtn" Content="" HorizontalAlignment="Left" Margin="185,76,0,0" VerticalAlignment="Top" Width="35" Height="35" Foreground="White" Click="downloadBtn_Click" BorderBrush="#00707070" ToolTip="Download">
             <Button.Background>
                 <ImageBrush ImageSource="{StaticResource downloadDrawingImage}"/>

@@ -9,9 +9,10 @@
       Title="Error" Background="Black">
 
     <Grid>
-        <Label Content="An Error Has Occurred" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" Foreground="#FF707070" FontSize="48" FontWeight="Bold"/>
-        <Label x:Name="label1" Content="Error Code: 00 (Unhandled Error)" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Foreground="#FF707070" FontSize="24"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,193,0,0" Text="We apologize for the inconvience. Please exit and relaunch NCX-Core. If this error has occurred more than once, please open an issue on our GitHub Repository."  TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF707070" FontSize="24" Width="736" TextAlignment="Center"/>
+        <Label Content="An Error Has Occurred" HorizontalAlignment="Left" Margin="5,41,0,0" VerticalAlignment="Top" Foreground="#FF707070" FontSize="48" FontWeight="Bold"/>
+        <Label x:Name="errCodeLbl" Content="Error Code: 00 (Unhandled Error)" HorizontalAlignment="Left" Margin="3,94,0,0" VerticalAlignment="Top" Foreground="#FF707070" FontSize="28"/>
+        <TextBlock x:Name="errText" HorizontalAlignment="Left" Text="We apologize for the inconvenience. Please exit and relaunch NCX-Core. If this error has occurred more than once, please open an issue on our GitHub Repository."  TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF707070" FontSize="24" Width="700" Margin="10,155,0,0"/>
+        <TextBlock x:Name="errDesc" HorizontalAlignment="Left" Margin="10,273,0,0" Text="Other error information."  TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF707070" FontSize="24" Width="700"/>
 
     </Grid>
 </Page>

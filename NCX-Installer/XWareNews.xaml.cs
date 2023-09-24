@@ -20,7 +20,7 @@ namespace NCX_Installer
         public XWareNews()
         {
             InitializeComponent();
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            if (File.Exists(Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
             {
                 btn7.Visibility = Visibility.Visible;
             }
@@ -53,9 +53,9 @@ namespace NCX_Installer
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            if (Directory.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/")))
+            if (Directory.Exists(Path.Combine(SavePath, "NCX-Core/")))
             {
-                if (Directory.Exists(System.IO.Path.Combine(SavePath,"NCX-Core/NCXNewsPlus/")))
+                if (Directory.Exists(Path.Combine(SavePath,"NCX-Core/NCXNewsPlus/")))
                 {
                     using (WebClient wc = new WebClient())
                     {
@@ -68,13 +68,13 @@ namespace NCX_Installer
                             // Param1 = Link of file
                             new System.Uri("https://github.com/NinjaCheetah/NCX-XWare/releases/latest/download/NCXNewsPlus.zip"),
                             // Param2 = Path to save
-                            System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip")
+                            Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip")
                         );
                     }
                 }
                 else
                 {
-                    Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"));
+                    Directory.CreateDirectory(Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"));
                     using (WebClient wc = new WebClient())
                     {
                         btn8.Visibility = Visibility.Hidden;
@@ -86,15 +86,15 @@ namespace NCX_Installer
                             // Param1 = Link of file
                             new System.Uri("https://github.com/NinjaCheetah/NCX-XWare/releases/latest/download/NCXNewsPlus.zip"),
                             // Param2 = Path to save
-                            System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip")
+                            Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip")
                         );
                     }
                 }
             }
             else
             {
-                Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core"));
-                Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"));
+                Directory.CreateDirectory(Path.Combine(SavePath, "NCX-Core"));
+                Directory.CreateDirectory(Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"));
                 using (WebClient wc = new WebClient())
                 {
                     btn8.Visibility = Visibility.Hidden;
@@ -106,7 +106,7 @@ namespace NCX_Installer
                         // Param1 = Link of file
                         new System.Uri("https://github.com/NinjaCheetah/NCX-XWare/releases/latest/download/NCXNewsPlus.zip"),
                         // Param2 = Path to save
-                        System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip")
+                        Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip")
                     );
                 }
             }
@@ -114,10 +114,9 @@ namespace NCX_Installer
 
         public void DownloadCompleted(object sender, EventArgs e)
         {
-            ZipFile.ExtractToDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip"), System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"), true);
-            File.Delete(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip"));
+            ZipFile.ExtractToDirectory(Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip"), Path.Combine(SavePath, "NCX-Core/NCXNewsPlus"), true);
+            File.Delete(Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.zip"));
             label1.Content = "Download Complete";
-            NavSettings.Default.filesDownloaded = true;
         }
 
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -135,9 +134,9 @@ namespace NCX_Installer
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            if (File.Exists(Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
             {
-                Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
+                Process.Start(Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
             }
         }
     }

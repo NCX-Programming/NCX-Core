@@ -86,13 +86,22 @@ namespace NCX_Installer
             // Download the file asynchronously, then set the label saying it's done
             downloadBtn.Visibility = Visibility.Hidden;
             label1.Visibility = Visibility.Visible;
-            await Task.Run(async () =>
+            try
             {
-                using var client = new HttpClient();
-                using var s = await client.GetStreamAsync(store.storeItems[itemList[slot - 1]].downloadURL);
-                using var fs = new FileStream(Path.Combine(deskFolderPath, store.storeItems[itemList[slot - 1]].file), FileMode.OpenOrCreate);
-                await s.CopyToAsync(fs);
-            });
+                await Task.Run(async () =>
+                {
+                    using var client = new HttpClient();
+                    using var s = await client.GetStreamAsync(store.storeItems[itemList[slot - 1]].downloadURL);
+                    using var fs = new FileStream(Path.Combine(deskFolderPath, store.storeItems[itemList[slot - 1]].file), FileMode.OpenOrCreate);
+                    await s.CopyToAsync(fs);
+                });
+            }
+            catch(Exception ex) 
+            {
+                // If the program fails to download, throw error code 03 (Download Error)
+                img1.Visibility = Visibility.Hidden;
+                NavigationService.Navigate(new ErrorPage(3));
+            }
             label1.Content = "Download Complete";
         }
     }

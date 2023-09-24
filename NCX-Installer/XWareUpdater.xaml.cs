@@ -49,9 +49,9 @@ namespace NCX_Installer
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            if (Directory.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/")))
+            if (Directory.Exists(Path.Combine(SavePath, "NCX-Core/")))
             {
-                if (Directory.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/")))
+                if (Directory.Exists(Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/")))
                 {
                     using (WebClient wc = new WebClient())
                     {
@@ -64,13 +64,13 @@ namespace NCX_Installer
                             // Param1 = Link of file
                             new System.Uri("https://github.com/NinjaCheetah/NCX-XWare/releases/latest/download/NCXCoreUpdater.zip"),
                             // Param2 = Path to save
-                            System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip")
+                            Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip")
                         );
                     }
                 }
                 else
                 {
-                    Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater"));
+                    Directory.CreateDirectory(Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater"));
                     using (WebClient wc = new WebClient())
                     {
                         btn8.Visibility = Visibility.Hidden;
@@ -82,15 +82,15 @@ namespace NCX_Installer
                             // Param1 = Link of file
                             new System.Uri("https://github.com/NinjaCheetah/NCX-XWare/releases/latest/download/NCXCoreUpdater.zip"),
                             // Param2 = Path to save
-                            System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip")
+                            Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip")
                         );
                     }
                 }
             }
             else
             {
-                Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core"));
-                Directory.CreateDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater"));
+                Directory.CreateDirectory(Path.Combine(SavePath, "NCX-Core"));
+                Directory.CreateDirectory(Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater"));
                 using (WebClient wc = new WebClient())
                 {
                     btn8.Visibility = Visibility.Hidden;
@@ -102,7 +102,7 @@ namespace NCX_Installer
                         // Param1 = Link of file
                         new System.Uri("https://github.com/NinjaCheetah/NCX-XWare/releases/latest/download/NCXCoreUpdater.zip"),
                         // Param2 = Path to save
-                        System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip")
+                        Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip")
                     );
                 }
             }
@@ -115,10 +115,9 @@ namespace NCX_Installer
 
         public void DownloadCompleted(object sender, EventArgs e)
         {
-            ZipFile.ExtractToDirectory(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip"), System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater"), true);
-            File.Delete(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip"));
+            ZipFile.ExtractToDirectory(Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip"),Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater"), true);
+            File.Delete(Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCXCoreUpdater.zip"));
             label1.Content = "Download Complete";
-            NavSettings.Default.filesDownloaded = true;
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)
@@ -128,11 +127,11 @@ namespace NCX_Installer
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe")))
+            if (File.Exists(Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe")))
             {
-                ExecuteAsAdmin(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
+                ExecuteAsAdmin(Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
                 string text = Settings1.Default.version;
-                File.WriteAllText(System.IO.Path.Combine(SavePath, "version.txt"), text);
+                File.WriteAllText(Path.Combine(SavePath, "version.txt"), text);
             }
         }
 

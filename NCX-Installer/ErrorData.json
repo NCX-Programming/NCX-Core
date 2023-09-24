@@ -1,0 +1,24 @@
+{
+  "errorCodes": {
+    "00": {
+      "code": 0,
+      "errName": "Unhandled Error",
+      "errDesc": ""
+    },
+    "01": {
+      "code": 1,
+      "errName": "XStore File Error",
+      "errDesc": "There may be a problem with your XStore data. If this problem occurs again, try clearing NCX-Core data from Settings."
+    },
+    "02": {
+      "code": 2,
+      "errName": "Network Error",
+      "errDesc": "You may be offline. Check your internet connection before launching NCX-Core again."
+    },
+    "03": {
+      "code": 3,
+      "errName": "Download Error",
+      "errDesc": "The download couldn't be completed, and may no longer be available. Please wait a little while and try again."
+    }
+  }
+}

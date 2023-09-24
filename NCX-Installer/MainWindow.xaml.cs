@@ -41,12 +41,16 @@ namespace NCX_Installer
         public MainWindow()
         {
             InitializeComponent();
-            // TODO: Figure out why this exists and if it does anything
-            NavSettings.Default.filesDownloaded = false;
+            // Wait to run init code until the content is on screen so we can see my nice loading banner
+            ContentRendered += MainWindow_ContentRendered;
+        }
+
+        private void MainWindow_ContentRendered(object sender, EventArgs e)
+        {
             // Create the NCX-Core folder if it isn't already there
             if (!Directory.Exists(Path.Combine(docFolderPath, "NCX-Core/")))
             {
-                Directory.CreateDirectory(Path.Combine(docFolderPath, "NCX-Core"));   
+                Directory.CreateDirectory(Path.Combine(docFolderPath, "NCX-Core"));
             }
             // Handle downloads async
             // TODO: Handle download errors so that bad internet doesn't immediately crash it
@@ -70,19 +74,28 @@ namespace NCX_Installer
                 {
                     using var client = new HttpClient();
                     using var s = await client.GetStreamAsync($"{store.storeItems[itemList[i]].iconURL}");
-                    using var fs = new FileStream(Path.Combine(docFolderPath, $"NCX-Core/slot{i+1}.png"), FileMode.OpenOrCreate);
+                    using var fs = new FileStream(Path.Combine(docFolderPath, $"NCX-Core/slot{i + 1}.png"), FileMode.OpenOrCreate);
                     await s.CopyToAsync(fs);
                 }
             });
-            initDownloads.Wait();
-            // Hide displayed launch image and show the main UI
-            img1.Visibility = Visibility.Hidden;
-            _NavigationFrame.Navigate(new MainMenu());
-            HomeButton.Visibility = Visibility.Visible;
-            LibraryButton.Visibility = Visibility.Visible;
-            StoreButton.Visibility = Visibility.Visible;
-            AboutButton.Visibility = Visibility.Visible;
-            SettingsButton.Visibility = Visibility.Visible;
+            try
+            {
+                initDownloads.Wait();
+                // Hide displayed launch image and show the main UI
+                img1.Visibility = Visibility.Hidden;
+                _NavigationFrame.Navigate(new MainMenu());
+                HomeButton.Visibility = Visibility.Visible;
+                LibraryButton.Visibility = Visibility.Visible;
+                StoreButton.Visibility = Visibility.Visible;
+                AboutButton.Visibility = Visibility.Visible;
+                SettingsButton.Visibility = Visibility.Visible;
+            }
+            catch (Exception ex)
+            {
+                // If we error out, hide the launch image and go to the error instead
+                img1.Visibility = Visibility.Hidden;
+                _NavigationFrame.Navigate(new ErrorPage(2));
+            }
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)

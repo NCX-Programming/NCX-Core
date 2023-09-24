@@ -37,6 +37,11 @@ namespace NCX_Installer
         public XStoreHome()
         {
             InitializeComponent();
+            Loaded += XStoreHome_Loaded;
+        }
+
+        private void XStoreHome_Loaded(object sender, RoutedEventArgs e)
+        {
             Button[] buttonArray = { prgmBtn1, prgmBtn2, prgmBtn3, prgmBtn4 };
             if (Settings1.Default.lightTheme == true)
             {
@@ -55,7 +60,7 @@ namespace NCX_Installer
                 for (int i = 0; i < itemList.Length; i++)
                 {
                     var brush = new ImageBrush();
-                    FileStream f = File.OpenRead(Path.Combine(docFolderPath, $"NCX-Core/slot{i+1}.png"));
+                    FileStream f = File.OpenRead(Path.Combine(docFolderPath, $"NCX-Core/slot{i + 1}.png"));
                     var imageSource = new BitmapImage();
                     imageSource.BeginInit();
                     imageSource.StreamSource = f;
@@ -70,40 +75,39 @@ namespace NCX_Installer
             }
             else
             {
-                //Error errPage = new Error(1);
-                //NavigationService.Navigate(errPage);
-                NavigationService.Navigate(new ErrorPage(0));
+                /* Throw error 01 (XStore File Error), because the XStore.json file probably doesn't exist. Yes, we could (and probably should) try 
+                 * and get it, but it's easier to just tell the user to restart NCX-Core and let it fix itself since it always downloads it. */
+                NavigationService.Navigate(new ErrorPage(1));
             }
         }
 
+        /* The following are the buttons that are actually asigned the programs in the store. When you click one, it sends you to XStorePage
+         * with the context of which one you pressed. There could be some confusion here because these numbers are lowered by one in most of the
+         * code that actually uses them since the actual array they refer to starts at 0, but having them be 1-4 here makes the UI easier to work
+         * with in my opinion. */
         private void prgmBtn1_Click(object sender, RoutedEventArgs e)
         {
-            XStorePage page = new XStorePage(1);
-            NavigationService.Navigate(page);
+            NavigationService.Navigate(new XStorePage(1));
         }
 
         private void prgmBtn2_Click(object sender, RoutedEventArgs e)
         {
-            XStorePage page = new XStorePage(2);
-            NavigationService.Navigate(page);
+            NavigationService.Navigate(new XStorePage(2));
         }
 
         private void prgmBtn3_Click(object sender, RoutedEventArgs e)
         {
-            XStorePage page = new XStorePage(3);
-            NavigationService.Navigate(page);
+            NavigationService.Navigate(new XStorePage(3));
         }
 
         private void prgmBtn4_Click(object sender, RoutedEventArgs e)
         {
-            XStorePage page = new XStorePage(4);
-            NavigationService.Navigate(page);
+            NavigationService.Navigate(new XStorePage(4));
         }
 
         private void XWareBtn_Click(object sender, RoutedEventArgs e)
         {
-            XWareHome page = new XWareHome();
-            NavigationService.Navigate(page);
+            NavigationService.Navigate(new XWareHome());
         }
     }
 }
