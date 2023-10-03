@@ -48,8 +48,7 @@ namespace NCX_Installer
                 Background = Brushes.White;
                 label1.Foreground = Brushes.Black; label2.Foreground = Brushes.Black; XWareBtn.Foreground = Brushes.Black;
             }
-            // Make sure XStore.json exists before we try to read it
-            // TODO: Actually like, handle this? If it doesn't exist just nothing will happen, but we should probably obtain it
+            // Make sure XStore.json exists before we try to read it, and if not throw error 01
             if (File.Exists(Path.Combine(docFolderPath, "NCX-Core/XStore.json")))
             {
                 // Parse XStore.json and build dictionaries and dictionary array

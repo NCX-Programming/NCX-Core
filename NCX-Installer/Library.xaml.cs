@@ -13,14 +13,14 @@ namespace NCX_Installer
     /// </summary>
     public partial class Library : Page
     {
-        static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static readonly string docFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
         public Library()
         {
             InitializeComponent();
             if (Settings1.Default.lightTheme == true)
             {
-                this.Background = Brushes.White;
+                Background = Brushes.White;
                 label1.Foreground = Brushes.Black; btn5.Foreground = Brushes.Black; btn6.Foreground = Brushes.Black;
                 btn7.Foreground = Brushes.Black; btn8.Foreground = Brushes.Black; btn9.Foreground = Brushes.Black;
                 btn10.Foreground = Brushes.Black;
@@ -30,12 +30,12 @@ namespace NCX_Installer
                 btn5.Visibility = Visibility.Visible;
                 btn6.Visibility = Visibility.Visible;
             }
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe")))
+            if (File.Exists(Path.Combine(docFolderPath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe")))
             {
                 btn7.Visibility = Visibility.Visible;
                 btn8.Visibility = Visibility.Visible;
             }
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            if (File.Exists(Path.Combine(docFolderPath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
             {
                 btn9.Visibility = Visibility.Visible;
                 btn10.Visibility = Visibility.Visible;
@@ -57,12 +57,11 @@ namespace NCX_Installer
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe")))
+            if (File.Exists(Path.Combine(docFolderPath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe")))
             {
-                ExecuteAsAdmin(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
-                // Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
+                ExecuteAsAdmin(Path.Combine(docFolderPath, "NCX-Core/NCXCoreUpdater/NCX-Core Updater.exe"));
                 string text = Settings1.Default.version;
-                File.WriteAllText(System.IO.Path.Combine(SavePath, "version.txt"), text);
+                File.WriteAllText(Path.Combine(docFolderPath, "version.txt"), text);
             }
         }
 
@@ -74,9 +73,9 @@ namespace NCX_Installer
 
         private void btn9_Click(object sender, RoutedEventArgs e)
         {
-            if (File.Exists(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
+            if (File.Exists(Path.Combine(docFolderPath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe")))
             {
-                Process.Start(System.IO.Path.Combine(SavePath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
+                Process.Start(Path.Combine(docFolderPath, "NCX-Core/NCXNewsPlus/NCXNewsPlus.exe"));
             }
         }
 
